@@ -1,0 +1,1307 @@
+---
+title: "Proto-lexicon size and phonotactic knowledge are linked in non-Māori speaking New Zealand adults."
+author: ""
+date: '`r trimws(format(Sys.Date(), "%B %e, %Y"))`'
+documentclass: book
+output:
+  html_document:
+    code_folding: hide
+    fig_caption: yes
+    highlight: textmate
+    theme: flatly
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+    number_sections: true
+    self_contained: yes
+    mode: selfcontained
+editor_options: 
+  chunk_output_type: console
+---
+
+# Introduction
+
+This R Markdown file contains supplementary information and all the code used for data exclusion, analysis, and plotting. This document is split into three sections. [Section 2][Data Preparation and Method] describes the data preparation process, including the dataset structure, the factors associated with the stimuli, and how they were calculated. It also details the experimental methodology and participant demographics. [Section 3][Identification Task] describes and supplies the code for the analysis of the Identification Task data. [Section 4][Wellformedness Rating Task] describes and provides the code for the analysis of the Wellformedness Rating task.
+
+```{r setup, echo=TRUE, message=FALSE, warning=FALSE}
+# Setup -----
+library(pacman)
+p_load(knitr, tidyverse, ordinal, effects, MASS, kableExtra, egg, lme4)
+
+#library(knitr)
+#library(tidyverse)
+#library(ordinal)
+#library(effects)
+#library(MASS)
+#library(kableExtra)
+#ibrary(egg)
+
+opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE, fig.show='hold', results='hold')
+
+opts_chunk$set(echo=TRUE, message=FALSE, warning=FALSE, fig.show='hold', results='hold')
+
+
+# Local functions ----
+
+# A function to calculate confidence intervals
+CI <- function (x, ci = 0.95) 
+{
+    a <- mean(x)
+    s <- sd(x)
+    n <- length(x)
+    error <- qt(ci + (1 - ci)/2, df = n - 1) * s/sqrt(n)
+    return(c(upper = a + error, mean = a, lower = a - error))
+}
+
+vif.mer <- function (fit) {
+## adapted from rms::vif
+
+  v <- vcov(fit)
+  nam <- names(fixef(fit))
+
+  ## exclude intercepts
+  ns <- sum(1 * (nam == "Intercept" | nam == "(Intercept)"))
+  if (ns > 0) {
+    v <- v[-(1:ns), -(1:ns), drop = FALSE]
+  nam <- nam[-(1:ns)]
+  }
+
+  d <- diag(v)^0.5
+  v <- diag(solve(v/(d %o% d)))
+  names(v) <- nam
+  v
+}
+
+
+
+# A function to center variables
+c. <- function (x) scale(x, scale = FALSE)
+
+# Custom function to format ordinal regression results in a nice table
+# Custom function to format ordinal regression results in a nice table
+clm_table <- function(mod, digits=3, ...) {
+  table <- summary(mod)$coefficients %>%
+  data.frame() %>%
+  rlang::set_names(c("beta", "se", "z", "p")) %>%
+  rownames_to_column("parameter") %>%
+  mutate(
+    parameter = parameter %>%
+      str_replace_all(
+        .,
+        str_c("(", str_c(names(attr(mod$terms, "dataClasses"))[attr(mod$terms, "dataClasses") %in% c("factor", "logical", "character")], collapse="|"), ")"),
+        "\\1 = "
+      ) %>%
+      str_replace_all(
+        .,
+        "(?<=^|\\:)(?:c\\.\\()([^:]+)(?:\\))(?=$|\\:)",
+        "\\1 (centered)"
+      ) %>%
+    str_replace_all(., fixed(":"), " × "),
+  significance = case_when(
+      p < 0.001 ~ "***",
+      p < 0.01 ~ "**",
+      p < 0.05 ~ "*",
+      p < 0.1 ~ ".",
+      TRUE ~ ""
+      ),
+      is_threshold = parameter %in% names(mod$alpha)
+  ) %>%
+  mutate_at(c("z", "p", "significance"), ~ ifelse(is_threshold, NA, .)) %>%
+  arrange(is_threshold) %>%
+  mutate(
+    type = c("Effects", rep("", n()-sum(is_threshold)-1), "Thresholds", rep("", sum(is_threshold)-1))
+  ) %>%
+  dplyr::select(type, parameter, beta, se, z, p, significance) %>%
+  mutate(
+    p = ifelse(p<0.001, "<0.001", format(round(p, 3), nsmall=3))
+  ) %>%
+  kable(digits=3, escape=F, col.names=c("", "Parameter", "Estimate", "Std. Error", "$z$", "$p$", ""), align="llrrrrl", ...) %>%
+  column_spec(1, bold=TRUE) %>%
+  kable_styling()
+  
+  return(table)
+}
+options(knitr.kable.NA = '')
+
+# Custom function to compute summary data for an ordinal regression model, to be plotted. The "type" argument specifies whether the data are for a latent variable plot, a distributional plot, or a mean rating plot. 
+clm_plotdat = function(mod, focal.predictors, type="latent", response.coding=NULL, ...) {
+  # For latent variable plot, draw straight from Effect
+  if (type=="latent") {
+    latentdat <-
+      Effect(focal.predictors, mod, latent=TRUE, ...) %>%
+      as.data.frame() %>%
+      dplyr::select(-se) %>%
+      rename("pred"=fit, "lci"=lower, "uci"=upper)
+    return(latentdat)
+  }
+  
+  # Get distributional data (used for both of other plots)
+  distdat <-
+    Effect(focal.predictors, mod, ...) %>%
+    as_tibble() %>%
+    dplyr::select(all_of(focal.predictors), matches("^(?:(?:L|U)\\.)?prob")) %>%
+    pivot_longer(
+      cols = -all_of(focal.predictors),
+      names_to = c(".value", "response"),
+      names_pattern = "^((?:(?:L|U)\\.)?prob)\\.(.+)$"      
+    ) %>%
+    rename("pred"=prob, "lci"=L.prob, "uci"=U.prob) %>%
+    mutate(
+      response = rep_len(mod$y.levels, n())
+    )
+  if (type=="dist") return(distdat)
+  
+  if (type=="mean") {
+    # Get threshold values
+    thresholds = c(-Inf, as.numeric(mod$alpha), Inf)
+    
+    # Get response coding
+    if (is.null(response.coding)) {
+      response.coding = 1:(length(mod$y.levels))
+      names(response.coding) = mod$y.levels
+    }
+    
+    # Build latent variable data based on distributional data
+    # Note: this is a HACK since drawing latent variable data from Effect doesn't account for threshold variability. The confidence intervals assume fixed thresholds, which obscures patterns in variation of the thresholds; CIs are thus not correct (but are better than what would be obtained from direct transformation of the latent variable from Effect)
+    
+    # Get distribution-based latent variable data, assuming fixed thresholds
+    latentdat <- distdat %>%
+      group_by_at(focal.predictors) %>%
+      summarise(
+        pred = qlogis(1-pred[1]) + thresholds[2],
+        lci = qlogis(1-uci[1]) + thresholds[2],
+        uci = qlogis(uci[length(uci)]) + thresholds[length(thresholds)-1]
+      ) %>%
+      as.data.frame()    
+    
+    # Get probabilities for each response option
+    meandat <- latentdat
+    for (i in 1:length(mod$y.levels)) {
+      meandat[, paste0("(", mod$y.levels[i], ").prob")] = plogis(latentdat[, "pred"] - thresholds[i]) - plogis(latentdat[, "pred"] - thresholds[i+1])
+      meandat[, paste0("(", mod$y.levels[i], ").lci")] = plogis(latentdat[, "lci"] - thresholds[i]) - plogis(latentdat[, "lci"] - thresholds[i+1])
+      meandat[, paste0("(", mod$y.levels[i], ").uci")] = plogis(latentdat[, "uci"] - thresholds[i]) - plogis(latentdat[, "uci"] - thresholds[i+1])
+    }
+    meandat <- meandat %>%
+      dplyr::select(-pred, -uci, -lci) %>%
+      pivot_longer(
+        cols = -all_of(focal.predictors),
+        names_to = c("response", ".value"),
+        names_pattern = "^\\((.+)\\)\\.([^.]+)$"
+      ) %>%
+      left_join(
+        data.frame(response=names(response.coding), code=response.coding, stringsAsFactors=FALSE),
+        by = "response"
+      ) %>%
+      group_by_at(focal.predictors) %>%
+      summarise(
+        pred = sum(prob * code),
+        lci = sum(lci * code),
+        uci = sum(uci * code)
+      ) %>%
+      ungroup()
+    return(meandat)
+  }
+}
+
+# Custom function to get the information about thresholds, in a nice format for plotting
+clm_thresholds = function(mod) {
+  thresholds <- summary(mod)$coefficients %>%
+  as.data.frame() %>%
+  rownames_to_column() %>%
+  dplyr::select(1:3) %>%
+  set_names(c("label", "value", "se")) %>%
+  filter(label %in% names(mod$alpha)) %>%
+  mutate(
+    lci = value - 1.96*se,
+    uci = value + 1.96*se
+  ) %>%
+  dplyr::select(-se)
+  return(thresholds)
+}
+
+# A function to add phonotactic scores from a file to the dataset
+add_scores = function(data, scoreFile, scoreName) {
+  scored_data <- data %>%
+    left_join(
+      read_csv(scoreFile, col_types=cols_only(item=col_character(),
+                                              logprob=col_double())
+               )%>%
+        transmute(
+          item = item,
+          !!scoreName := logprob / (nchar(item) + 1)
+        )
+      , by="item"
+    )
+  return(scored_data)
+}
+
+# A function to run shell scripts on Windows or UNIX-based OS
+run_shell = function(cmd) {
+  if (Sys.info()[['sysname']] == "Windows") {
+    return(shell(cmd, flag="", ignore.stdout=TRUE, ignore.stderr=TRUE))
+  } else {
+    return(system(cmd, ignore.stdout=TRUE, ignore.stderr=TRUE))
+  }
+}
+
+# A function to highlight the minimum value in a column, for presentation in a kable
+# Highlighting is accomplished by coloring red
+highlight_min = function(col, digits=1) {
+  rounded <- round(col, digits)
+  i <- which(rounded==min(rounded))
+  highlighted <- cell_spec(format(rounded, nsmall=digits), align="r")
+  highlighted[i] <- cell_spec(format(rounded[i], nsmall=digits), align="r", color="red")
+  return(highlighted)
+}
+
+# A function to display a table of numbers
+display_table = function(dat, caption, digits=3, label=NA, highlight=c()) {
+  table <- dat %>%
+    mutate_at(highlight, ~ highlight_min(., digits=digits)) %>%
+    kable(caption=caption, digits=digits, escape=F, label=label) %>%
+    kable_styling()
+  return(table)
+}
+```
+
+
+# Data Preparation and Method
+
+## Stimuli
+
+### Creation of Stimuli
+
+The total set of stimuli generated for this experiment consists of 1054 tokens, made up of 527 pairs of real word (or just "word") and non-word pairs. These pairs were hand-selected from larger candidate sets in order to meet various criteria.
+
+The candidate set of words was created by extracting words from the dictionary. The candidate set of non-words was created by generating an exhaustive set of phonotactically legal phoneme sequences that were not attested as words in the dictionary (where "phonotactically legal" means no consonant clusters or codas). In both cases, each candidate word/nonword was required to:  
+
+1. consist of at least 3 phonemes;  
+2. consist of 3 or fewer morae, to remove the possibility of morphological complexity;  
+3. not be spelled in the same way as an existing English word;  
+4. not be (or be likely to be interpreted as) a loan or personal name;  
+5. not match any of the known reduplication templates for te reo Māori (see Keegan, 1996);  
+6. not be judged to be morphologically complex by a fluent Māori-speaking RA or a morphological parsing algorithm, even when vowel length distinctions are ignored;  
+7. not contain a highly transparent and productive affix (*kai-*, *whaka-* / *-faka*, *-[C]ia*, *-[C]anga* / *-[C]aNa*) that was not identified in (6).  
+
+Where possible, each candidate word was manually matched with a highly-similar candidate nonword that differed by at most 0.1 in [phonotactic score] (typically much lower, on the order of 0.01). The nonword matched to a word was required to:  
+
+1. have the same number of syllables, morae, and phonemes as the word;  
+2. have consonants, vowels, long vowels, and diphthongs all in the same position as the word;  
+3. differ from the word in as few phonemes as possible (i.e. a Levenshtein edit distance of 1-3 where possible).  
+
+If it was not possible to find a matching nonword for a word, that word was discarded.
+
+Following this procedure, there were six pairs of stimuli that contained a macron. These were removed, leaving **1042 tokens, in 521 pairs**.
+
+The contrast between words and nonwords is referred to in the R code as `type`.
+
+### Phonotactic Score
+
+We calculated phonotactic score as a measure of how "typical" or "Māori-like" a word or non-word is. In this measure, a higher value represents a highly typical Māori (non-)word, while a lower value represents a highly atypical Māori (non-)word. 
+
+The SRI Language Modelling Toolkit (SRILM) was used to calculate the phonotactic scores of the stimuli, following Oh et al. (2020) (see their Detailed Materials and Methods Supplement for further details). The phonotactic score is the average base-10 log probability of the trigrams of phonemes in a stimulus, including the final trigram that generates the word-end symbol, calculated with Witten-Bell smoothing over word types in the Te Aka Māori Dictionary. For example, the phonotactic score of the word *ako* is based on the frequencies of its constituent trigrams `##a`, `#ak`, `ako`, and `ko#` across word types in the dictionary.
+
+For the purposes of creating stimuli, words and nonwords were required to match according to two separate phonotactic scores. One of these scores was based on word types exactly as they appear in the Te Aka Dictionary, including all vowel length contrasts. The other was based on word types with the distinction between all long vowels and their short counterparts collapsed (i.e. all long vowels shortened prior to modeling). Because the stimuli were matched according to both phonotactic scores, we can be confident that each word and nonword are as phonotactically similar as possible to each other, regardless of how participants cognitively represent and track vowel length.
+
+For the purposes of analysis, we used only the phonotactic score that collapses vowel length distinctions, following the finding by Oh et al. (2020) that it correlates better with human phonotactic ratings. In the R code in this document, this measure is referred to as `score.shortv`. In the rest of this document, the term "phonotactic score" refers the scores based on this length-neutralised model.
+
+The set of stimuli were binned into three equally-sized categories based on the phonotactic score of each stimulus representing "high", "medium", and "low" likeness to the overall Māori lexicon: $N^\text{high} = 175$, $N^\text{medium} = 174$, $N^\text{low} = 172$.
+
+### Neighbourhood Count
+
+Neighbourhood count is a general measure of the number of minimal pairs that a given word type has, i.e. the number of other word types that are a Levenshtein edit distance of 1 from it. A host of studies have shown the processing of a word is affected by the number of neighbors that it has.
+
+To deal with the fact that different words have different ranges of *possible* neighbor counts, we use a related measure that we refer to as a *neighbourhood occupancy rate*. To calculate neighborhood occupancy rate, we consider how many possible neighbors a word may have, by counting the number of **unique, phonotactically legal** strings that can be formed by adding, deleting, or substituting a single phoneme. We then divide the actual number of neighbors (as counted in the Te Aka Dictionary) by the possible number of neighbors, to reflect the proportion of possible neighbors that actually exist in the language.
+
+For example, the non-word *aNu* (written *angu*) has a neighbourhood count of 12 in the Te Aka Dictionary. Calculating its phonotactically legal edits results in 87 possible neighbours, broken down as follows:  
+
+* 4 possible vowel addition locations $\times$ 10 possible vowels, minus 2 cases where insertion of the same vowel in two separate locations yields the same form (*aaNu*, *aNuu*);  
+* 1 possibe consonant addition location (word-initially) $\times$ 10 possible consonants;  
+* 2 possible deletions (final /u/ cannot be deleted without creating an illegal consonant coda);  
+* 2 possible vowel-vowel substitutions $\times$ 9 possible other vowels to substitute;  
+* 1 possible consonant-consonant substition $\times$ 9 possible other consonants to substitute;  
+* 1 possible consonant-vowel substitution $\times$ 10 possible vowels to substitute;  
+* 0 possible vowel-consonant substitutions (any substitution would create an illegal consonant cluster).
+
+Consequently, this item has a neighbourhood occupancy rate of $12/87 = 0.138$. In the R code in this document, this measure is referred to as `norm.neighbors`.
+
+### Frequency
+
+In order to measure the frequency of the word stimuli, two Māori text corpora were used: the MAONZE corpus, and the Māori Broadcast Corpus (MBC). Combined, there are a total of approximately 1.35 million words. We retrieved the raw count of each word stimulus in these corpora. These raw counts were converted into frequency per million words.
+
+Following this, each stimulus was assigned to one of four bins:  
+
+* High Frequency (100+ per million)  
+* Mid Frequency (6-99 per million)  
+* Low Frequency (1-5 per million)  
+* Unattested (0 per million)  
+
+Non-words were assigned the bin of their real counterparts. 
+
+Table 1 lists the number of pairs, the mean length (by phoneme size), and the mean [Phonotactic Score] for each frequency bin.
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+Table 1: Each Frequency Category with the Number of Pairs in Each Category, the Mean Length of Stimuli in that Category, as well as Mean Phonotactic Score
+</caption>
+</table>
+
+
+| Category   | Number of Pairs| Mean length | Mean Score |
+|:----------:|:--------------:| :----------:|:----------:|
+|   High     |         64     |    4.25     |  -0.8004   |
+|   Mid      |         101    |    4.39     |  -0.8055   |
+|   Low      |         107    |    4.54     |  -0.807    |
+| Unattested |         249    |    5.21     |  -0.791    |
+
+For the [Identification Task], we did not use the unattested words or their non-word counterparts. For the [Wellformedness Rating Task], we used non-words from all frequency bins, including the unattested bin.
+
+
+## Experimental Methodology
+
+Both tasks were conducted remotely and online, via a standard web browser. They were advertised to potential participants on Facebook. Only people living in New Zealand were targeted by the advertisement.
+
+Participants completed both tasks in a single sitting. The order of the tasks was randomised. At the beginning of the experiment, participants were presented with a consent form, explaining the basic details of the experiment. Following this, they began the experiment. 
+
+Each task included brief instructions at the beginning for what they were expected to do. For the Identification Task, participants were told that they would be shown Māori words, in which some were real and some were not, and that they would rate these words based on how confident they were that the word was real. For the Wellformedness Rating Task, participants were told that they would be shown fake Māori words, and for each word they weould "rate how good this word would be as a Māori word". They were given the examples of *otiko* as a "good" Māori non-word and *iengāo* as a bad Māori non-word (these non-words had high and low phonotactic scores, respectively, and were not used as stimuli in the experiment).
+
+At the end of the experiment, the participants were asked to complete a questionnaire. This questionnaire included demographic and social questions Further details of the questionnaire are in [Questionnaire and Participant Demographics].
+
+### Identification Task
+
+For the Identification Task, 20 stimulus pairs were randomly sampled from each of the high, mid, and low frequency bins. This yielded 60 real words and 60 matched non-words, for a total of 120 stimuli. Each participant in the experiment received a random sample, and each sample was shuffled into a random order.
+
+Participants were presented with each stimulus one at a time and rated it on a 5-point Likert scale based on their confidence that it was a Māori word. A rating of 1 was labeled as "confident that this is NOT a Māori word", while a rating of 5 was labeled as "confident that this is a Māori word". 
+
+### Wellformedness Rating Task
+
+For the Wellformedness Rating Task, 40 non-word stimuli were randomly sampled from each of the high, medium, and low phonotactic score bins, for a total of 120 stimuli. 
+
+Participants were presented with each stimulus one at a time and rated it on a 5-point Likert scale based on how Māori-like they perceived it to be. A rating of 1 was labeled as "non-Māori-like non-word", while a rating of 5 was labeled as "highly Māori-like non-word". 
+
+
+## Data Filtering and Preparation
+
+### Preliminary Data Cleaning and Filtering
+
+The experiment dataset has the following column keys:
+
+* `workerId`: The unique ID associated with each participant.  
+* `enteredResponse`: the response to the stimuli that the participant gave.  
+* `prompt`: The stimuli that the participant responded to.  
+* `reactionTime`: the length of time the participant took to respond to the stimuli, in milliseconds.  
+* `trialNumber`: the number of the stimulis in the order that the participant is prompted to give their rating, from 1 - 240  
+
+
+In all, there were 268 participants who gave at least one answer to the experiment. Prior to reading into this R markdown document, we removed participants that did not complete the experiments. We identified participants that completed based on whether they completed every item in the experiment. The experimental data include 240 stimuli + 3 instruction pages requiring participant responses = 243 items. Any participant with less than 243 items associated with their worker ID did not complete the experiment. After filtering these worker IDs, there were 226 participants left over.
+
+Furthermore, certain participants accidentally rated the same stimulus more than once due to internet connection or server errors. When this occurred on the last stimulus, this results in duplicate rows in the experimental data. These duplicates are identifiable based on whether there are more than 243 rows associated with a worker ID. In one instance, there are two repetitions of the final stimuli, and these both needed to be removed. There were 10 participants with these repeat stimuli, and these results were corrected by removing all repeat answers apart from the first answer. Note that the actual responses were identical in all instances of this data error.
+
+In rare cases, duplicates occurred on non-final stimuli, and this resulted in the next stimulus being skipped. The result is that these participants answered a max of 239 stimuli. Consequently, while they have 243 rows associated with their data, they did not complete the experiment. As they did not complete the experiment, these participants need to be identified and removed. We identified these participants based on whether or not they have 240 unique "trialNumber" keys present. In all, there were two participants that were removed due to this error.
+
+
+The survey dataset consists of a `workerId` column, and following this each question is numbered from Q1 - Q26. We recoded these column names to make them meaningfully reflect the survey question involved (see [Questionnaire and Participant Demographics] for a description of the survey questions). Prior to reading the survey into this document, several open-ended questions were manually recoded:
+
+* Q6 -- gender (recoded for whether participants were male (`M`), female (`F`), non-binary (`NB`), or preferred not to say (`NS`))  
+* Q7 -- ethnicity (recoded for whether the participant was Māori (`M`), non-Māori (`Non M`), or the participant did not state their ethnicity)  
+* Q18 -- duration (recoded for whether the participant has lived in their current region for < 10 years (`short`) or >= 10 years (`long`))  
+* Q21 -- otherLangs (recoded for the language other than their first language participants speak)  
+
+
+### Filtering Based on Survey Responses
+
+We used answers in the post-experiment questionnaire to filter participants. The following exclusions were made:
+
+* 3 participants were removed for not completing the post-experiment questionnaire;  
+* 9 participants were removed for indicating that they could speak or understand Māori at least "fairly well";  
+* 3 participants were removed for indicating that they had studied Linguistics;  
+* 12 participants were removed for indicating that they had lived outside NZ for longer than a year since they were 7;  
+* 5 participants were removed for indicating that their first language was not English;  
+* 6 participants were removed for indicating that they learned their first language outside New Zealand and have lived in their current location for a short period of time;  
+* 5 participants were removed for indicating that they spoke a Polynesian language;  
+* 4 participants were removed for completing the experiment too quickly, as indicated by having a median reaction time that was below two standard deviations of the grand mean of participant-wise median reaction times.
+
+There are 187 participants remaining after this filtering process.
+
+```{r filter_survey}
+experiment <- read_csv("docs/experiment_clean.csv")
+survey <- read_csv("docs/survey_clean.csv")
+
+# incomplete survey data
+experiment <- experiment[experiment$workerId %in% survey$workerId,] # 3 participants did not complete survey
+
+# speaking and understanding of Māori
+speakMaoriIDs <- unique(survey[survey$speakMaori >= 3,]$workerId) # No worker IDs indicated that they spoke Māori "fairly well" or greater
+compMaoriIDs <- unique(survey[survey$compMaori >= 3,]$workerId) #9 worker IDs indicated that they understood Māori "fairly well" or greater
+
+experiment <- experiment[!experiment$workerId %in% speakMaoriIDs,]
+experiment <- experiment[!experiment$workerId %in% compMaoriIDs,]
+
+remove(speakMaoriIDs, compMaoriIDs)
+
+# studying linguistics
+linguisticIDs <- unique(survey[survey$linguistics == "yes",]$workerId) # 3 worker IDs indicated that have studied linguistics
+experiment <- experiment[!experiment$workerId %in% linguisticIDs,]
+remove(linguisticIDs)
+
+# lived outside NZ
+outsideNzIDs <- unique(survey[survey$outsideNz == "Yes",]$workerId) # 12 worker IDs indicated that have lived outside of New Zealand for longer than a year since they were 7
+experiment <- experiment[!experiment$workerId %in% outsideNzIDs,]
+remove(outsideNzIDs)
+
+# non-English first lg
+nonEnglishIDs <- unique(survey[survey$firstLang == "NonEnglish",]$workerId) # 5 worker IDs indicated that they do not speak English as a first language
+experiment <- experiment[!experiment$workerId %in% nonEnglishIDs,]
+remove(nonEnglishIDs)
+
+# English outside NZ
+shortNonEngIDs <- unique(survey[survey$firstLangCountry == "Other" & survey$duration == "short",])$workerId # 6 worker IDs
+experiment <- experiment[!experiment$workerId %in% shortNonEngIDs,]
+remove(shortNonEngIDs)
+
+# polynesian language
+polyIDs <- unique(survey[survey$anyPolynesian == "Yes",])$workerId # 5 worker IDs
+experiment <- experiment[!experiment$workerId %in% polyIDs,]
+remove(polyIDs)
+
+# fast participants
+workerIDmedians <- experiment %>% group_by(workerId) %>% mutate(medianTime = median(reactionTime)) %>% subset(select=c(workerId, medianTime)) %>% unique()
+medianSd <- sd(workerIDmedians$medianTime)
+twoSdCutoff <- (mean(workerIDmedians$medianTime) - medianSd) - medianSd
+fastIDs <- workerIDmedians$workerId[workerIDmedians$medianTime < twoSdCutoff] # 4 IDs
+
+experiment <- experiment[!experiment$workerId %in% fastIDs,]
+
+remove(workerIDmedians, medianSd, twoSdCutoff, fastIDs)
+```
+
+Next, we split the experimental results into two datasets, taking into account the fact that participants completed the two tasks in random order:
+
+* `wordIdent` The Word Identification Task Data  
+* `wellForm` The Well-Formedness Rating Task Data  
+
+For each task, we filtered out participants that did not display much variation in their responses, as identified by the standard deviation of their responses (i.e. the 1-5 rating) being below two standard deviations of the grand mean of participant-wise response standard deviations. For the Identification Task, there were 4 participants that were removed. For the Wellformedness Rating Task, there were 3 participants that were removed. The result is that there are slightly differing participant bases in the analysis of the [Word Identification Task] and the [Wellformedness Rating Task], although in the latter case, given the Word Identification Task scoring measure, all participants that were analysed were also retained in the Word Identification Task.
+
+```{r filter_task}
+# split data based on task
+expDetails <- read_csv("docs/participant_experiment_details.csv")
+experimentIDs <- experiment$workerId %>% unique()
+
+identTask <- tibble()
+wellFormTask <- tibble()
+for(experimentId in experimentIDs) {
+  if(expDetails$first_experiment[expDetails$worker == experimentId] == "Discrimination") {
+    identTask <- bind_rows(identTask, experiment[experiment$workerId == experimentId & experiment$trialNumber %in% 1:120,])
+    wellFormTask <- bind_rows(wellFormTask, experiment[experiment$workerId == experimentId & experiment$trialNumber %in% 121:240,])
+  } else {
+    wellFormTask <- bind_rows(wellFormTask, experiment[experiment$workerId == experimentId & experiment$trialNumber %in% 1:120,])
+    identTask <- bind_rows(identTask, experiment[experiment$workerId == experimentId & experiment$trialNumber %in% 121:240,])    
+  }
+}
+
+remove(expDetails, experimentIDs, experimentId)
+
+# filter participants from each task based on variation
+identTaskWorkerIDmedians <- identTask %>% group_by(workerId) %>% mutate(responseSd = sd(enteredResponse)) %>% subset(select=c(workerId, responseSd)) %>% unique()
+sdSd <- sd(identTaskWorkerIDmedians$responseSd)
+twoSdCutoff <- (mean(identTaskWorkerIDmedians$responseSd) - sdSd) - sdSd
+lowSdIds <- identTaskWorkerIDmedians$workerId[identTaskWorkerIDmedians$responseSd < twoSdCutoff] #4
+identTask <- identTask[!identTask$workerId %in% lowSdIds,]
+
+remove(identTaskWorkerIDmedians, sdSd, twoSdCutoff, lowSdIds)
+
+wellFormWorkerIDmedians <- wellFormTask %>% group_by(workerId) %>% mutate(responseSd = sd(enteredResponse)) %>% subset(select=c(workerId, responseSd)) %>% unique()
+sdSd <- sd(wellFormWorkerIDmedians$responseSd)
+twoSdCutoff <- (mean(wellFormWorkerIDmedians$responseSd) - sdSd) - sdSd
+lowSdIds <- wellFormWorkerIDmedians$workerId[wellFormWorkerIDmedians$responseSd < twoSdCutoff] #3
+wellFormTask <- wellFormTask[!wellFormTask$workerId %in% lowSdIds,]
+
+remove(wellFormWorkerIDmedians, sdSd, twoSdCutoff, lowSdIds)
+```
+
+Finally, we merged the properties of each stimulus (described in [Stimuli]) with the experimental results, together with the survey results. The resulting datasets are the full datasets used for statistical analysis.
+
+```{r combine_datasets} 
+stimuli <- read_csv("docs/stimuli.csv")
+
+# fix the column names for the stimulus in identTask, wellFormTask, and stimuli
+colnames(identTask)[colnames(identTask) == "prompt"] <- "word"
+colnames(wellFormTask)[colnames(wellFormTask) == "prompt"] <- "word"
+colnames(stimuli)[colnames(stimuli) == "item"] <- "word"
+
+identTask <- merge(identTask, stimuli, by = "word")
+wellFormTask <- merge(wellFormTask, stimuli, by = "word")
+
+identTask <- merge(identTask, survey, by = "workerId")
+wellFormTask <- merge(wellFormTask, survey, by = "workerId")
+
+remove(experiment, stimuli, survey)
+
+
+# Tidy the combined datasets
+
+identTask$word = as.character(identTask$word)
+Encoding(identTask$word) = "UTF-8"
+identTask <- identTask %>% mutate(bin = NA)
+identTask$bin[identTask$freq.category == "low"] <- 1
+identTask$bin[identTask$freq.category == "mid"] <- 2
+identTask$bin[identTask$freq.category == "high"] <- 3
+
+wellFormTask$word <- as.character(wellFormTask$word)
+Encoding(wellFormTask$word) = "UTF-8"
+wellFormTask$enteredResponse <- as.factor(wellFormTask$enteredResponse)
+
+```
+
+
+## Questionnaire and Participant Demographics
+
+The post-experiment questionnaire consisted of 26 questions. There were four question types: (i) yes/no questions; (ii) single answer out of multiple options; (iii) multiple answers out of multiple options; (iv) text input. For the purpose of coding answers, options in Questions 1, 2, 13, 14 were assigned numerical values, based on the number of answers the participant gave.
+
+1. How well are you able to speak Maori?  
+   * Not at all (0)  
+   * No more than a few words for phrases (1)  
+   * Not very well (2)  
+   * Fairly well (3)  
+   * Well (4)  
+   * Very well (5)
+
+2. How well are you able to understand/read Maori?  
+   * Not at all (0)  
+   * No more than a few words or phrases (1)  
+   * Not very well (2)  
+   * Fairly well (3)  
+   * Well (4)  
+   * Very well (5)
+
+3. What is the highest level of education you have studied Te Reo Māori?  
+   * Never studied it  
+   * At postgraduate level in university  
+   * At undergraduate level in university  
+   * At high school  
+   * At primary/intermediate school
+
+4. Have you ever taken a university-level course in linguistics?  
+   * Yes, I have taken a linguistics course  
+   * No, but I have studied a language at university  
+   * No, I have no university-level study in linguistics or languages
+
+5. Which age group do you belong to?  
+   * 18-29  
+   * 30-39  
+   * 40-49  
+   * 50-59  
+   * +60
+
+6. Please state your gender.  *(free response)*
+ 
+7. Please state your ethnicity.  *(free response)*
+
+8. Were you born in New Zealand?  
+   * Yes  
+   * No
+
+9. Which island have you spent more time on?  
+   * North Island  
+   * South Island  
+   * Equal measure on both
+
+10. In the time since you were 7, have you ever lived outside of NZ for a period of more than a year?  
+    * Yes  
+    * No
+
+11. In which region have you spent the largest amount of time since you were 7?  
+    * Northland  
+    * Auckland  
+    * Waikato  
+    * Bay of Plenty  
+    * Gisborne  
+    * Hawke's Bay  
+    * Taranaki  
+    * Wanganui  
+    * Manawatu  
+    * Wairarapa  
+    * Wellington  
+    * Nelson Bays  
+    * Marlborough  
+    * West Coast  
+    * Canterbury  
+    * Timaru  
+    * Oamaru  
+    * Otago  
+    * Southland  
+    * Overseas
+
+12. Your highest education is:  
+    * High School  
+    * Undergraduate Degree  
+    * Graduate Degree
+
+13. How often do you think you are exposed to Māori language in your daily life, by means of Māori radio, Māori TV, online media?  
+    * Less than once a year (1)  
+    * Less than once a month (2)  
+    * Less than once a week (3)  
+    * Less than once a day (4)  
+    * Multiple times a day (5)
+
+14. How often do you think you are exposed to Māori language in your daily life, in conversation at work, at home, in social settings?  
+    * Less than once a year (1)  
+    * Less than once a month (2)  
+    * Less than once a week (3)  
+    * Less than once a day (4)  
+    * Multiple times a day (5)
+
+15. In the past five years, have you had any children living with you who have attended preschool or primary school in New Zealand?  
+    * Yes
+    * No
+
+16. Please tick all boxes that apply.  
+    * I can give a mihi in Māori  
+    * I can sing a few songs in Māori  
+    * I can sing a NZ national anthem in Māori  
+    * I know how to say some basic phrases (e.g. My name is..., I'm from...) in Māori  
+    * I know how to say some commands (e.g. Sit down / Come here) in Māori  
+    * I know how to say some greetings in Māori  
+    * I know how to say some numbers in Māori  
+    * I know how to say some body parts in Māori  
+    * I know how to say some colors in Māori
+
+17. What region of New Zealand do you live in currently? (Please choose “overseas” if you are living outside of New Zealand).  
+    * Northland  
+    * Auckland  
+    * Waikato  
+    * Bay of Plenty  
+    * Gisborne  
+    * Hawke's Bay  
+    * Taranaki  
+    * Wanganui  
+    * Manawatu  
+    * Wairarapa  
+    * Wellington  
+    * Nelson Bays  
+    * Marlborough  
+    * West Coast  
+    * Canterbury  
+    * Timaru  
+    * Oamaru  
+    * Otago  
+    * Southland  
+    * Overseas
+
+18. How long have you been living there?  *(free response)*  
+
+19. Please state your first language (the language you speak/use most of your time).  *(free response)*  
+
+20. What country were you living in when you first learned this language?  *(free response)*  
+
+21. Please list any other languages that you can speak well.  *(free response)*  
+
+22. Have you lived in Hawaii?  
+    * Yes  
+    * No
+
+23. Do you speak/understand any Polynesian languages such as Hawaiian, Tahitian, Sāmoan, or Tongan?  
+    * Yes  
+    * No
+
+24. If you replied yes to question 22, please state the language you know.  *(free response)*  
+
+25. How do you feel about the following statement: “I have a lot of respect for people who can speak Māori fluently.”  
+    * Strongly disagree  
+    * Somewhat disagree  
+    * Neither agree nor disagree  
+    * Somewhat agree  
+    * Strongly agree
+
+26. How do you feel about the following statement: “Some Māori language education should be compulsory in school for all children.”  
+    * Strongly disagree  
+    * Somewhat disagree  
+    * Neither agree nor disagree  
+    * Somewhat agree  
+    * Strongly agree
+
+Figure 1 presents a selection of the results of the 187 participants' answers. 
+
+Participants generally rated themselves poorly at understanding or speaking Māori. Q1 "How well are you able to speak Māori?" & Q2 "How well are you able to understand/read Māori" requested participants to rate themselves from "Not at all" to "very well", with a scale of 6 options. These options were given the numerical values 0--5 and were combined for a Māori ability score from 0 to 10.  130 participants (69.5%) scored 2, which indicates generally very poor abilities. Due to the filtering process described above, the maximum score for participants retained in the analysis is 4 (because anything higher would entail at least one self-rating of "Fairly well" (3) or greater), but only 14 participants (7.5%) scored 4. 
+
+The questionnaire asked participants to list basic Māori skills they are capable of (Basic Knowledge of Māori, Q15).  172 participants (92.0%) were able to carry out at least three of the following basic skills: giving a *mihi* (greeting), singing Māori songs, singing the New Zealand national anthem in Māori, knowing very basic phrases, saying basic commands (e.g. *e tū!* "stand up!"), saying greetings, saying some numbers, knowing the names of body parts, and knowing the names of some colours. While the questionnaire did not ask how the participants learned these skills, students are frequently taught them in the New Zealand primary and secondary school system.
+
+Q13 "How often do you think you are exposed to the Māori language in your daily life, by means of Māori radio, Māori TV, online media?" & Q14 "How often do you think you are exposed to Māori language in your daily life, in conversation at work, at home, in social settings?" requested participants rate their amount of exposure to Māori out of five options, from "Less than once a year" to "Multiple times a day". These options were coded from 1--5, for a total Māori exposure score from 2--10. 155 participants (82.9%) indicated an exposure rate of 6 or greater, which indicates that most participants were exposed to Māori at least once a month.
+
+Q25 'How do you feel about the following statement: "I have a lot of respect for people who can speak Māori fluently"' & Q26 'How do you feel about the following statement: "Some Māori language education should be compulsory in school for all children"' requested participants to rate their agreement to these questions on a Likert scale. These options were coded from 1--5, for a total Māori attitude score of 1--10. There were 119 participants (63.6%) with a score of 10, indicating an answer of 5 to both questions, and 165 participants (88.2%) with a score of at least 8. These indicate that generally participants had very positive attitudes toward Māori. 
+
+```{r Figure 1, fig.width=9.5, fig.height=6.5, fig.cap="Figure 1: Overview of participants' demographics"}
+# Code for Figure S1: Plot participant demographics
+
+
+dataExpCombined <- bind_rows(identTask, wellFormTask)
+dataExpCombined <- dataExpCombined %>% distinct()
+
+# Basic knowledge of Māori
+DataML <- unique(dataExpCombined[,c("maoriList","workerId")]); DataML$maoriList <- as.factor(DataML$maoriList)
+DataMLT <- as.data.frame(table(DataML$maoriList)); names(DataMLT) <- c("maoriList","freq")
+FigS1DataML <- ggplot(DataML, aes(x=maoriList,color=maoriList,fill=maoriList)) +
+  geom_bar(aes(),size=.1,show.legend=F) + 
+  geom_text(data=DataMLT, aes(x=maoriList,y=freq,label=freq), color="black", vjust=-0.5,size=3) + 
+  labs(x="Basic knowledge of Māori",y="Number of participants") + 
+  coord_cartesian(ylim=c(0, 50)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataML, DataMLT)
+
+# Māori proficiency 
+DataMP <- unique(dataExpCombined[,c("maoriProf","workerId")]); DataMP$maoriProf <- as.factor(DataMP$maoriProf)
+DataMPT <- as.data.frame(table(DataMP$maoriProf)); names(DataMPT) <- c("maoriProf","freq")
+FigS1DataMP <- ggplot(DataMP, aes(x=maoriProf, color=maoriProf, fill=maoriProf)) + 
+  geom_bar(aes(),size=.1,show.legend=F) + 
+  geom_text(data=DataMPT, aes(x=maoriProf,y=freq,label=freq), color="black", vjust=-0.5,size=3) + 
+  labs(x="Māori proficiency",y="Number of participants") + 
+  coord_cartesian(ylim=c(0, 140)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataMP, DataMPT)
+
+# Exposure to Māori
+DataME <- unique(dataExpCombined[,c("maoriExpo","workerId")]); DataME$maoriExpo <- as.factor(DataME$maoriExpo)
+DataMET <- as.data.frame(table(DataME$maoriExpo)); names(DataMET) <- c("maoriExpo","freq")
+FigS1DataME <- ggplot(DataME, aes(x=maoriExpo, color=maoriExpo, fill=maoriExpo)) + 
+  geom_bar(aes(),size=.1,show.legend=F) + 
+  geom_text(data=DataMET, aes(x=maoriExpo,y=freq,label=freq), color="black", vjust=-0.5,size=3) +
+  labs(x="Māori exposure",y="Number of participants") + 
+  coord_cartesian(ylim=c(0, 50)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataME, DataMET)
+
+# Gender
+DataGender <- unique(dataExpCombined[,c("gender","workerId")])
+DataGenderT <- as.data.frame(table(DataGender$gender)); names(DataGenderT) <- c("gender","freq")
+FigS1DataGender <- ggplot(DataGender, aes(x=gender,color=gender,fill=gender)) + 
+  geom_bar(aes(),size=.1,show.legend=F) + 
+  geom_text(data=DataGenderT, aes(x=gender,y=freq,label=freq), color="black", vjust=-0.5,size=3) +
+  labs(x="Gender",y="Number of participants") + 
+  coord_cartesian(ylim=c(0, 150)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataGender, DataGenderT)
+
+# Age
+DataAge <- unique(dataExpCombined[,c("age","workerId")]); DataAge$age <- factor(DataAge$age, levels=c("18-29", "30-39", "40-49", "50-59", "60"), labels=c("18-29", "30-39", "40-49", "50-59", ">60"))
+DataAgeT <- as.data.frame(table(DataAge$age)); names(DataAgeT) <- c("age","freq"); DataAgeT$age <- factor(DataAgeT$age, levels=c("18-29", "30-39", "40-49", "50-59", ">60"))
+FigS1DataAge <- ggplot(DataAge, aes(x=age,color=age,fill=age)) + 
+  geom_bar(aes(),size=.1,show.legend=F) + 
+  geom_text(data=DataAgeT, aes(x=age,y=freq,label=freq), color="black", vjust=-0.5,size=3) + 
+  labs(x="Age group",y="Number of participants") + 
+  coord_cartesian(ylim=c(0, 80)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataAge, DataAgeT)
+
+# Education
+DataEducation <- unique(dataExpCombined[,c("qualification","workerId")])
+DataEducation$qualification <- factor(DataEducation$qualification, levels=c("high","undergraduate","graduate"), labels=c("high school", "undergrad", "graduate"))
+DataEducationT <- as.data.frame(table(DataEducation$qualification)); names(DataEducationT) <- c("qualification","freq"); DataEducationT$qualification <- factor(DataEducationT$qualification, levels=c("high school", "undergrad", "graduate"))
+FigS1DataEducation <- ggplot(DataEducation, aes(x=qualification,color=qualification,fill=qualification)) + 
+  geom_bar(aes(),size=.1,show.legend=F) + 
+  geom_text(data=DataEducationT, aes(x=qualification,y=freq,label=freq), color="black", vjust=-0.5,size=3) + 
+  labs(x="Highest qualification",y="Number of participants") + 
+  coord_cartesian(ylim=c(0, 100)) + 
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataEducation, DataEducationT)
+
+# Place
+DataPlace <- unique(dataExpCombined[,c("island","workerId")]); DataPlace$island <- factor(DataPlace$island, levels=c("north","south", "equal"), labels=c("North Island", "South Island", "Equal"))
+DataPlaceT <- as.data.frame(table(DataPlace$island)); names(DataPlaceT) <- c("island","freq"); DataPlaceT$island <- factor(DataPlaceT$island, levels=c("North Island", "South Island", "Equal"))
+FigS1DataPlace <- ggplot(DataPlace, aes(x=island, color=island, fill= island)) + 
+  geom_bar(aes(),size=.1,show.legend=F) +
+  geom_text(data=DataPlaceT,aes(x=island,y=freq,label=freq), color="black", vjust=-0.5,size=3) + 
+  labs(x = "Place within NZ", y = "Number of participants") + 
+  coord_cartesian(ylim=c(0, 140)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataPlace, DataPlaceT)
+
+# Ethnicity
+DataEthnicity <- unique(dataExpCombined[,c("ethnicity","workerId")]); DataEthnicity$ethnicity <- factor(DataEthnicity$ethnicity, levels=c("Non M","M", "NS"), labels=c("Non-Māori", "Māori", "Did Not Specify"))
+DataEthnicityT <- as.data.frame(table(DataEthnicity$ethnicity)); names(DataEthnicityT) <- c("ethnicity","freq"); DataEthnicityT$ethnicity <- factor(DataEthnicityT$ethnicity, levels=c("Non-Māori", "Māori", "Did Not Specify"))
+FigS1DataEthnicity <- ggplot(DataEthnicity, aes(x=ethnicity, color=ethnicity, fill= ethnicity)) + 
+  geom_bar(aes(),size=.1,show.legend=F) +
+  geom_text(data=DataEthnicityT,aes(x=ethnicity,y=freq,label=freq), color="black", vjust=-0.5,size=3) + 
+  labs(x = "Ethnicity", y = "Number of participants") + 
+  coord_cartesian(ylim=c(0, 180)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataEthnicity, DataEthnicityT)
+
+# Value Maori 
+DataMA <- unique(dataExpCombined[,c("maoriAttitude","workerId")]); DataMA$maoriAttitude <- as.factor(DataMA$maoriAttitude)
+DataMAT <- as.data.frame(table(DataMA$maoriAttitude)); names(DataMAT) <- c("maoriAttitude","freq")
+FigS1DataMA <- ggplot(DataMA, aes(x=maoriAttitude, color=maoriAttitude, fill=maoriAttitude)) + 
+  geom_bar(aes(),size=.1,show.legend=F) + 
+  geom_text(data=DataMAT, aes(x=maoriAttitude,y=freq,label=freq), color="black", vjust=-0.5,size=3) + 
+  labs(x="Attitude Toward Māori",y="Number of participants") + 
+  coord_cartesian(ylim=c(0, 140)) +
+  theme_classic() +
+  theme(
+    panel.background = element_blank()
+  )
+remove(DataMA, DataMAT)
+
+ggarrange(FigS1DataML, FigS1DataGender, FigS1DataPlace, FigS1DataMP, FigS1DataAge, FigS1DataEducation, FigS1DataME, FigS1DataEthnicity, FigS1DataMA, ncol=3)
+
+remove(dataExpCombined, FigS1DataML, FigS1DataGender, FigS1DataPlace, FigS1DataMP, FigS1DataAge, FigS1DataEducation, FigS1DataME, FigS1DataEthnicity, FigS1DataMA)
+```
+
+
+# Identification Task
+
+## Experimental Results
+
+### Mean Confidence Ratings
+
+Figure 2 visualizes how the mean confidence rating for a stimulus across participants differs based on its frequency bin and whether it is a real word or a non-word. Words are generally given higher ratings that non-words, with the size of the difference decreasing as the frequency of the word decreases. The distinction between high-frequency words and their matched non-words is particularly stark, at almost 1 whole point on the Likert response scale.
+
+```{r Figure 2, fig.width=10, fig.height=5, fig.cap="Figure 2: Mean wordhood confidence ratings for each stimulus per frequency bin. Points represent mean ratings across all real words and nonwords within each bin."}
+# Code for Figure S2: Plot mean ratings per bin, per stimulus type
+
+#Get mean ratings for each stimulus per bin
+allBins <- list()
+bin_names <- c("low", "mid", "high")
+for(i in 1:length(bin_names)){
+  Bin <- identTask[identTask$freq.category==bin_names[i],]
+  BinMeanRatings <- aggregate(as.numeric(Bin$enteredResponse), by=list(Bin$word, Bin$type), mean)
+  names(BinMeanRatings) <- c("word","type","meanRating")
+  BinMeanRatings$bin <- bin_names[i]
+  allBins[[i]] <- BinMeanRatings
+}
+remove(i, Bin, BinMeanRatings)
+
+allBins <- do.call(rbind,allBins)
+allBins$type = factor(allBins$type)
+levels(allBins$type) = c("Nonword", "Word")
+allBins$bin <- factor(allBins$bin, levels=c("high","mid","low"))
+
+# Get grand mean ratings for each stimulus type per bin
+binMeans <- allBins %>% 
+  group_by(type, bin) %>% 
+  dplyr::summarize(grand_mean = mean(meanRating))
+
+ ggplot(allBins,aes(x = bin, y = meanRating, fill = type)) +
+    geom_violin(alpha=0.4, position=position_identity()) + 
+    geom_point(data=binMeans, aes(y=grand_mean, shape=type), size=4) +
+    geom_line(data=binMeans, aes(x=as.numeric(as.factor(bin)), y=grand_mean, color=type, linetype=type), size=1) + 
+    scale_fill_manual(name="Stimulus type",
+                      values = c("Nonword" = "black", "Word" = "blue"),
+                      guide = guide_legend(reverse = TRUE)) +  
+    scale_shape_manual(name="Stimulus type",
+                      values = c("Nonword" = 21, "Word" = 24),
+                      guide = guide_legend(reverse = TRUE)) +   
+    scale_color_manual(name="Effect estimate",
+                       values = c("Nonword"="black", "Word" = "blue"),
+                       guide=FALSE) +
+    scale_linetype_manual(name="Effect estimate",
+                          values = c("Nonword" = "solid", "Word" = "dotted"),
+                          guide=FALSE) + 
+    labs(y = "Mean Rating (by stimulus)",x = "Frequency Bin") +
+    ylim(1, 5) +
+    theme(axis.text=element_text(size=28),
+         axis.title=element_text(size=24,face="bold"),
+    legend.title=element_text(size=22),
+    legend.text=element_text(size=22)) +
+    theme_classic()
+
+remove(binMeans)
+```
+
+### Mean Rating and Phonotactic Score for each Stimulus per Frequency Bin
+
+Figure 3 expands on the visualisation of Figure 2 by adding a dimension for the phonotactic score of the words and non-words within each frequency bin. Each point represents the mean rating for a single word or non-word, across all participants. Across all three bins, participants gave higher ratings to both words and non-words with higher phonotactic scores, but the influence of phonotactic score was weak in the high-frequency bin compared to the other bins. In the high-frequency bin, words generally received high ratings, regardless of phonotactic score, while the ratings for non-words were dependent on phonotactic score. Thus, the difference between words and non-words is greatest for items with low phonotactic scores. In the mid- and low-frequency bins, the dependence of ratings on phonotactic scores is just as strong for words as it is for non-words: the rating increases with phonotactic score, and the same difference between words and non-words is observable at all phonotactic scores.
+
+```{r Figure 3, fig.width=9, fig.height=3, fig.cap="Figure 3: Mean confidence rating vs. phonotactic score for each stimulus for real words and nonwords by frequency bin. Lines show correlations within each bin, for each stimulus type."}
+
+scores <- unique(identTask[,c("word","score.shortv")])
+allBinsScored <- merge(allBins, scores, by="word")
+remove(scores)
+
+discrim_bins_scatter <- ggplot(allBinsScored, aes(x=score.shortv, y=meanRating, color=type)) +
+  geom_point(aes(shape=type), alpha=0.3, size=3) +
+  geom_smooth(aes(fill=type), method="lm", formula="y~x", alpha=0.6, size=1) +
+  facet_grid(. ~ bin) +
+  xlab("Phonotactic score") +
+  ylab("Mean rating (per stimulus)") +
+  scale_shape_manual(name="Stimulus type",
+                    values = c("Nonword" = 1, "Word" = 2),
+                    guide = guide_legend(reverse = TRUE)) +   
+  scale_color_manual(name="Stimulus type",
+                     values = c("Nonword"="black", "Word" = "blue"),
+                     guide = guide_legend(reverse = TRUE)) +
+  scale_fill_manual(name="Stimulus type",
+                     values = c("Nonword"="gray70", "Word" = "dodgerblue1"),
+                     guide = guide_legend(reverse = TRUE)) +  
+  ylim(1, 5) +
+  theme_bw() + 
+  theme(
+    panel.grid = element_blank()
+  )
+
+discrim_bins_scatter
+
+# ggsave("plots/discrim_bins_scatter.jpg", plot = discrim_bins_scatter , width = 7, height = 4, dpi = 200)
+
+remove(allBins, allBinsScored, bin_names, discrim_bins_scatter)
+```
+
+## Identification Task Ordinal Regression Model
+
+We analyse the data using a (logit) ordinal regression model, following Oh et al. (2020) (see their Detailed Materials and Methods Supplement for details).
+
+The visualisations in [Mean Confidence Ratings] and [Mean Rating and Phonotactic Score for each Stimulus per Frequency Bin] show that the high-frequency bin patterns differently from the mid- and low-frequency bins, especially in relation to the contrast between words and non-words. In order to account for this difference in our statistical analysis, we explored two different ways of representing the frequency bin factor in our model:  
+1. `bin`: Helmert contrasts between `low` vs. `mid`, and `low & mid` vs. `high`.  
+2. `bin_binary`: a binary contrast between `low & mid`, and `high`.
+
+```{r Add Helmert Contrasts and Binary High/Non-High Contrasts}
+identTask$enteredResponse <- as.factor(identTask$enteredResponse)
+identTask$word <- as.factor(identTask$word)
+helmert <- contr.helmert(n = 3)
+colnames(helmert) <- c("1v2", "-2v3")
+identTask$bin <- as.factor(as.numeric(identTask$bin))
+contrasts(identTask$bin) <- helmert
+remove(helmert)
+
+identTask <- identTask %>% mutate(bin_b = NA)
+identTask$bin_b[identTask$bin == 1] <- "low_mid"
+identTask$bin_b[identTask$bin == 2] <- "low_mid"
+identTask$bin_b[identTask$bin == 3] <- "high"
+
+```
+
+In fitting our regression model, we use a step-down procedure: we start with a large model, and identify candidates for deletion in a stepwise fashion. For practical reasons, we first remove as many candidates as possible in a fixed-effects setting (`clm`) before moving to a mixed-effects setting (`clmm`). 
+
+In the fixed-effects setting, we remove interactions one at a time if they do not make a significant contribution to the model’s explanatory power, assessed via Analysis of Deviance (using a type III test from the `anova` function), starting with the interaction with the least contribution. We then remove main effects one a time if they are not included in any remaining interactions and they do not make a significant contribution to the model’s explanatory power. 
+
+Once there are no more candidate terms for removal, we re-fit the model in a mixed-effects setting, adding random intercepts by participant and item and random slopes by participant for each remaining term. We remove interaction terms from random slopes as required to circumvent convergence issues, and consider adding them back into the model at the end if they are retained in the fixed effects structure. We identify candidate terms for removal if their coefficient is not significant in the model; after performing each removal, we confirm that it was justified via model comparison, using a log-likelihood ratio test.
+
+We start from a model using Helmert contrasts to represent the frequency bin factor (`bin`), and proceed until the stepwise fitting procedure is complete. At that point, we swap the frequency bin factor to a binary factor (`bin_b`) and consider if this change permits any further simplification of model structure. We compare the resultant models and choose the one with the lowest AIC as the model that is best supported by the data.
+
+
+```{r Model Comparison}
+identTask$enteredResponse <- as.factor(identTask$enteredResponse)
+identTask$bin_b <- as.factor(identTask$bin_b)
+
+# We start with the largest model with a four-way interaction
+#m1 <- clm(enteredResponse ~ c.(score.shortv) * type * c.(n.neighbors) * bin, data=identTask)
+
+#summary(m1) # four-way interaction is significant - keep all effects. Do a mixed effects model.
+
+#m2 <- clmm(enteredResponse ~ c.(score.shortv) * type * c.(n.neighbors) * bin + (1|workerId) + (1|word), data=identTask)
+
+
+#summary(m2) # remove four-way interaction. three-way interaction of score : type : bin is significant - keep this.
+
+#m3 <- clmm(enteredResponse ~ (c.(score.shortv) * type * bin) + (c.(n.neighbors) * c.(score.shortv) * bin) + (1|workerId) + (1|word), data=identTask)
+
+#summary(m3) # remove all interactions with neighbours
+
+#m4 <- clmm(enteredResponse ~ (c.(score.shortv) * type * bin) + c.(n.neighbors) + (1|workerId) + (1|word), data=identTask)
+
+#summary(m4) # model random slopes
+
+#m5 <- clmm(enteredResponse ~ (c.(score.shortv) * type * bin) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+
+#summary(m5) # three-way interaction is not significant, remove
+
+#m6 <- clmm(enteredResponse ~ type * bin + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+#write_rds(m6, "docs/m6.rds")
+
+#m7 <- clmm(enteredResponse ~ type * bin + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type * bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+#write_rds(m7, "docs/m7.rds")
+# model m7 does not converge
+
+#m8 <- clmm(enteredResponse ~ (type * bin) + c.(score.shortv) + (c.(n.neighbors) * type) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+#write_rds(m8, "docs/m8.rds")
+
+#m9 <- clmm(enteredResponse ~ (type * (bin + c.(n.neighbors))) + c.(score.shortv) + (1 + (type * (bin + c.(n.neighbors))) + c.(score.shortv)|workerId) + (1|word), data=identTask)
+#write_rds(m9, "docs/m9.rds")
+# model m9 does not converge
+
+#m10 <- clmm(enteredResponse ~ (type * bin) + c.(score.shortv) + (1 + c.(score.shortv) + type + bin|workerId) + (1|word), data=identTask)
+#write_rds(m10, "docs/m10.rds")
+
+#m11 <- clmm(enteredResponse ~ (type * bin) + c.(score.shortv) + (1 + type * bin + c.(score.shortv)|workerId) + (1|word), data=identTask)
+#write_rds(m11, "docs/m11.rds")
+# model m10 does not converge
+
+# binary models
+#m6a <- clmm(enteredResponse ~ (type * bin_b) + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin_b + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+#write_rds(m6a, "docs/m6a.rds")
+
+#m8a <- clmm(enteredResponse ~ (type * bin_b) + c.(score.shortv) + (c.(n.neighbors) * type) + (1 + c.(score.shortv) + type + bin_b + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+#write_rds(m8a, "docs/m8a.rds")
+
+#m10a <- clmm(enteredResponse ~ (type * bin_b) + c.(score.shortv) + (1 + c.(score.shortv) + type + bin_b|workerId) + (1|word), data=identTask)
+#write_rds(m10a, "docs/m10a.rds")
+
+m6 <- read_rds("docs/m6.rds")
+m6a <- read_rds("docs/m6a.rds")
+m8 <- read_rds("docs/m8.rds")
+m8a <- read_rds("docs/m8a.rds")
+m10 <- read_rds("docs/m10.rds")
+m10a <- read_rds("docs/m10a.rds")
+tibble(
+  "Model"=c("m6 (helmert)",
+            "m6a (binary)",
+            "m8 (helmert)",
+            "m8a (binary)",
+            "m10 (helmert)",
+            "m10a (binary)"
+            ),
+  "AIC" = c(AIC(m6),
+            AIC(m6a),
+            AIC(m8),
+            AIC(m8a),
+            AIC(m10),
+            AIC(m10a)
+            )
+  ) %>%
+  display_table(digits=1, highlight=c("AIC"), caption="Table 2: Comparison of AIC using different representations of the frequency bin factor. m6 is the best Model.")
+
+remove(m6, m6a, m8, m8a, m10, m10a)
+```
+
+Table 3 summarises the best-fitting model. This model shows that the type of stimulus and the phonotactic scores of the stimuli are significant predictors for the ratings that stimuli received: in general across frequency bins, ratings increased with phonotactic score, and words received higher ratings than non-words. Furthermore, there is a significant interaction between stimulus type and low & mid vs. high contrast, reflecting a greater difference between ratings of words and non-words in the high-frequency bin in comparison to the other bins.
+
+```{r Table3 Model Summary}
+m6 <- read_rds("docs/m6.rds")
+clm_table(m6, caption="Table 3: Fixed Effects of the Word Identification Task Model.")
+remove(m6)
+```
+
+At this point, we must confirm that the selected model shows no intercorrelation between predictors, which may impact the results. We do this by retrieving the Variance  Inflation Factor (VIF) for each fixed effect. As shown in Table 4, all fixed effects have a VIF lower than 5, meaning that all fixed effects are within an acceptable range. 
+
+```{r VIF for word ident model, fig.width=6, fig.height=4, fig.cap=""}
+# In order to calculate VIF for model m6, a linear version of the model is created, and the vif.mer() function is used on this model.
+#m6_lmer <- lmer(as.integer(enteredResponse) ~ type * bin + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), 
+#                data=identTask, 
+#                control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun=2e5)))
+#write_rds(m6_lmer, "docs/m6_lmer.rds")
+read_rds("docs/m6_lmer.rds") %>%
+  vif.mer() %>%
+  data.frame() %>%
+  rownames_to_column(var = "Factor") %>%
+  setNames(c("Factor", "VIF")) %>%
+  mutate(
+    VIF = round(VIF, 2)
+  ) %>%
+  kable(caption="Table 4: Variance Inflation Factor (VIF) of Fixed Factors in the Word Identification Task Model", label=NA)  %>%
+  kable_styling()
+
+```
+
+
+# Wellformedness Rating Task
+
+## Generate Accuracy Score
+
+In analysing the Wellformedness Rating Task, we want to investigate whether there is any effect of the participant's performance in the [Identification Task]. To accomplish this, we restrict analysis of the Wellformedness Rating Task to those participants who are included in the final data for **both** tasks, by virtue of showing variation in their ratings across stimuli in both tasks. For these participants, we calculate a score to represent how well they performed in the Identification Task, by subtracting their mean rating for non-words from their mean rating for words. 
+
+The Density Plot of the Identification Task Accuracy Scores shows a normal distribution. The mean Identification Task score is 0.467, with a standard deviation of 0.3. 
+```{r accuracy scores Figure 4, fig.widtn=5, fig.height=5, fig.cap="Figure 4: Histogram and Density Plot, Scaled to Kernel Density Estimation."}
+# Calculate exp1 accuracy score for each workerId
+identTask$enteredResponse<-as.numeric(identTask$enteredResponse)
+scoreWord<-aggregate(enteredResponse~type+workerId, identTask, mean)
+
+scoreWord<-identTask %>% filter (type=="word") %>% group_by(workerId)%>%summarize(word_avg = mean(enteredResponse))
+
+scoreNon<-identTask %>% filter (type=="nonword") %>% group_by(workerId)%>%summarize(nonword_avg = mean(enteredResponse))
+
+accScore<- merge(scoreWord, scoreNon, by="workerId")
+accScore$Exp1.score<-(accScore$word_avg) - (accScore$nonword_avg)
+accScore$Exp1.score<-round(accScore$Exp1.score, digits=3)
+
+wellFormTask<-merge(x = wellFormTask, y = accScore[ , c("workerId", "Exp1.score")], by = "workerId", all.x=TRUE)
+wellFormTask<-wellFormTask[!is.na(wellFormTask$Exp1.score), ]
+
+ggplot(accScore, aes(x=Exp1.score)) +
+  geom_histogram(aes(y =..density..), bins = 50, colour="red", fill="cyan3") +
+  geom_density(alpha=.2, fill="black") +
+  xlab("Identification Task Score") +
+    ylab("Density") +
+  ggtitle("") +
+  theme_bw() +
+  theme(
+      legend.position="none",
+      panel.background = element_blank()
+  )
+  
+remove(accScore, scoreNon, scoreWord)
+```
+
+## Wellformedness Rating Task Descriptive Statistics
+
+Figure 5 shows the mean rating of stimuli in the Wellformedness Rating task by the phonotactic score of the stimuli. The results show a positive correlation between the rating of stimuli and their phonotactic score ($r = 0.60$).
+
+```{r Figure 5, fig.width=6, fig.height=4, fig.cap="Figure 5: Mean Wellformedness Rating by Phonotactic Score. Dotted lines separate items into bins of equal size by phonotactic score."}
+#Get mean ratings for each stimulus per bin
+allBinsScored <- wellFormTask %>%
+  group_by(word, bin=tert_count, score.shortv) %>%
+  summarise(
+    meanRating = mean(as.numeric(enteredResponse))
+  )
+
+# get boundaries between bins
+boundaries <- c(max(allBinsScored$score.shortv[allBinsScored$bin == "low"]), max(allBinsScored$score.shortv[allBinsScored$bin == "medium"]))
+
+rating_by_phonotactics <- ggplot(allBinsScored, aes(x=score.shortv, y=meanRating)) +
+  geom_point(alpha=0.1, size=4) +
+  geom_smooth(method="lm", formula="y~x", alpha=0.7, size=1, color="black") +
+  geom_vline(xintercept=boundaries, linetype="dotted") +
+  xlab("Phonotactic score") +
+  ylab("Mean rating (per stimulus)") +
+  ylim(1, 5) +
+  theme_bw() + 
+  theme(
+    panel.grid = element_blank()
+  )
+
+rating_by_phonotactics
+
+remove(allBinsScored, rating_by_phonotactics, boundaries)
+```
+
+## Wellformedness Rating Task Ordinal Regression Model
+
+We analysed the data using (logit) ordinal regression, following the same stepwise procedure as outlined for the [Identification Task Ordinal Regression Model]. No terms were able to be removed.
+
+```{r Wellformedness Rating Task Regression Model 1}
+# create centralised variables
+
+#  Analysis for Exp2 with Exp1.score
+#modelAcc1<- clmm(enteredResponse ~ c.(score.shortv)*(c.(Exp1.score) + c.(norm.neighbors)) + (1 + c.(score.shortv) * c(norm.neighbors)| workerId) + (1 + c.(Exp1.score)| word), data=wellFormTask)
+#no convergnece
+
+#modelAcc1a <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) * c.(norm.neighbors) + (1| workerId) + (1|word), data=wellFormTask)
+#summary(modelAcc1a) # three-way interaction is not significant. Keep all two-way interactions.\
+
+#modelAcc2 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + c.(Exp1.score) * c.(norm.neighbors) + (1|workerId) + (1|word), data=wellFormTask)
+#summary(modelAcc2) # all interactions significant. add random slopes.
+
+#modelAcc3 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + c.(Exp1.score) * c.(norm.neighbors) + (1 + c.(score.shortv) * c.(norm.neighbors)|workerId) + (1 + Exp1.score|word), data=wellFormTask)
+#summary(modelAcc3) # exp1score * norm.neighbors is not significant - remove.
+#write_rds(modelAcc3, "docs/modelAcc3.rds")
+
+#modelAcc4 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + (1 + c.(score.shortv) * c.(norm.neighbors)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask) 
+#summary(modelAcc4) # model does not work
+
+
+#modelAcc5 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + (1 + c.(score.shortv) + c.(norm.neighbors)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask) 
+#write_rds(modelAcc5, "docs/modelAcc5.rds")
+
+modelAcc3 <- read_rds("docs/modelAcc3.rds")
+modelAcc5 <- read_rds("docs/modelAcc5.rds")
+
+tibble(
+  "Model"=c(
+            "modelAcc3",
+            "modelAcc5"
+            ),
+  "AIC" = c(AIC(modelAcc3),
+            AIC(modelAcc5)
+            )
+  ) %>%
+  display_table(digits=1, highlight=c("AIC"), caption="Table 5: Comparison of AIC of two models. modelAcc5 is the best Model.", label=NA)
+
+```
+
+The final model is shown in Table 6. The model shows a significant effect of phonotactic score; as seen in [Wellformedness Rating Task Descriptive Statistics], stimuli are rated higher if they have higher phonotactic scores. The results also show a significant interaction between phonotactic score and neighbourhood occupancy rate: non-words that have many real-word neighbours display less sensitivity to phonotactic score. We interpret this as a recognition effect: participants are more likely to recognise a neighbour in such circumstances and thus to be affected by the fact that the stimulus *is not* that neighbour.
+
+Finally, there is a significant interaction between phonotactic score and Identification Task score: participants who were more accurate in the Identification Task were more sensitive to phonotactic score in the Wellformedness Rating Task.
+
+```{r Table4 Model Summary, fig.width=6, fig.height=4, fig.cap=""}
+modelAcc5 <- readRDS("docs/modelAcc5.rds")
+clm_table(modelAcc5, caption="Table 6: Fixed Effects of the Best Wellformedness Rating Task Model", label=NA)
+remove(modelAcc5)
+```
+
+As with the Word Identification task, we retrieve the Variance Inflation Factor (VIF) for each fixed effect in this model. As shown in Table 7, all fixed effects have a VIF < 5, meaning that all fixed effects are within an acceptable range.
+```{r VIF for wellformedness model, fig.width=6, fig.height=4, fig.cap=""}
+#modelAcc5_lmer <- lmer(as.integer(enteredResponse) ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + (1 + c.(score.shortv) + c.(norm.neighbors)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask)
+#write_rds(modelAcc5_lmer, "docs/modelAcc5_lmer.rds")
+read_rds("docs/modelAcc5_lmer.rds") %>%
+  vif.mer() %>%
+  data.frame() %>%
+  rownames_to_column(var = "Factor") %>%
+  setNames(c("Factor", "VIF")) %>%
+  mutate(
+    VIF = round(VIF, 2)
+  ) %>%
+  kable(caption="Table 7: Variance Inflation Factor (VIF) of Fixed Effects in the Wellformedness Rating Task Model", label=NA) %>%
+  kable_styling()
+```
+
+
+For ease of interpretation, we plot the interaction between performance in the Identification Task and sensitivity to phonotactic score in the Wellformedness Rating Task, using the same method described in the Detailed Materials and Method Supplement of Oh et al. (2020). This plot is shown in Figure 6: in general, participants with a higher Identification Task score will give ill-formed non-words lower scores and well-formed words higher scores, whereas participants with a lower Identification Task score will give all non-words ratings closer to 3 ("unsure").
+
+```{r fig.width = 8, fig.height=6, fig.cap="Figure 6: Relationship Between Identification Task Score, Wellformedness Rating, and Phonotactic Score."}
+modelAcc5 <- readRDS("docs/modelAcc5.rds")
+
+
+fig3.mean <- clm_plotdat(modelAcc5, c("Exp1.score", "score.shortv"), xlevels=list(score.shortv=25, Exp1.score=c(0,1)), type="mean") %>%
+  mutate(
+    Exp1.score = factor(Exp1.score, labels=c("low (0 point difference)", "high (1 point difference)")) %>% fct_relevel("high (1 point difference)")
+  ) %>%
+  ggplot(., aes(x=score.shortv, y=pred, color=Exp1.score, fill=Exp1.score)) +
+    geom_ribbon(aes(ymin=lci, ymax=uci), alpha=0.3, color=NA) +
+    geom_line(size=1) +
+    xlab("Phonotactic score") +
+    ylab("Predicted mean rating") + 
+    ylim(1, 5) +
+    scale_x_continuous(guide=guide_axis(check.overlap = TRUE)) +   
+    scale_color_discrete(name="Word identification knowledge\n(Exp1 word-nonword difference)") +
+    scale_fill_discrete(name="Word identification knowledge\n(Exp1 word-nonword difference)") +
+    theme_bw() + 
+    theme(
+      legend.position="right",
+      panel.background = element_blank()
+    )
+
+fig3.dist <- clm_plotdat(modelAcc5, c("Exp1.score", "score.shortv"), xlevels=list(score.shortv=25, Exp1.score=c(0,1)), type="dist") %>%
+  mutate(
+     Exp1.score = factor(Exp1.score, labels=c("low (0 point difference)", "high (1 point difference)")) %>% fct_relevel("high (1 point difference)")
+  ) %>%
+  ggplot(., aes(x=score.shortv, y=pred, color=Exp1.score, fill=Exp1.score)) +
+    geom_ribbon(aes(ymin=lci, ymax=uci), alpha=0.3, color=NA) +
+    geom_line(size=1) +
+    xlab("Phonotactic score") +
+    ylab("Probability of rating") + 
+    scale_x_continuous(guide=guide_axis(n.dodge = 2)) +
+    scale_color_discrete(name="Word identification knowledge\n(Exp1 word-nonword difference)") +
+    scale_fill_discrete(name="Word identification knowledge\n(Exp1 word-nonword difference)") +
+    facet_grid(. ~ response, labeller=as_labeller(function(x) str_c("Rating: ", x))) +
+    ylim(0, 1) +  
+    theme_bw() + 
+    theme(
+      legend.position="none",
+      panel.background = element_blank()
+    )
+
+ggarrange(fig3.mean, fig3.dist, nrow=2, ncol=2, widths=c(2,10), heights=c(3,1))
+
+remove(fig3.dist, fig3.mean, modelAcc5)
+```

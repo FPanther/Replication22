@@ -1,0 +1,224 @@
+workerId,speakMaori,compMaori,maoriEducation,linguistics,age,gender,ethnicity,bornNz,island,outsideNz,regionMost,qualification,mediaMaori,socialMaori,children,maoriList,regionCurrentLive,duration,firstLang,firstLangCountry,otherLangs,hawaii,anyPolynesian,whichPolynesian,maoriRespect,maoriCompulsory,maoriProf,maoriExpo,maoriAttitude
+007af30de1d5a438b7761ce678f888cd,1,1,1,no,30-39,F,Non M,Yes,north,No,Wellington,undergraduate,4,4,No,6,Wellington,long,English,NZ,None,No,No,None,5,5,2,8,10
+0095f5458f34dbe08ebc49055abfb32d,1,2,1,lang,30-39,F,Non M,Yes,north,No,Wellington,high,5,4,Yes,9,Manawatu,long,English,NZ,None,No,No,None,5,5,3,9,10
+01478d5cb244039261ec8e1528644b06,2,3,3,no,40-49,F,Non M,Yes,north,No,Bay of Plenty,graduate,4,5,Yes,8,Bay of Plenty,long,English,NZ,None,No,No,None,5,5,5,9,10
+01bce5d8e75b0f9e667e0bf824a4b4d4,1,1,0,no,18-29,F,Non M,No,north,No,Auckland,undergraduate,3,1,No,3,Auckland,long,English,NZ,cmn,No,No,None,5,5,2,4,10
+01c84341119a23950e2bd5e6b92b93c2,1,1,1,no,30-39,NB,Non M,Yes,north,No,Otago,high,2,2,No,5,Canterbury,short,English,NZ,None,No,No,None,5,5,2,4,10
+01dbc4eadce83c891046f642b3efaac1,1,1,1,no,50-59,F,Non M,Yes,south,No,Southland,high,5,3,No,3,Southland,long,English,NZ,None,No,No,None,5,5,2,8,10
+025429f118ffbb6cc5322116ca5f5cea,1,1,2,no,40-49,F,Non M,Yes,south,No,Otago,graduate,5,4,Yes,9,Auckland,long,English,NZ,None,No,No,None,5,5,2,9,10
+02d4cd81d7d892ccbf2aa2e88e6b322c,1,1,0,no,60,F,Non M,Yes,north,No,Waikato,undergraduate,5,3,No,7,Waikato,long,English,NZ,None,No,No,None,5,5,2,8,10
+032cd3150cc80f4ab3f95becc38bb372,1,3,0,no,60,F,Non M,Yes,north,No,Auckland,graduate,2,5,No,7,Auckland,long,English,NZ,fra,No,No,None,5,5,4,7,10
+03e98c90d062d7ac79c1569aefb62ea1,1,1,0,no,18-29,M,Non M,Yes,north,No,Manawatu,graduate,2,2,No,5,Manawatu,long,English,NZ,None,No,No,None,4,3,2,4,7
+05e4be420d3f9a0c9c3e5fed429d9067,1,1,1,no,18-29,F,Non M,Yes,south,No,Canterbury,high,4,3,No,3,Canterbury,short,English,NZ,None,No,No,None,5,5,2,7,10
+08973334ead67eaebea8128adb67b472,1,1,0,no,60,F,Non M,Yes,south,No,Canterbury,undergraduate,5,2,No,3,Nelson Bays,short,English,NZ,None,No,No,None,5,5,2,7,10
+0986498b173a41ae90f0a7586b3f61c2,1,1,1,no,18-29,M,Non M,Yes,north,Yes,Auckland,high,1,1,No,7,Auckland,long,English,NZ,None,No,No,None,4,2,2,2,6
+0adb755d3a09efa29dddd79357c9cf1f,1,1,0,no,18-29,F,Non M,No,south,No,Canterbury,graduate,5,5,No,7,Canterbury,long,English,NZ,None,No,No,None,5,5,2,10,10
+0c20db2c56928359664ce29c2ccde0cd,2,2,2,no,30-39,F,Non M,Yes,south,No,Otago,undergraduate,5,5,No,9,Canterbury,short,English,NZ,None,No,No,None,5,5,4,10,10
+0d6688fd815d09353f65e39382b86302,1,1,0,no,60,F,Non M,Yes,north,No,Auckland,undergraduate,5,2,No,2,Auckland,long,English,NZ,None,No,No,None,5,4,2,7,9
+0dc074468638215d46a0fdac11dfe445,1,1,0,no,18-29,F,Non M,No,north,No,Wellington,undergraduate,2,1,No,3,Wellington,long,English,Other,None,No,No,None,3,3,2,3,6
+0f10985a686e7d85684bb01a952ac829,1,1,1,no,18-29,NB,Non M,Yes,south,No,Canterbury,undergraduate,3,2,Yes,6,Canterbury,long,English,NZ,nzsl,No,No,None,5,5,2,5,10
+0f38f22f74a9692155b8d02a954f8742,1,1,4,no,18-29,F,Non M,Yes,north,No,Auckland,graduate,4,4,No,5,Otago,short,English,NZ,None,No,No,None,5,5,2,8,10
+10e679315c44ad1ebd40c3616516fa79,1,1,1,no,18-29,F,Non M,Yes,north,No,Auckland,high,3,4,Yes,7,Canterbury,short,English,NZ,None,No,No,None,5,5,2,7,10
+110271d34ec11e1f0acf5d52748bdd7f,1,1,3,no,60,F,Non M,Yes,north,No,Auckland,graduate,5,3,No,3,Auckland,long,English,NZ,None,No,No,None,5,5,2,8,10
+1197d355a710f2d68441be8962feed0e,1,1,3,lang,18-29,F,M,Yes,north,No,Waikato,undergraduate,5,3,No,8,Otago,short,English,Other,None,No,No,None,5,5,2,8,10
+12f49fcf23b2ab5abc8191f05190ac63,2,2,3,lang,18-29,F,Non M,Yes,north,No,Auckland,graduate,3,5,No,9,Wellington,short,English,NZ,None,No,No,None,5,5,4,8,10
+130934dcfc28ac03059a3f69f8d89589,1,1,1,no,30-39,M,Non M,Yes,north,No,Waikato,undergraduate,1,1,No,3,Waikato,long,English,NZ,None,No,No,None,5,5,2,2,10
+13a832e5bf7dfa0d724c03a6e89bd3a1,1,1,1,no,18-29,F,Non M,Yes,north,No,Northland,undergraduate,2,4,No,8,Auckland,short,English,NZ,None,No,No,None,5,5,2,6,10
+13dd830b85e0c8ab6f59ed5408e26e8f,1,1,1,no,18-29,M,Non M,Yes,north,No,Northland,high,3,4,No,4,Canterbury,short,English,NZ,None,No,No,None,5,5,2,7,10
+14a9c6f8e4029213c285bac783d4b125,1,2,0,no,30-39,F,Non M,Yes,north,No,Auckland,graduate,5,4,No,7,Waikato,short,English,NZ,None,No,No,None,5,5,3,9,10
+157932cae1680f606696529168e46787,1,1,1,lang,18-29,F,Non M,Yes,north,No,Auckland,undergraduate,4,2,No,9,Auckland,long,English,NZ,fra,No,No,None,5,4,2,6,9
+15b1d92d72527c7e259ff3961244b70d,1,2,0,no,50-59,F,Non M,Yes,south,No,Canterbury,graduate,2,5,Yes,9,Timaru - Oamaru,short,English,NZ,None,No,No,None,4,4,3,7,8
+1606f099b94b0cc02fc5c3e991cc1154,1,1,2,lang,18-29,F,Non M,Yes,south,No,Canterbury,high,4,3,Yes,5,Canterbury,short,English,NZ,jpn,No,No,None,5,5,2,7,10
+163094f65bbc309bb69edd5271e8991e,2,3,3,lang,30-39,F,Non M,No,north,No,Wellington,graduate,4,4,Yes,9,Wellington,long,English,NZ,None,No,No,None,5,5,5,8,10
+165ca034ad2d2dfbc51e900453770ec3,1,1,0,no,30-39,M,Non M,Yes,north,No,Waikato,high,4,4,No,5,Waikato,long,English,NZ,None,No,No,None,5,4,2,8,9
+190da8e48579f847a5f74bbf253032e6,1,1,3,lang,50-59,F,Non M,Yes,north,No,Waikato,graduate,5,5,Yes,6,Waikato,long,English,NZ,None,No,No,None,5,5,2,10,10
+196203a03ec27eea589cb7bca88983b8,1,0,2,no,18-29,F,Non M,Yes,north,No,Wairarapa,high,4,3,No,7,Wellington,short,English,NZ,fra,No,No,None,4,4,1,7,8
+1ac76bfafc775679a8b3d5e4bc669eb1,1,1,3,no,30-39,F,Non M,Yes,north,No,Bay of Plenty,graduate,4,5,Yes,8,Bay of Plenty,long,English,NZ,None,No,No,None,5,5,2,9,10
+1c6c3a736358eb99cdf8efb1a3d3831d,1,2,1,no,18-29,F,M,Yes,south,No,Nelson Bays,graduate,4,3,Yes,8,Auckland,short,English,NZ,None,No,No,None,5,5,3,7,10
+1cfc8088d4135136c8d3dd4a2ee69569,1,0,0,no,60,F,Non M,Yes,north,No,Taranaki,high,4,4,No,1,Taranaki,long,English,NZ,None,No,No,None,5,5,1,8,10
+1e46d4b3c611eadca971bf50e57d91e8,1,1,1,no,18-29,F,Non M,Yes,north,No,Wellington,high,4,4,No,9,Otago,short,English,NZ,None,No,No,None,5,5,2,8,10
+1ea65c266c7dfe132e449832fddc22cb,1,1,1,yes,40-49,F,Non M,Yes,equal,Yes,Wellington,graduate,5,2,Yes,4,Wellington,long,English,NZ,jpn,No,No,None,5,4,2,7,9
+212bdbe9c06506602d63c7d8727217bd,1,1,0,no,50-59,F,Non M,Yes,north,No,Taranaki,graduate,5,4,No,5,Taranaki,long,English,NZ,None,No,No,None,5,3,2,9,8
+23f0c1fe5e7f3876fb4aad5099887c29,2,2,0,no,60,F,Non M,Yes,north,No,Wellington,undergraduate,5,4,No,5,Wellington,long,English,NZ,None,No,No,None,5,5,4,9,10
+29642adc8522e1ddd4a05209563070d0,1,0,1,no,30-39,M,Non M,No,north,No,Auckland,undergraduate,4,5,No,3,Waikato,short,NonEnglish,Other,tmn,No,No,None,3,2,1,9,5
+2a13d73898e8bbb94b828720a960cc58,1,1,1,no,18-29,F,Non M,Yes,north,No,Waikato,high,5,3,No,7,Waikato,long,English,NZ,None,No,No,None,5,5,2,8,10
+2de7dfbe1e8d4c05120bfa48f6488bcb,1,1,0,no,30-39,F,M,Yes,north,No,Hawke's Bay,high,4,1,Yes,8,Hawke's Bay,long,English,NZ,None,No,No,None,5,3,2,5,8
+2e0d9af8ce82f79cb339d8a53f446ba5,0,0,0,no,30-39,F,Non M,Yes,north,No,Wairarapa,high,5,2,Yes,3,Auckland,short,English,NZ,None,No,No,None,5,4,0,7,9
+2fa8d464a429ff4aaede0a4b0ba135f4,1,1,3,no,18-29,M,Non M,Yes,south,No,Canterbury,graduate,5,4,No,3,Canterbury,long,English,NZ,spa,No,No,None,5,5,2,9,10
+3228ba7eb80e3a8ebe498bbe0fcaf9e7,1,1,1,no,18-29,F,Non M,Yes,south,No,Canterbury,undergraduate,2,4,No,6,Canterbury,long,English,NZ,None,No,No,None,5,5,2,6,10
+3311b4d1b4d2dd044c6151d71b71d949,1,1,1,no,18-29,F,M,Yes,north,No,Waikato,undergraduate,5,5,No,4,Waikato,long,English,NZ,None,No,No,None,2,1,2,10,3
+33fcd134409eef97a9417e31f82eeb35,1,1,0,no,60,F,Non M,Yes,north,No,Auckland,high,5,1,No,3,Auckland,long,English,NZ,None,No,No,None,5,3,2,6,8
+359888f72ee4b718c05dbcd1c9db4c00,1,2,2,no,18-29,F,Non M,Yes,north,No,Auckland,undergraduate,2,3,No,5,Auckland,long,English,NZ,None,No,No,None,4,4,3,5,8
+3726d057836bcfa5b0e4419c483e090e,1,1,1,no,18-29,F,Non M,Yes,south,No,Canterbury,high,4,4,No,4,Canterbury,long,English,NZ,None,No,No,None,3,4,2,8,7
+3a7bd8fbf33a0db8a86b560847959397,1,1,1,no,18-29,F,M,Yes,north,No,Northland,high,3,3,No,2,Wellington,short,English,NZ,None,No,No,None,5,5,2,6,10
+3ae061efeb8e89fd216eda7d51b5ebe8,0,1,3,no,60,F,Non M,Yes,north,No,Taranaki,undergraduate,5,5,No,3,Taranaki,long,English,NZ,None,No,No,None,5,5,1,10,10
+3d7f9521f4baa49e33b3c060f7d0c0c5,1,1,1,no,18-29,F,Non M,Yes,north,No,Auckland,undergraduate,5,4,No,6,Otago,short,English,NZ,None,No,No,None,3,5,2,9,8
+3e659c014eb4d23dc29da72e3f0c791e,1,1,1,no,50-59,F,Non M,Yes,north,No,Auckland,graduate,4,2,No,6,Auckland,long,English,NZ,None,No,No,None,5,5,2,6,10
+3ff8b3dc2560d0a222f097a78dc57bfa,2,2,3,lang,18-29,F,Non M,No,north,No,Auckland,undergraduate,5,4,No,6,Auckland,long,English,Other,None,No,No,None,5,5,4,9,10
+40e249de8de14d2109c895a5c22a9eba,1,1,1,no,40-49,F,M,Yes,north,No,Waikato,undergraduate,5,4,Yes,7,Bay of Plenty,short,English,NZ,None,No,No,None,5,5,2,9,10
+415eee3dac9194664e33c8f776b2188d,1,1,1,lang,30-39,M,Non M,Yes,north,No,Waikato,undergraduate,2,1,Yes,4,Wellington,long,English,NZ,None,No,No,None,4,4,2,3,8
+4167f34ca0a171558e18798f3c3dd8d3,1,1,0,no,50-59,F,Non M,Yes,north,No,Wairarapa,high,4,3,No,5,Wairarapa,long,English,NZ,None,No,No,None,5,5,2,7,10
+4274e3d25be54093d8898e62a832c598,1,1,0,no,30-39,F,Non M,Yes,north,No,Auckland,undergraduate,5,5,Yes,9,Wellington,long,English,NZ,None,No,No,None,5,5,2,10,10
+4366771df659426a64169d49d21d87ad,1,1,1,no,18-29,F,Non M,No,north,No,Auckland,graduate,1,1,No,3,Auckland,long,English,NZ,cmn,No,No,None,5,5,2,2,10
+44fbdde4b1c2f157f02ef1cb9bf53798,1,1,1,no,50-59,F,Non M,No,north,No,Northland,undergraduate,4,5,No,5,Wairarapa,short,English,NZ,None,No,No,None,5,5,2,9,10
+45167bfe52b5b163734e4b1add2ac034,0,0,0,no,60,M,Non M,Yes,north,No,Wellington,graduate,5,3,No,3,Wellington,long,English,NZ,None,No,No,None,5,5,0,8,10
+478cf650221a0dd2bc0befb633544c23,2,2,1,lang,30-39,F,Non M,Yes,north,No,Bay of Plenty,undergraduate,4,5,Yes,8,Wellington,long,English,NZ,None,No,No,None,5,5,4,9,10
+4c14e59fe306855f6d7b5a848034e423,2,3,3,lang,40-49,F,Non M,Yes,north,No,Auckland,undergraduate,5,4,Yes,9,Auckland,long,NonEnglish,NZ,None,No,Yes,None,5,4,5,9,9
+4f77d032a44d229d0cbb455f38f237d5,1,1,2,no,50-59,F,Non M,Yes,north,No,Auckland,undergraduate,4,1,No,6,Canterbury,long,English,NZ,deu,No,No,None,5,5,2,5,10
+509d236a8e36c71f88b2878f33a24e89,1,1,0,no,40-49,M,Non M,Yes,north,No,Auckland,graduate,5,5,No,8,Auckland,long,English,NZ,None,No,No,None,3,3,2,10,6
+509dae097755ae43eeba7eff3b7c0ee8,2,2,0,no,30-39,F,Non M,Yes,north,No,Waikato,undergraduate,4,4,Yes,9,Waikato,long,English,NZ,None,No,No,None,4,5,4,8,9
+50a126a3264c95b37dcf5c55430fc32b,1,1,0,no,30-39,F,Non M,Yes,north,Yes,Auckland,graduate,4,4,No,7,Northland,short,English,NZ,None,No,No,None,5,5,2,8,10
+511cac61d42841227afd6691cecb21aa,1,1,0,no,18-29,F,Non M,Yes,south,No,Canterbury,undergraduate,2,5,No,2,Canterbury,long,English,NZ,None,No,No,None,5,5,2,7,10
+518e6ca78bde167df6d3c14223906f82,2,1,2,no,18-29,M,Non M,Yes,north,No,Auckland,high,3,2,No,8,Auckland,long,English,NZ,None,No,No,None,5,4,3,5,9
+52c3e80a324d5618bf69b098433bddc3,1,1,3,no,18-29,F,Non M,No,south,No,Canterbury,undergraduate,2,2,No,5,Canterbury,long,English,NZ,None,No,No,None,5,5,2,4,10
+53cf4faa0224235a5fa2da8338d10b75,1,1,0,no,50-59,F,M,Yes,north,Yes,Auckland,graduate,4,5,No,5,Auckland,long,English,NZ,afr,No,No,None,5,5,2,9,10
+540328d6307e669fc4cdff8eed155f8b,1,1,1,no,18-29,F,Non M,Yes,north,No,Auckland,undergraduate,4,4,No,7,Auckland,long,English,NZ,None,No,No,None,5,5,2,8,10
+54c4a751906b026ded64eef11964552f,1,1,1,no,18-29,M,Non M,Yes,north,No,Auckland,high,3,4,No,7,Manawatu,short,English,NZ,None,No,No,None,5,5,2,7,10
+57df659ba019d45cac21fb985254f624,1,0,0,no,50-59,F,Non M,Yes,north,No,Bay of Plenty,high,5,4,No,6,Bay of Plenty,long,English,NZ,None,No,No,None,5,1,1,9,6
+58795eed138d1ab2138595dbfa0fb2e1,1,1,1,no,30-39,F,Non M,Yes,north,No,Waikato,undergraduate,2,1,No,8,Waikato,long,English,NZ,None,No,No,None,4,5,2,3,9
+593dcc31c64f967b6693b12a98492bdf,1,1,1,lang,18-29,F,Non M,Yes,north,No,Wellington,undergraduate,4,3,No,8,Auckland,short,English,NZ,fra,No,No,None,5,5,2,7,10
+59eb73632c89ed34d39eec53625032a9,1,1,1,no,18-29,F,Non M,Yes,south,No,Canterbury,graduate,4,4,No,4,Canterbury,long,English,NZ,None,No,No,None,5,4,2,8,9
+5b828b40f96fdb1e8011e7c82f40f696,1,1,0,no,50-59,F,Non M,Yes,north,No,Auckland,graduate,2,3,No,7,Auckland,long,English,NZ,None,No,No,None,3,4,2,5,7
+5bff2f3ae6214e407a05f231b9aad68a,2,1,0,no,40-49,F,Non M,Yes,north,No,Northland,high,4,2,Yes,7,Northland,long,English,NZ,None,No,No,None,5,3,3,6,8
+5d00b648a5e21c5294646733fdb667e8,2,2,1,no,40-49,F,M,Yes,north,No,Northland,high,1,5,Yes,8,Auckland,long,English,NZ,None,No,Yes,Cook Island Maori,5,5,4,6,10
+5defe1fcdad32cb00e5e310672997f6a,0,0,0,no,50-59,F,Non M,Yes,north,No,Taranaki,high,3,3,No,1,Taranaki,long,English,NZ,None,No,No,None,3,4,0,6,7
+5e6f5712c21c8a2ad275fa6f31e58bc4,1,1,0,no,30-39,F,Non M,Yes,south,No,Canterbury,undergraduate,4,5,Yes,7,Canterbury,short,English,NZ,None,No,No,None,3,5,2,9,8
+5f30554620bd170e1de62f9ecff7a4ef,1,3,3,lang,60,F,Non M,Yes,south,No,Otago,graduate,5,3,No,3,Taranaki,short,English,NZ,None,No,No,None,5,4,4,8,9
+60ba303432ddba65adf9ac777780c1da,1,1,3,lang,50-59,F,Non M,Yes,north,No,Auckland,undergraduate,5,5,No,5,Auckland,long,English,NZ,None,No,No,None,3,2,2,10,5
+610a755dfa39b0870988274b77abee0f,1,1,1,lang,18-29,M,Non M,Yes,north,No,Auckland,undergraduate,2,2,No,5,Auckland,long,English,NZ,None,No,No,None,5,5,2,4,10
+62a5ed12d71a0e1bc401479d04a66661,1,1,1,lang,30-39,F,Non M,Yes,north,No,Manawatu,undergraduate,2,3,No,5,Manawatu,long,English,NZ,deu,No,No,None,4,4,2,5,8
+62e3811b683ace1f3e6c2aa93f3b6a67,1,1,1,no,40-49,M,Non M,Yes,north,No,Wellington,high,5,2,Yes,5,Wellington,long,English,NZ,None,No,No,None,5,4,2,7,9
+62e6b2cc07ff39c102c09864481e330f,1,0,0,no,40-49,F,Non M,Yes,north,No,Wellington,graduate,5,3,Yes,2,Bay of Plenty,short,English,NZ,None,No,No,None,2,4,1,8,6
+63935a8456e382291ef523ab4141bd03,1,1,1,no,18-29,F,Non M,Yes,south,No,Canterbury,high,2,5,No,8,Canterbury,long,English,NZ,None,No,No,None,5,5,2,7,10
+64396271f0e9e9099988c1d118bec37f,1,1,1,no,30-39,F,Non M,Yes,north,No,Taranaki,graduate,5,5,Yes,7,Northland,short,English,NZ,None,No,No,None,5,4,2,10,9
+6534a3866a32071d780c7b29475e3107,1,1,1,no,40-49,F,Non M,Yes,north,No,Auckland,high,4,2,No,4,Auckland,long,English,NZ,None,No,No,None,5,5,2,6,10
+658dd8baf89e170d74c7f4e40c8a976f,1,2,1,no,18-29,F,Non M,Yes,north,No,Wellington,graduate,3,4,No,6,Wellington,long,English,NZ,None,No,No,None,5,5,3,7,10
+65c7d59a874cc3a394b159d0222f4203,1,3,1,no,18-29,F,Non M,Yes,north,No,Wellington,high,5,5,Yes,8,Wellington,long,English,NZ,None,No,No,None,5,5,4,10,10
+6658067c92cdd287a8d5fbb036d59a03,1,2,1,no,18-29,M,Non M,Yes,north,No,Bay of Plenty,graduate,4,4,No,7,Otago,short,English,NZ,None,No,No,None,5,4,3,8,9
+666a32fbd4408b1a1ec6d6514b05a1d2,1,2,3,no,50-59,M,Non M,Yes,north,No,Waikato,graduate,3,3,Yes,8,Hawke's Bay,long,English,NZ,None,No,No,None,5,5,3,6,10
+6676ee963ab045153f7ab32890f16870,1,1,0,no,30-39,F,Non M,Yes,south,Yes,Canterbury,graduate,3,2,Yes,4,Canterbury,long,English,NZ,None,No,No,None,5,5,2,5,10
+668b041a8f0db009f6d9f26d2a4a0e4e,1,1,1,no,30-39,F,Non M,Yes,north,No,Waikato,high,3,3,Yes,7,Waikato,long,English,NZ,None,No,No,None,3,4,2,6,7
+676b3304138db7ffcaa9228629c5cb42,0,0,0,no,40-49,M,Non M,Yes,south,No,Nelson Bays,undergraduate,3,2,No,2,Nelson Bays,long,English,NZ,None,No,No,None,4,4,0,5,8
+67fab8a914d495ce539c4167c5dd1eb7,1,1,1,no,18-29,M,Non M,Yes,north,No,Wellington,graduate,3,5,No,5,Otago,short,English,NZ,None,No,No,None,5,5,2,8,10
+680f8bde1c04bc92e7e6526a48e06a50,1,1,0,no,40-49,F,Non M,Yes,north,No,Waikato,undergraduate,3,2,No,7,Waikato,short,English,NZ,swe,No,No,None,5,5,2,5,10
+6a2eca9f67e18f470a88670d752fc4bc,1,1,1,no,18-29,F,Non M,Yes,north,No,Wellington,graduate,4,5,No,5,Wellington,long,English,Other,None,No,No,None,5,5,2,9,10
+6a9a5cc7c529884d7c56a5de02f4fc7e,1,1,0,no,18-29,F,Non M,Yes,south,No,Canterbury,high,2,5,No,8,Canterbury,long,English,NZ,None,No,No,None,5,5,2,7,10
+6abb95edde787e5f391151bb1b35be9a,1,1,2,no,40-49,F,Non M,Yes,equal,No,Wellington,graduate,2,5,Yes,9,Wellington,long,English,NZ,None,No,No,None,5,4,2,7,9
+6b87a478753e9aa33c6412eb9ce25273,2,2,1,no,18-29,M,Non M,Yes,north,No,Hawke's Bay,high,4,3,No,6,Auckland,short,English,NZ,None,No,No,None,5,5,4,7,10
+6e08dde1fb29ca219272ddc6de2d3c2c,2,2,1,no,50-59,F,Non M,Yes,north,No,Bay of Plenty,graduate,4,4,No,8,Bay of Plenty,long,English,NZ,None,No,No,None,5,5,4,8,10
+6eba09d4c6c205c935a98bc3c75b83f1,1,1,1,no,18-29,NB,Non M,Yes,south,No,Canterbury,undergraduate,4,4,No,3,Canterbury,long,English,NZ,None,No,No,None,5,5,2,8,10
+73c1a49c813b5b289a69e62484a9c480,1,1,1,no,18-29,F,Non M,Yes,north,No,Auckland,undergraduate,2,1,No,4,Auckland,long,English,NZ,fra,No,No,None,5,4,2,3,9
+73d8ade251df7e34c0f3d4d4b449bc9c,1,0,0,no,60,F,Non M,Yes,north,No,Auckland,undergraduate,5,1,No,6,Canterbury,short,English,NZ,None,No,No,None,5,5,1,6,10
+7a4ab66d11fcae1bf9eb85c8961d56ee,1,1,1,no,30-39,M,Non M,Yes,north,No,Auckland,graduate,4,4,No,5,Waikato,short,English,NZ,None,No,No,None,5,5,2,8,10
+7a704ae96f7cdb409120b0b29b79daf8,1,1,1,no,18-29,F,Non M,Yes,north,No,Waikato,high,5,4,No,7,Waikato,short,English,NZ,None,No,No,None,4,5,2,9,9
+7ba2e8b70a855dfdd1da9fd0cb07dd4c,1,1,1,no,18-29,F,Non M,No,south,No,Canterbury,high,4,4,Yes,7,Canterbury,long,English,Other,None,No,No,None,5,5,2,8,10
+7bc130677e39b1db3fa47039ee05f9e3,1,1,0,no,50-59,M,Non M,Yes,north,No,Manawatu,high,4,2,No,3,Wellington,short,English,NZ,None,No,No,None,5,4,2,6,9
+7d161be1e29172921cba81bc373b632a,1,1,0,no,60,F,Non M,Yes,north,No,Auckland,high,5,2,No,4,Auckland,long,NonEnglish,NZ,None,No,No,None,5,4,2,7,9
+7e567e87ed04d23ded9ae56c9f4893bb,1,1,0,no,30-39,M,Non M,Yes,north,No,Auckland,high,2,2,No,2,Auckland,long,English,NZ,None,No,No,None,5,5,2,4,10
+7eccedfd2bbc6828c9b4718464593b7e,1,0,0,no,30-39,F,Non M,Yes,north,No,Auckland,high,5,3,Yes,7,Auckland,short,English,NZ,prt,No,No,None,5,5,1,8,10
+80a6ea94508f3d40a738f224e7bb3f58,2,2,0,no,50-59,F,Non M,No,south,No,West Coast,high,2,5,No,3,West Coast,long,English,Other,None,No,No,None,5,5,4,7,10
+80e4db0279742d52e9c90c80dec7b2a5,1,1,0,no,40-49,F,Non M,Yes,north,No,Auckland,graduate,5,4,No,8,Northland,long,English,NZ,None,No,No,None,4,4,2,9,8
+814fac8fd196cfa30d14040b202f3cb2,1,2,0,no,60,F,Non M,Yes,south,No,Canterbury,undergraduate,3,3,No,5,Canterbury,long,English,NZ,None,No,No,None,5,5,3,6,10
+81fd80883c8f47a9641f87e9e086ee5b,1,1,1,no,40-49,F,Non M,Yes,north,No,Auckland,high,5,5,Yes,8,Auckland,long,English,NZ,None,No,No,None,5,5,2,10,10
+82938c39aa59c1981763fdb6bdf0df5d,1,1,0,lang,60,F,Non M,Yes,north,No,Wairarapa,graduate,5,3,No,6,Wairarapa,long,English,NZ,"fra,ita",No,No,None,5,5,2,8,10
+84886764dbfdd1b68644c88e585850b8,2,3,4,yes,40-49,F,Non M,Yes,north,No,Wellington,graduate,5,5,No,8,Wellington,long,English,NZ,fra,No,No,None,5,5,5,10,10
+84eebc5c09a9fc87d2242f0a04657137,1,1,0,no,18-29,M,Non M,No,north,No,Otago,graduate,5,5,No,5,West Coast,short,English,NZ,None,No,No,None,5,4,2,10,9
+85a18e973c536052c228b1ff4edef03f,2,2,1,no,18-29,F,Non M,Yes,north,No,Northland,high,4,3,No,6,Auckland,short,English,NZ,None,No,No,None,3,1,4,7,4
+86ca58315fb0b1cb3bf04886b51e7d1a,1,2,2,no,30-39,F,M,Yes,south,No,Canterbury,undergraduate,3,5,Yes,9,Canterbury,long,English,NZ,None,No,No,None,3,4,3,8,7
+87226641d7f985755c77308556498d75,1,1,1,no,60,F,Non M,Yes,north,No,Auckland,graduate,5,5,No,9,Auckland,long,English,NZ,fra,No,No,None,5,5,2,10,10
+87925421855c01b782f3b643d39b0643,1,0,0,no,18-29,F,Non M,Yes,north,No,Waikato,high,2,1,Yes,5,Waikato,long,English,NZ,None,No,No,None,5,5,1,3,10
+8905098b98326165998d436d6f922555,0,0,1,no,30-39,F,M,Yes,north,No,Bay of Plenty,high,3,5,Yes,1,Bay of Plenty,long,English,NZ,None,No,No,None,5,3,0,8,8
+899206984f90d5bf92460ad18102eeed,1,1,0,no,40-49,M,Non M,Yes,equal,No,Canterbury,high,5,3,Yes,8,Wairarapa,long,English,NZ,None,No,No,None,5,5,2,8,10
+8acdfc3f94a262e3c62cbab71fde2c2f,1,1,0,no,60,F,Non M,No,north,No,Hawke's Bay,graduate,5,4,No,6,Hawke's Bay,short,English,Other,None,No,No,None,4,4,2,9,8
+8b0c9d6441dc67f9368d68d9d9b83c5d,2,2,3,no,30-39,F,Non M,Yes,north,No,Wellington,graduate,4,5,No,9,Wellington,long,English,NZ,None,No,No,None,5,5,4,9,10
+8b3e255cdaf15e6af62319fc65b5507c,2,2,2,lang,30-39,M,Non M,Yes,north,No,Wellington,graduate,4,5,No,9,Wellington,long,English,NZ,fra,No,No,None,5,5,4,9,10
+8bbdc813b8175e9739b2544af4d0e6b4,1,1,0,no,40-49,M,Non M,Yes,north,No,Auckland,high,4,5,Yes,4,Auckland,long,English,NZ,None,No,No,None,5,5,2,9,10
+8ded93f2bb1b4cfbc990a0854fb5be30,1,1,1,lang,18-29,NS,NS,Yes,north,No,Auckland,undergraduate,3,3,Yes,6,Auckland,long,English,NZ,None,No,No,None,5,4,2,6,9
+90ebbcb953c0ffa13d0bd0115626ad1a,1,1,0,no,18-29,F,M,Yes,equal,No,Auckland,undergraduate,4,2,No,3,Auckland,short,English,NZ,None,No,No,None,4,3,2,6,7
+91b9df8fce30048d437898e8d0f885a8,1,2,2,no,30-39,M,M,Yes,north,No,Bay of Plenty,high,5,5,Yes,9,Bay of Plenty,long,English,NZ,None,No,No,None,5,5,3,10,10
+92ac404f3e0707f3fd3f184b7641314c,1,1,2,no,18-29,F,M,Yes,north,No,Auckland,high,5,5,Yes,9,Auckland,long,English,NZ,None,No,No,None,5,5,2,10,10
+9445b05c74e4f21888469bf4695990a8,1,2,1,no,30-39,F,Non M,Yes,north,No,Waikato,high,1,1,Yes,4,Waikato,long,English,NZ,None,No,No,None,5,5,3,2,10
+96a1e156bed326c0b36262bdd0a5ebd9,2,2,2,lang,30-39,F,Non M,Yes,south,Yes,Auckland,graduate,5,5,Yes,8,Auckland,short,English,NZ,kor,No,No,None,5,5,4,10,10
+97785f9cd5e8e4012aa212e334dfe8d7,1,1,0,no,40-49,F,Non M,Yes,south,No,Canterbury,graduate,4,3,Yes,9,Canterbury,long,English,NZ,None,No,No,None,5,5,2,7,10
+980a494a21783966f704629f25c85f9b,1,1,0,no,50-59,F,Non M,Yes,south,No,Canterbury,graduate,5,4,No,7,Canterbury,long,English,NZ,None,No,No,None,5,5,2,9,10
+98d132e73bdfb22918629bd27bf4c6d8,1,1,0,lang,18-29,F,Non M,Yes,north,No,Hawke's Bay,undergraduate,3,2,No,6,Auckland,short,English,NZ,jpn,No,No,None,5,5,2,5,10
+99f1200c81666281b2979a6125cfa7dd,1,1,1,lang,18-29,M,Non M,No,north,No,Waikato,undergraduate,4,2,No,3,Waikato,long,English,Other,None,No,No,None,4,3,2,6,7
+9bc2aa682ab3be2820df074b5c13ff6f,2,1,0,no,18-29,F,Non M,Yes,north,No,Auckland,undergraduate,5,5,No,6,Wellington,short,English,NZ,None,No,No,None,5,5,3,10,10
+9de730451c42c9a62ac5480599a07317,1,2,1,no,40-49,F,Non M,Yes,north,No,Auckland,graduate,5,2,Yes,8,Northland,long,English,NZ,None,No,No,None,5,5,3,7,10
+9e3672c487d3636237ebea0652192542,1,1,0,no,50-59,F,Non M,Yes,north,No,Taranaki,high,4,5,No,6,Taranaki,long,English,NZ,None,No,No,None,5,5,2,9,10
+a2d24a9ba9b51e2d07f19528695b1da4,1,1,1,no,18-29,F,Non M,Yes,north,No,Auckland,graduate,4,2,No,7,Auckland,long,English,NZ,fra,No,No,None,5,4,2,6,9
+a4181feccbc71585f005485d0dc6d67d,1,2,0,no,18-29,NB,Non M,Yes,north,No,Wellington,undergraduate,5,4,No,7,Wellington,long,English,NZ,None,No,No,None,5,5,3,9,10
+a7d1350e7ae5eb7fb54e904214e0619a,0,0,2,lang,18-29,F,Non M,Yes,north,No,Auckland,high,1,1,No,0,Wellington,short,English,NZ,None,No,No,None,5,5,0,2,10
+a8285ad4a4876309852e0d08eb6965d8,2,3,2,no,18-29,M,Non M,Yes,north,No,Waikato,undergraduate,5,3,No,9,Canterbury,short,English,NZ,None,No,No,None,5,5,5,8,10
+a88145e6602d08dbf8932275d4b37567,1,1,1,no,18-29,F,Non M,Yes,north,Yes,Auckland,undergraduate,4,1,No,4,Auckland,long,English,NZ,cmn,No,No,None,4,4,2,5,8
+a88a1729227924eb33d8cc71540f64aa,1,1,2,no,40-49,F,Non M,Yes,north,No,Waikato,undergraduate,2,3,No,4,Waikato,long,English,NZ,None,No,No,None,5,4,2,5,9
+aab4de71754712dce121b9e11e73b1c5,1,1,1,no,18-29,M,Non M,Yes,south,No,Canterbury,graduate,4,2,No,6,Canterbury,long,English,NZ,None,No,No,None,5,5,2,6,10
+ab795f666c625a72d078de397a64acac,1,1,1,no,18-29,F,Non M,Yes,north,No,Auckland,graduate,4,4,No,6,Auckland,short,English,NZ,None,No,No,None,5,4,2,8,9
+ad47dbe1914091baf70c3ccba5d26656,1,1,0,no,60,F,Non M,Yes,south,No,Canterbury,high,4,3,No,5,Canterbury,long,English,NZ,None,No,No,None,5,5,2,7,10
+b1454d3b2e04ac2abff65d30cafcebb6,1,2,0,lang,60,F,Non M,Yes,south,No,Canterbury,graduate,5,3,No,2,Canterbury,long,English,NZ,None,No,No,None,4,5,3,8,9
+b2088355be969fd2b6beba47dbb670c3,1,1,1,no,40-49,F,Non M,Yes,south,No,Canterbury,high,5,5,No,5,Canterbury,long,English,NZ,None,No,No,None,5,5,2,10,10
+b4a627e90f0390e082cb23e57732b64f,1,1,3,lang,30-39,F,Non M,Yes,north,No,Waikato,undergraduate,4,1,No,9,Waikato,long,English,NZ,None,No,No,None,5,5,2,5,10
+b4fd883a1a17fd8f34f39a093b5fbacd,1,1,0,no,50-59,F,Non M,Yes,north,No,Waikato,high,1,1,No,5,Waikato,long,English,NZ,None,No,No,None,5,5,2,2,10
+b533c739e1cb920d44740077479a509a,1,1,1,no,40-49,F,Non M,Yes,south,No,Otago,high,2,2,Yes,4,Otago,long,English,NZ,None,No,No,None,5,5,2,4,10
+b73f348690973cbf4083bc9d0537736f,2,2,1,lang,40-49,F,Non M,Yes,north,No,Auckland,graduate,5,4,No,9,Auckland,short,English,NZ,None,No,Yes,Bislama,5,5,4,9,10
+b7530f5bb1646e5ea65a4f2d549b3c6f,1,1,0,no,60,F,Non M,Yes,north,No,Auckland,graduate,5,3,No,6,Auckland,long,English,NZ,None,No,No,None,5,5,2,8,10
+ba118efccf1790cf4244a0b78bdd6878,0,0,1,no,60,F,Non M,Yes,north,No,Wairarapa,undergraduate,5,3,No,1,Wairarapa,long,English,NZ,None,No,No,None,5,4,0,8,9
+bd3bce368fd0cf02469a54a9addd871a,1,1,0,lang,60,F,Non M,Yes,equal,No,Auckland,graduate,4,4,No,3,Auckland,short,English,NZ,deu,No,No,None,5,5,2,8,10
+c07e5d48b04743a74400d82ab837066b,1,2,0,lang,18-29,NB,Non M,Yes,north,No,Wellington,high,5,4,No,8,Wellington,long,English,NZ,"jpn,vnm",No,No,None,5,5,3,9,10
+c31e2ee88b94f81abf844b00c3af20f2,1,1,0,no,60,F,Non M,Yes,south,No,Canterbury,graduate,5,4,No,8,Canterbury,long,English,NZ,fra,No,No,None,5,5,2,9,10
+c3ac80c2ffbe0dcce94b5438afb5e778,1,1,1,no,18-29,NB,Non M,Yes,equal,No,Timaru - Oamaru,high,2,3,No,4,Timaru - Oamaru,long,English,NZ,None,No,No,None,5,5,2,5,10
+c3fc842f50fef7e7d2b3ae153238cbcb,1,1,2,no,40-49,F,M,Yes,south,No,West Coast,high,5,4,Yes,8,Bay of Plenty,short,English,NZ,None,No,No,None,5,5,2,9,10
+c58c60a986258da43f45910025e86317,2,1,0,no,50-59,F,M,Yes,south,No,Canterbury,undergraduate,3,3,No,9,Canterbury,long,English,NZ,None,No,No,None,5,5,3,6,10
+c5eecfdf9a5bf570742247ec69e91e03,1,1,1,no,18-29,F,Non M,Yes,north,No,Taranaki,graduate,2,4,No,5,Manawatu,short,English,NZ,None,No,No,None,4,5,2,6,9
+c69c7a129347f723776af6b5594d92d3,2,3,4,no,30-39,F,Non M,Yes,south,No,Otago,graduate,4,4,No,9,Otago,short,English,NZ,None,No,No,None,5,5,5,8,10
+cb2162c69ea3bc94cd70f35f9a078a06,1,2,0,no,18-29,F,Non M,No,north,No,Auckland,undergraduate,4,2,No,7,Auckland,long,English,Other,None,No,No,None,5,5,3,6,10
+cbcc79cf2386fcc76b82d594341f866e,1,1,0,no,60,F,Non M,Yes,south,No,Canterbury,undergraduate,5,4,No,9,Canterbury,long,English,NZ,None,No,No,None,5,5,2,9,10
+ccd3866d3d34b06f52c88285c915be6d,1,1,1,no,18-29,NB,Non M,Yes,south,No,Canterbury,high,1,1,No,6,Wellington,short,English,NZ,jpn,No,No,None,5,5,2,2,10
+cd72f48a8d57d3997c94af457d52728d,1,1,1,lang,30-39,F,Non M,Yes,north,No,Waikato,graduate,4,2,No,5,Waikato,long,English,NZ,jpn,No,No,None,5,5,2,6,10
+cdcd5b30399e21fad41ffd027ddd7f76,1,1,1,no,18-29,F,Non M,Yes,south,No,Nelson Bays,high,5,5,Yes,9,Canterbury,short,English,NZ,None,No,No,None,5,5,2,10,10
+d47e6ce315ddaada56d3446a7224515a,1,1,0,no,60,F,Non M,Yes,north,No,Wairarapa,graduate,5,4,No,3,Wellington,long,English,NZ,None,No,No,None,5,5,2,9,10
+d48a247ec7d6ecc9f2d7435af7c7e579,1,0,0,no,30-39,F,Non M,Yes,north,No,Waikato,undergraduate,3,2,Yes,5,Wellington,long,English,NZ,None,No,No,None,5,4,1,5,9
+d4ad46e75bd617e321844188a9c70564,1,1,1,no,18-29,F,Non M,Yes,south,No,Otago,undergraduate,4,3,No,4,Otago,long,English,NZ,None,No,No,None,5,4,2,7,9
+d53b1e52f776f28d3c9602d67c7ff34b,0,0,0,lang,18-29,F,Non M,Yes,south,No,Timaru - Oamaru,undergraduate,3,3,Yes,1,Timaru - Oamaru,short,English,NZ,deu,No,No,None,5,5,0,6,10
+d5c6cd1681a172422fedbff28b67d17c,1,1,0,no,40-49,F,Non M,Yes,north,No,Manawatu,undergraduate,4,3,No,0,Manawatu,long,English,NZ,None,No,No,None,3,3,2,7,6
+d691187f5f66b9f94ccb5476cf58e8d2,0,0,1,no,30-39,M,Non M,Yes,south,Yes,Nelson Bays,high,2,3,No,4,Nelson Bays,short,English,NZ,None,No,No,None,5,5,0,5,10
+d716e59b9465cf49cea342876ec20b75,2,2,2,no,60,F,Non M,Yes,equal,No,Wellington,graduate,4,4,Yes,8,Wellington,long,English,NZ,None,No,No,None,5,5,4,8,10
+d734b97b5236aa5b790a7e95cb98c6ae,1,1,0,no,40-49,F,Non M,Yes,south,No,Canterbury,high,5,2,Yes,9,Canterbury,long,English,NZ,None,No,No,None,5,5,2,7,10
+d78a9b157e7d81e89cd558ffc06d468b,1,2,0,no,18-29,F,Non M,Yes,north,No,Auckland,graduate,5,5,No,8,Canterbury,short,English,NZ,None,No,No,None,5,5,3,10,10
+d8377ea63461cb507e43177156c5e7ed,2,2,1,yes,30-39,F,Non M,Yes,south,Yes,Canterbury,undergraduate,5,5,No,8,Canterbury,long,English,NZ,cmn,No,No,None,5,5,4,10,10
+dab31f975618774d0ffb7c882094ee6b,1,1,0,no,60,F,Non M,Yes,north,No,Wellington,undergraduate,5,4,No,0,Wellington,short,English,NZ,None,No,No,None,4,5,2,9,9
+db77a338e87b948b64c293ea5115196b,0,0,0,no,50-59,F,Non M,Yes,north,No,Hawke's Bay,high,4,4,No,1,Waikato,short,English,NZ,None,No,No,None,3,2,0,8,5
+dc665572d6fe912ecebd32cbafd63612,1,1,1,no,18-29,F,Non M,Yes,south,No,Otago,graduate,4,3,No,8,Otago,long,English,NZ,None,No,No,None,5,5,2,7,10
+df37878455a71097170049390255b2d7,1,1,0,no,60,F,Non M,Yes,south,No,Otago,undergraduate,5,4,No,3,Otago,long,English,NZ,None,No,No,None,4,5,2,9,9
+e121733c5d69d9f7a20a83499a40d30b,1,1,3,no,50-59,F,Non M,Yes,south,No,Southland,graduate,5,5,No,9,Nelson Bays,short,English,NZ,None,No,No,None,5,5,2,10,10
+e213e33ed5bf5e1a5f08572ea3284853,1,1,3,no,50-59,F,Non M,Yes,south,No,West Coast,undergraduate,2,2,No,4,Nelson Bays,long,English,NZ,None,No,No,None,4,4,2,4,8
+e2a85ce543056804460dede4f66939fc,1,2,3,no,50-59,NS,Non M,Yes,north,No,Waikato,graduate,4,4,Yes,8,Waikato,long,English,NZ,None,No,No,None,5,4,3,8,9
+e43fae4b0619fa361840452d8fc247bc,0,0,0,no,40-49,F,M,Yes,north,No,Waikato,high,3,3,No,2,Waikato,long,English,NZ,None,No,No,None,5,5,0,6,10
+e465f81d0710face7ee8f770e9626217,1,0,0,no,30-39,F,Non M,No,north,No,Auckland,graduate,3,3,No,4,Auckland,long,English,Other,None,No,No,None,3,3,1,6,6
+e69eafd31c1575f6858137f3d89b031a,1,2,4,no,30-39,M,Non M,No,north,Yes,Auckland,graduate,3,4,Yes,4,Auckland,short,NonEnglish,Other,None,No,No,None,5,5,3,7,10
+e6c9a12ea42b0b9134de9a023c1b4d27,1,1,0,no,60,F,Non M,Yes,north,Yes,Bay of Plenty,undergraduate,4,4,No,6,Bay of Plenty,long,English,NZ,None,No,No,None,5,4,2,8,9
+e70fc512d2a379b914b49e734c966aac,2,2,1,no,30-39,M,Non M,Yes,north,No,Waikato,graduate,5,5,Yes,9,Waikato,long,English,NZ,None,No,No,None,5,5,4,10,10
+e7bc6d411b6e52b9399dbef743e21806,1,1,2,no,40-49,F,Non M,Yes,north,No,Wellington,undergraduate,4,3,Yes,8,Wellington,long,English,NZ,None,No,No,None,5,5,2,7,10
+e8607b0ac4a0814ee2c590be4dcb0c3b,2,2,0,no,30-39,F,Non M,No,north,Yes,Auckland,graduate,4,4,Yes,5,Auckland,short,NonEnglish,Other,None,No,No,None,4,5,4,8,9
+e9f3ce7447dcf043601438a25c2ef626,1,1,1,no,50-59,F,Non M,Yes,north,No,Waikato,high,5,5,No,5,Waikato,long,English,NZ,None,No,No,None,5,1,2,10,6
+eaa052ea89a3b91d264b04df8e2e6f69,1,1,0,no,50-59,F,Non M,Yes,north,No,Manawatu,high,5,2,Yes,4,Manawatu,long,English,NZ,None,No,No,None,4,2,2,7,6
+eb00c74ee12b1962a60ddb8a7791b11d,2,1,0,no,40-49,F,M,Yes,north,No,Waikato,high,4,4,Yes,6,Waikato,long,English,NZ,None,No,No,None,5,5,3,8,10
+eca12a422476c013ca2fa3aa5afe560c,1,1,1,no,18-29,F,Non M,Yes,equal,No,Nelson Bays,graduate,1,4,No,8,Wellington,short,English,NZ,"jan, cmn, fra",No,No,None,5,5,2,5,10
+ef881fd7a7148a38fbe984b4ab69ce16,1,1,1,no,40-49,F,Non M,Yes,north,No,Wellington,graduate,3,3,No,7,Wellington,long,English,NZ,None,No,No,None,5,5,2,6,10
+ef922647b19f8d85817b3689054b40a7,1,1,0,no,40-49,F,Non M,Yes,north,No,Auckland,graduate,5,3,Yes,4,Auckland,long,English,NZ,None,No,No,None,3,2,2,8,5
+efb13c4a5a889fbc543dcc6fec0c6bdc,1,1,1,no,18-29,M,Non M,Yes,north,No,Wellington,undergraduate,4,4,No,5,Wellington,long,English,NZ,None,No,No,None,4,5,2,8,9
+efcedc8c1589704998bcdcff2f2c9355,2,2,0,no,40-49,F,Non M,Yes,north,No,Wellington,high,5,5,Yes,7,Wellington,long,English,NZ,None,No,Yes,Cook Island Maori,5,4,4,10,9
+f096e83ffc9a95982c42b37d4a404578,1,1,1,lang,30-39,M,Non M,Yes,south,No,Timaru - Oamaru,graduate,5,5,Yes,9,Timaru - Oamaru,short,English,NZ,deu,No,No,None,5,5,2,10,10
+f0ede975999e8c1175550788234d7951,1,1,0,no,40-49,F,Non M,Yes,south,No,Otago,graduate,4,4,No,4,Otago,long,English,NZ,None,No,No,None,5,5,2,8,10
+f14462c39ba8876867e162d2e3d1e228,1,0,1,lang,18-29,F,Non M,Yes,north,No,Auckland,undergraduate,3,2,No,2,Auckland,long,English,NZ,cmn,No,No,None,5,5,1,5,10
+f300854a78cd337ca2afe9b9cc061f38,1,1,0,no,30-39,M,Non M,Yes,south,No,Southland,undergraduate,2,1,Yes,4,Southland,short,English,NZ,jpn,No,No,None,5,4,2,3,9
+f38fd7f58a91e820c409e950c868cb2e,1,1,1,no,18-29,M,Non M,No,north,No,Wellington,undergraduate,4,2,No,5,Wellington,short,English,NZ,None,No,No,None,4,5,2,6,9
+f5f5a50d8343c81345a97d3408608089,1,2,1,no,18-29,NB,Non M,Yes,south,No,Nelson Bays,high,5,4,No,9,Nelson Bays,short,English,NZ,None,No,No,None,5,4,3,9,9
+f6cabf13653109ea4d8bff8c7ddaeedf,1,2,1,no,30-39,F,Non M,No,north,No,Auckland,undergraduate,4,4,No,9,Canterbury,short,English,Other,None,No,No,None,5,5,3,8,10
+f9001e39291d01aaa4bd0a101ee973f6,1,1,0,no,30-39,F,M,Yes,north,No,Auckland,high,5,3,No,3,Auckland,long,English,NZ,None,No,No,None,5,5,2,8,10
+faf825d4ef5a9de45e3435abdbf7fc8e,1,1,1,no,30-39,M,Non M,Yes,north,No,Waikato,high,4,4,Yes,7,Waikato,long,English,NZ,None,No,No,None,3,4,2,8,7
+fbdc34a25aa449da833a6cde244bfa24,1,1,1,no,18-29,F,Non M,Yes,north,No,Manawatu,undergraduate,3,3,No,9,Manawatu,long,English,NZ,None,No,No,None,5,5,2,6,10
+fd219e79989e995b62c1c92cde2a3195,1,1,4,no,50-59,M,Non M,Yes,south,No,Canterbury,undergraduate,5,5,Yes,9,Canterbury,long,English,NZ,None,No,No,None,5,4,2,10,9
+fdfc0ac6f6a9b0011b83a47821e0a68b,1,1,1,no,30-39,F,Non M,Yes,north,No,Auckland,undergraduate,5,3,Yes,3,Timaru - Oamaru,short,English,NZ,None,No,No,None,5,5,2,8,10
+fea6168ea5be32b6da958d38fcfce17e,1,1,0,no,50-59,F,M,Yes,north,No,Northland,high,2,1,No,5,Northland,long,English,NZ,None,No,No,None,5,4,2,3,9
+ff950380e15cad1f24da5057f6dd1009,1,1,1,no,50-59,F,Non M,Yes,south,No,Canterbury,graduate,5,2,No,2,Canterbury,long,English,NZ,None,No,Yes,Samoan,5,5,2,7,10
