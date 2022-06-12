@@ -100,7 +100,7 @@ clm_table <- function(mod, digits=3, ...) {
   significance = case_when(
       p < 0.001 ~ "***",
       p < 0.01 ~ "**",
-      p < 0.05 ~ "*",
+      p < 0.05 ~ "\\*",
       p < 0.1 ~ ".",
       TRUE ~ ""
       ),
@@ -303,13 +303,13 @@ The SRI Language Modelling Toolkit (SRILM) was used to calculate the phonotactic
 
 For the purposes of creating stimuli, words and nonwords were required to match according to two separate phonotactic scores. One of these scores was based on word types exactly as they appear in the Te Aka Dictionary, including all vowel length contrasts. The other was based on word types with the distinction between all long vowels and their short counterparts collapsed (i.e. all long vowels shortened prior to modeling). Because the stimuli were matched according to both phonotactic scores, we can be confident that each word and nonword are as phonotactically similar as possible to each other, regardless of how participants cognitively represent and track vowel length.
 
-For the purposes of analysis, we used only the phonotactic score that collapses vowel length distinctions, following the finding by Oh et al. (2020) that it correlates better with human phonotactic ratings. In the R code in this document, this measure is referred to as `score.shortv`. In the rest of this document, the term "phonotactic score" refers the scores based on this length-neutralised model.
+For the purposes of analysis, we used only the phonotactic score that collapses vowel length distinctions, following the finding by Oh et al. (2020) that it correlates better with human phonotactic ratings. In the R code in this document, this measure is referred to as `p.scr`. In the rest of this document, the term "phonotactic score" refers the scores based on this length-neutralised model.
 
 The set of stimuli were binned into three equally-sized categories based on the phonotactic score of each stimulus representing "high", "medium", and "low" likeness to the overall Māori lexicon: $N^\text{high} = 175$, $N^\text{medium} = 174$, $N^\text{low} = 172$.
 
-### Neighbourhood Count
+### Neighbourhood Density
 
-Neighbourhood count is a general measure of the number of minimal pairs that a given word type has, i.e. the number of other word types that are a Levenshtein edit distance of 1 from it. A host of studies have shown the processing of a word is affected by the number of neighbors that it has.
+Neighbourhood density is a general measure of the number of minimal pairs that a given word type has, i.e. the number of other word types that are a Levenshtein edit distance of 1 from it. A host of studies have shown the processing of a word is affected by the neighbourhood density of a word.
 
 To deal with the fact that different words have different ranges of *possible* neighbor counts, we use a related measure that we refer to as a *neighbourhood occupancy rate*. To calculate neighborhood occupancy rate, we consider how many possible neighbors a word may have, by counting the number of **unique, phonotactically legal** strings that can be formed by adding, deleting, or substituting a single phoneme. We then divide the actual number of neighbors (as counted in the Te Aka Dictionary) by the possible number of neighbors, to reflect the proportion of possible neighbors that actually exist in the language.
 
@@ -323,7 +323,7 @@ For example, the non-word *aNu* (written *angu*) has a neighbourhood count of 12
 * 1 possible consonant-vowel substitution $\times$ 10 possible vowels to substitute;  
 * 0 possible vowel-consonant substitutions (any substitution would create an illegal consonant cluster).
 
-Consequently, this item has a neighbourhood occupancy rate of $12/87 = 0.138$. In the R code in this document, this measure is referred to as `norm.neighbors`.
+Consequently, this item has a neighbourhood occupancy rate of $12/87 = 0.138$. In the R code in this document, this measure is referred to as `nm.nbr`.
 
 ### Frequency
 
@@ -551,6 +551,12 @@ wellFormTask$word <- as.character(wellFormTask$word)
 Encoding(wellFormTask$word) = "UTF-8"
 wellFormTask$enteredResponse <- as.factor(wellFormTask$enteredResponse)
 
+# clmm(), which is used for ordinal regression modelling, has a bug that requires random terms to be below a certain size, or it returns an error. Here we rename two variables in the datasets so that the models run later in this document do not return errors.
+identTask <- identTask %>%
+  dplyr::rename(nm.nbr = norm.neighbors, n.phon = n.phonemes, p.scr = score.shortv)
+
+wellFormTask <- wellFormTask %>%
+  dplyr::rename(nm.nbr = norm.neighbors, p.scr = score.shortv)
 ```
 
 
@@ -936,11 +942,11 @@ Figure 3 expands on the visualisation of Figure 2 by adding a dimension for the 
 
 ```{r Figure 3, fig.width=9, fig.height=3, fig.cap="Figure 3: Mean confidence rating vs. phonotactic score for each stimulus for real words and nonwords by frequency bin. Lines show correlations within each bin, for each stimulus type."}
 
-scores <- unique(identTask[,c("word","score.shortv")])
+scores <- unique(identTask[,c("word","p.scr")])
 allBinsScored <- merge(allBins, scores, by="word")
 remove(scores)
 
-discrim_bins_scatter <- ggplot(allBinsScored, aes(x=score.shortv, y=meanRating, color=type)) +
+discrim_bins_scatter <- ggplot(allBinsScored, aes(x=p.scr, y=meanRating, color=type)) +
   geom_point(aes(shape=type), alpha=0.3, size=3) +
   geom_smooth(aes(fill=type), method="lm", formula="y~x", alpha=0.6, size=1) +
   facet_grid(. ~ bin) +
@@ -989,120 +995,113 @@ identTask <- identTask %>% mutate(bin_b = NA)
 identTask$bin_b[identTask$bin == 1] <- "low_mid"
 identTask$bin_b[identTask$bin == 2] <- "low_mid"
 identTask$bin_b[identTask$bin == 3] <- "high"
+identTask$enteredResponse <- as.factor(identTask$enteredResponse)
+identTask$bin_b <- as.factor(identTask$bin_b)
 
 ```
 
 In fitting our regression model, we use a step-down procedure: we start with a large model, and identify candidates for deletion in a stepwise fashion. For practical reasons, we first remove as many candidates as possible in a fixed-effects setting (`clm`) before moving to a mixed-effects setting (`clmm`). 
 
-In the fixed-effects setting, we remove interactions one at a time if they do not make a significant contribution to the model’s explanatory power, assessed via Analysis of Deviance (using a type III test from the `anova` function), starting with the interaction with the least contribution. We then remove main effects one a time if they are not included in any remaining interactions and they do not make a significant contribution to the model’s explanatory power. 
+In the fixed-effects setting, we remove interactions one at a time if they do not make a significant contribution to the model’s explanatory power. We then remove main effects if they are not included in any remaining interactions and if they are not statistically significant. 
 
-Once there are no more candidate terms for removal, we re-fit the model in a mixed-effects setting, adding random intercepts by participant and item and random slopes by participant for each remaining term. We remove interaction terms from random slopes as required to circumvent convergence issues, and consider adding them back into the model at the end if they are retained in the fixed effects structure. We identify candidate terms for removal if their coefficient is not significant in the model; after performing each removal, we confirm that it was justified via model comparison, using a log-likelihood ratio test.
+Once there are no more candidate terms for removal, we re-fit the model in a mixed-effects setting, adding random intercepts by participant and item and random slopes by participant for each remaining term. We remove interaction terms from random slopes as required to circumvent problems in running the models. We identify candidate terms for removal if their coefficient is not significant in the model; after performing each removal, we confirm that it was justified via model comparison, using a log-likelihood ratio test.
 
 We start from a model using Helmert contrasts to represent the frequency bin factor (`bin`), and proceed until the stepwise fitting procedure is complete. At that point, we swap the frequency bin factor to a binary factor (`bin_b`) and consider if this change permits any further simplification of model structure. We compare the resultant models and choose the one with the lowest AIC as the model that is best supported by the data.
 
 
 ```{r Model Comparison}
-identTask$enteredResponse <- as.factor(identTask$enteredResponse)
-identTask$bin_b <- as.factor(identTask$bin_b)
-
 # We start with the largest model with a four-way interaction
-#m1 <- clm(enteredResponse ~ c.(score.shortv) * type * c.(n.neighbors) * bin, data=identTask)
+#m1 <- clm(enteredResponse ~ c.(p.scr) * type * c.(nm.nbr) * bin * c.(n.phon), data=identTask)
 
-#summary(m1) # four-way interaction is significant - keep all effects. Do a mixed effects model.
+#summary(m1) # five-way interaction is significant - keep all effects. Do a mixed effects model.
 
-#m2 <- clmm(enteredResponse ~ c.(score.shortv) * type * c.(n.neighbors) * bin + (1|workerId) + (1|word), data=identTask)
+#m2 <- clmm(enteredResponse ~ c.(p.scr) * type * c.(nm.nbr) * bin * c.(n.phon) + (1|word) + (1|workerId), data=identTask)
 
+#summary(m2) # score * type * nm.nbr * bin is significant. anything larger is not significant. n.phonemes is significant as a simple effect.
 
-#summary(m2) # remove four-way interaction. three-way interaction of score : type : bin is significant - keep this.
+#m3 <- clmm(enteredResponse ~ (c.(p.scr) * type * c.(nm.nbr) * bin) + c.(n.phon) + (1|word) + (1|workerId), data=identTask)
 
-#m3 <- clmm(enteredResponse ~ (c.(score.shortv) * type * bin) + (c.(n.neighbors) * c.(score.shortv) * bin) + (1|workerId) + (1|word), data=identTask)
+#summary(m3) # four-way interaction not significant. score * type * bin is significant. No interaction involving nm.nbr is significant, but it is significant without interactions. Include it without interaction.
+#anova(m2, m3) # m3 has a lower AIC
 
-#summary(m3) # remove all interactions with neighbours
+#m4 <- clmm(enteredResponse ~ (c.(p.scr) * type * bin) + c.(n.phon) + c.(nm.nbr) + (1|word) + (1|workerId), data=identTask)
 
-#m4 <- clmm(enteredResponse ~ (c.(score.shortv) * type * bin) + c.(n.neighbors) + (1|workerId) + (1|word), data=identTask)
+#summary(m4) # nothing to remove.
+#anova(m3, m4) # m4 has a lower AIC
 
-#summary(m4) # model random slopes
+#m5 <- clmm(enteredResponse ~ (c.(p.scr) * type * bin) + c.(n.phon) + c.(nm.nbr) + (1|word) + (1 + c.(p.scr) * type * bin + c.(n.phon) + c.(nm.nbr)|workerId), data=identTask)
+#summary(m5) # model does not complete after running for several days - random terms are too complex. try a version with simple random slopes (i.e. no interactions)
+#write_rds(m5, "docs/m5.rds")
 
-#m5 <- clmm(enteredResponse ~ (c.(score.shortv) * type * bin) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
-
-#summary(m5) # three-way interaction is not significant, remove
-
-#m6 <- clmm(enteredResponse ~ type * bin + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+#m6 <- clmm(enteredResponse ~ (c.(p.scr) * type * bin) + c.(n.phon) + c.(nm.nbr) + (1|word) + (1 + c.(p.scr) + type + bin + c.(n.phon) + c.(nm.nbr)|workerId), data=identTask)
+#summary(m6) # three-way interaction is significant. create alternative model with binary contrast
 #write_rds(m6, "docs/m6.rds")
 
-#m7 <- clmm(enteredResponse ~ type * bin + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type * bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
-#write_rds(m7, "docs/m7.rds")
-# model m7 does not converge
-
-#m8 <- clmm(enteredResponse ~ (type * bin) + c.(score.shortv) + (c.(n.neighbors) * type) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), data=identTask)
-#write_rds(m8, "docs/m8.rds")
-
-#m9 <- clmm(enteredResponse ~ (type * (bin + c.(n.neighbors))) + c.(score.shortv) + (1 + (type * (bin + c.(n.neighbors))) + c.(score.shortv)|workerId) + (1|word), data=identTask)
-#write_rds(m9, "docs/m9.rds")
-# model m9 does not converge
-
-#m10 <- clmm(enteredResponse ~ (type * bin) + c.(score.shortv) + (1 + c.(score.shortv) + type + bin|workerId) + (1|word), data=identTask)
-#write_rds(m10, "docs/m10.rds")
-
-#m11 <- clmm(enteredResponse ~ (type * bin) + c.(score.shortv) + (1 + type * bin + c.(score.shortv)|workerId) + (1|word), data=identTask)
-#write_rds(m11, "docs/m11.rds")
-# model m10 does not converge
-
-# binary models
-#m6a <- clmm(enteredResponse ~ (type * bin_b) + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin_b + c.(n.neighbors)|workerId) + (1|word), data=identTask)
+#m6a <- clmm(enteredResponse ~ (c.(p.scr) * type * bin_b) + c.(n.phon) + c.(nm.nbr) + (1|word) + (1 + c.(p.scr) + type + bin_b + c.(n.phon) + c.(nm.nbr)|workerId), data=identTask)
+#summary(m6a)
 #write_rds(m6a, "docs/m6a.rds")
-
-#m8a <- clmm(enteredResponse ~ (type * bin_b) + c.(score.shortv) + (c.(n.neighbors) * type) + (1 + c.(score.shortv) + type + bin_b + c.(n.neighbors)|workerId) + (1|word), data=identTask)
-#write_rds(m8a, "docs/m8a.rds")
-
-#m10a <- clmm(enteredResponse ~ (type * bin_b) + c.(score.shortv) + (1 + c.(score.shortv) + type + bin_b|workerId) + (1|word), data=identTask)
-#write_rds(m10a, "docs/m10a.rds")
 
 m6 <- read_rds("docs/m6.rds")
 m6a <- read_rds("docs/m6a.rds")
-m8 <- read_rds("docs/m8.rds")
-m8a <- read_rds("docs/m8a.rds")
-m10 <- read_rds("docs/m10.rds")
-m10a <- read_rds("docs/m10a.rds")
+
 tibble(
-  "Model"=c("m6 (helmert)",
-            "m6a (binary)",
-            "m8 (helmert)",
-            "m8a (binary)",
-            "m10 (helmert)",
-            "m10a (binary)"
+  "Model"=c(
+    "Model 6 (Three-Way Helmert Contrast)",
+    "Model 6a (Binary Contrast)"
             ),
-  "AIC" = c(AIC(m6),
-            AIC(m6a),
-            AIC(m8),
-            AIC(m8a),
-            AIC(m10),
-            AIC(m10a)
+  "AIC" = c(
+    AIC(m6),
+    AIC(m6a)
             )
   ) %>%
-  display_table(digits=1, highlight=c("AIC"), caption="Table 2: Comparison of AIC using different representations of the frequency bin factor. m6 is the best Model.")
+  display_table(digits=1, highlight=c("AIC"), caption="Table 2: Comparison of AIC using different representations of the frequency bin factor. Model 6 is the best Model.")
 
-remove(m6, m6a, m8, m8a, m10, m10a)
+remove(m6, m6a)
 ```
 
-Table 3 summarises the best-fitting model. This model shows that the type of stimulus and the phonotactic scores of the stimuli are significant predictors for the ratings that stimuli received: in general across frequency bins, ratings increased with phonotactic score, and words received higher ratings than non-words. Furthermore, there is a significant interaction between stimulus type and low & mid vs. high contrast, reflecting a greater difference between ratings of words and non-words in the high-frequency bin in comparison to the other bins.
+Table 3 summarises the best-fitting model. This model shows that the type of stimulus, phonotactic score, and frequency of stimuli (i.e. its stimulus bin) are significant predictors for the ratings that stimuli received: in general across frequency bins, ratings increased with phonotactic score, and words received higher ratings than non-words. Neighbourhood density and stimulus length (number of phonemes) both condition higher ratings. The former effect is likely to do with words with greater neighbourhood densities being more likely to activate words known to participants. The latter effect is likely to do with longer words appearing more Māori-like to participants. 
 
 ```{r Table3 Model Summary}
 m6 <- read_rds("docs/m6.rds")
+names(m6$coefficients) <- names(m6$coefficients) %>% str_replace_all("nm.nbr", "neighbourhood density") %>% str_replace_all("p.scr", "phonotactic score") %>% str_replace_all("n.phon", "number of phonemes")
 clm_table(m6, caption="Table 3: Fixed Effects of the Word Identification Task Model.")
 remove(m6)
 ```
+
+Figure 4 shows the Predicted Rating of Stimuli by the three factors shown to interact significantly in the Word Identification Task Model: Phonotactic score, stimulus type, and frequency bin. This plot confirms the effects shown in figure 3: Real words in the high frequency bin show a different distribution from other stimuli: there is not a positive phonotactic slope, and there is a very high intercept.
+
+```{r model results Figure 4, fig.width=8, fig.height=5, fig.cap="Figure 4: Three-Way Interaction in the Word Identification Task Model Between Phonotactic Score, Stimulus Type, and Frequency Bin"}
+m6 <- read_rds("docs/m6.rds")
+m6_data <- clm_plotdat(m6, c("p.scr", "type", "bin"), type="mean")
+m6_data %>%
+  mutate(
+    bin = recode_factor(bin, "1" = "Low", "2" = "Mid", "3" = "High")
+  ) %>%
+  ggplot(aes(x = p.scr, y = pred, color = type, fill = type)) +
+  geom_line() +
+  geom_ribbon(aes(ymin = lci, ymax = uci), alpha = 0.3, colour=NA) +
+  facet_wrap(.~bin) +
+  theme_minimal() +
+  xlab("Phonotactic Score") +
+  ylab("Predicted Rating") +
+  scale_y_continuous(limits=c(0, 5), breaks=c(1, 2, 3, 4, 5))
+  
+```
+
 
 At this point, we must confirm that the selected model shows no intercorrelation between predictors, which may impact the results. We do this by retrieving the Variance  Inflation Factor (VIF) for each fixed effect. As shown in Table 4, all fixed effects have a VIF lower than 5, meaning that all fixed effects are within an acceptable range. 
 
 ```{r VIF for word ident model, fig.width=6, fig.height=4, fig.cap=""}
 # In order to calculate VIF for model m6, a linear version of the model is created, and the vif.mer() function is used on this model.
-#m6_lmer <- lmer(as.integer(enteredResponse) ~ type * bin + c.(score.shortv) + c.(n.neighbors) + (1 + c.(score.shortv) + type + bin + c.(n.neighbors)|workerId) + (1|word), 
+#m6_lmer <- lmer(as.integer(enteredResponse) ~ (c.(p.scr) * type * bin) + c.(n.phon) + c.(nm.nbr) + (1|word) + (1 + c.(p.scr) + type + bin + c.(n.phon) + c.(nm.nbr)|workerId), 
 #                data=identTask, 
 #                control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun=2e5)))
 #write_rds(m6_lmer, "docs/m6_lmer.rds")
-read_rds("docs/m6_lmer.rds") %>%
-  vif.mer() %>%
+m6_lmer <- read_rds("docs/m6_lmer.rds")
+m6_vif <- vif.mer(m6_lmer)
+ names(m6_vif) <- names(m6_vif) %>% str_replace_all("nm.nbr", "neighbourhood density") %>% str_replace_all("p.scr", "phonotactic score") %>% str_replace_all("n.phon", "number of phonemes") %>% str_replace_all("[\\(\\)]", "") %>%  str_replace_all("c\\.", "(centered)")  %>% str_replace_all("(\\(centered\\))(.{1,})", "\\2 \\1")
+ 
+m6_vif %>%
   data.frame() %>%
   rownames_to_column(var = "Factor") %>%
   setNames(c("Factor", "VIF")) %>%
@@ -1122,7 +1121,7 @@ read_rds("docs/m6_lmer.rds") %>%
 In analysing the Wellformedness Rating Task, we want to investigate whether there is any effect of the participant's performance in the [Identification Task]. To accomplish this, we restrict analysis of the Wellformedness Rating Task to those participants who are included in the final data for **both** tasks, by virtue of showing variation in their ratings across stimuli in both tasks. For these participants, we calculate a score to represent how well they performed in the Identification Task, by subtracting their mean rating for non-words from their mean rating for words. 
 
 The Density Plot of the Identification Task Accuracy Scores shows a normal distribution. The mean Identification Task score is 0.467, with a standard deviation of 0.3. 
-```{r accuracy scores Figure 4, fig.widtn=5, fig.height=5, fig.cap="Figure 4: Histogram and Density Plot, Scaled to Kernel Density Estimation."}
+```{r accuracy scores Figure 5, fig.width=5, fig.height=5, fig.cap="Figure 5: Histogram and Density Plot, Scaled to Kernel Density Estimation."}
 # Calculate exp1 accuracy score for each workerId
 identTask$enteredResponse<-as.numeric(identTask$enteredResponse)
 scoreWord<-aggregate(enteredResponse~type+workerId, identTask, mean)
@@ -1155,20 +1154,20 @@ remove(accScore, scoreNon, scoreWord)
 
 ## Wellformedness Rating Task Descriptive Statistics
 
-Figure 5 shows the mean rating of stimuli in the Wellformedness Rating task by the phonotactic score of the stimuli. The results show a positive correlation between the rating of stimuli and their phonotactic score ($r = 0.60$).
+Figure 6 shows the mean rating of stimuli in the Wellformedness Rating task by the phonotactic score of the stimuli. The results show a positive correlation between the rating of stimuli and their phonotactic score ($r = 0.60$).
 
-```{r Figure 5, fig.width=6, fig.height=4, fig.cap="Figure 5: Mean Wellformedness Rating by Phonotactic Score. Dotted lines separate items into bins of equal size by phonotactic score."}
+```{r Figure 5, fig.width=6, fig.height=4, fig.cap="Figure 6: Mean Wellformedness Rating by Phonotactic Score. Dotted lines separate items into bins of equal size by phonotactic score."}
 #Get mean ratings for each stimulus per bin
 allBinsScored <- wellFormTask %>%
-  group_by(word, bin=tert_count, score.shortv) %>%
+  group_by(word, bin=tert_count, p.scr) %>%
   summarise(
     meanRating = mean(as.numeric(enteredResponse))
   )
 
 # get boundaries between bins
-boundaries <- c(max(allBinsScored$score.shortv[allBinsScored$bin == "low"]), max(allBinsScored$score.shortv[allBinsScored$bin == "medium"]))
+boundaries <- c(max(allBinsScored$p.scr[allBinsScored$bin == "low"]), max(allBinsScored$p.scr[allBinsScored$bin == "medium"]))
 
-rating_by_phonotactics <- ggplot(allBinsScored, aes(x=score.shortv, y=meanRating)) +
+rating_by_phonotactics <- ggplot(allBinsScored, aes(x=p.scr, y=meanRating)) +
   geom_point(alpha=0.1, size=4) +
   geom_smooth(method="lm", formula="y~x", alpha=0.7, size=1, color="black") +
   geom_vline(xintercept=boundaries, linetype="dotted") +
@@ -1187,30 +1186,25 @@ remove(allBinsScored, rating_by_phonotactics, boundaries)
 
 ## Wellformedness Rating Task Ordinal Regression Model
 
-We analysed the data using (logit) ordinal regression, following the same stepwise procedure as outlined for the [Identification Task Ordinal Regression Model]. No terms were able to be removed.
+We analysed the data using (logit) ordinal regression, following the same stepwise procedure as outlined for the [Identification Task Ordinal Regression Model], except for this model we begin with random effects, given that we are testing fewer fixed effects. No terms were able to be removed.
 
 ```{r Wellformedness Rating Task Regression Model 1}
-# create centralised variables
 
-#  Analysis for Exp2 with Exp1.score
-#modelAcc1<- clmm(enteredResponse ~ c.(score.shortv)*(c.(Exp1.score) + c.(norm.neighbors)) + (1 + c.(score.shortv) * c(norm.neighbors)| workerId) + (1 + c.(Exp1.score)| word), data=wellFormTask)
-#no convergnece
-
-#modelAcc1a <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) * c.(norm.neighbors) + (1| workerId) + (1|word), data=wellFormTask)
+#modelAcc1 <- clmm(enteredResponse ~ c.(p.scr) * c.(Exp1.score) * c.(nm.nbr) + (1| workerId) + (1|word), data=wellFormTask)
 #summary(modelAcc1a) # three-way interaction is not significant. Keep all two-way interactions.\
 
-#modelAcc2 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + c.(Exp1.score) * c.(norm.neighbors) + (1|workerId) + (1|word), data=wellFormTask)
+#modelAcc2 <- clmm(enteredResponse ~ c.(p.scr) * c.(Exp1.score) + c.(p.scr) * c.(nm.nbr) + c.(Exp1.score) * c.(nm.nbr) + (1|workerId) + (1|word), data=wellFormTask)
 #summary(modelAcc2) # all interactions significant. add random slopes.
 
-#modelAcc3 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + c.(Exp1.score) * c.(norm.neighbors) + (1 + c.(score.shortv) * c.(norm.neighbors)|workerId) + (1 + Exp1.score|word), data=wellFormTask)
-#summary(modelAcc3) # exp1score * norm.neighbors is not significant - remove.
+#modelAcc3 <- clmm(enteredResponse ~ c.(p.scr) * c.(Exp1.score) + c.(p.scr) * c.(nm.nbr) + c.(Exp1.score) * c.(nm.nbr) + (1 + c.(p.scr) * c.(nm.nbr)|workerId) + (1 + Exp1.score|word), data=wellFormTask)
+#summary(modelAcc3) # exp1score * nm.nbr is not significant - remove.
 #write_rds(modelAcc3, "docs/modelAcc3.rds")
 
-#modelAcc4 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + (1 + c.(score.shortv) * c.(norm.neighbors)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask) 
+#modelAcc4 <- clmm(enteredResponse ~ c.(p.scr) * c.(Exp1.score) + c.(p.scr) * c.(nm.nbr) + (1 + c.(p.scr) * c.(nm.nbr)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask) 
 #summary(modelAcc4) # model does not work
 
 
-#modelAcc5 <- clmm(enteredResponse ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + (1 + c.(score.shortv) + c.(norm.neighbors)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask) 
+#modelAcc5 <- clmm(enteredResponse ~ c.(p.scr) * c.(Exp1.score) + c.(p.scr) * c.(nm.nbr) + (1 + c.(p.scr) + c.(nm.nbr)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask) 
 #write_rds(modelAcc5, "docs/modelAcc5.rds")
 
 modelAcc3 <- read_rds("docs/modelAcc3.rds")
@@ -1229,22 +1223,26 @@ tibble(
 
 ```
 
-The final model is shown in Table 6. The model shows a significant effect of phonotactic score; as seen in [Wellformedness Rating Task Descriptive Statistics], stimuli are rated higher if they have higher phonotactic scores. The results also show a significant interaction between phonotactic score and neighbourhood occupancy rate: non-words that have many real-word neighbours display less sensitivity to phonotactic score. We interpret this as a recognition effect: participants are more likely to recognise a neighbour in such circumstances and thus to be affected by the fact that the stimulus *is not* that neighbour.
+The final model is shown in Table 6. The model shows a significant effect of phonotactic score; as seen in [Wellformedness Rating Task Descriptive Statistics], stimuli are rated higher if they have higher phonotactic scores. The results also show a significant interaction between phonotactic score and neighbourhood density: non-words that have many real-word neighbours display less sensitivity to phonotactic score. We interpret this as a recognition effect: participants are more likely to recognise a neighbour in such circumstances and thus to be affected by the fact that the stimulus *is not* that neighbour.
 
 Finally, there is a significant interaction between phonotactic score and Identification Task score: participants who were more accurate in the Identification Task were more sensitive to phonotactic score in the Wellformedness Rating Task.
 
 ```{r Table4 Model Summary, fig.width=6, fig.height=4, fig.cap=""}
 modelAcc5 <- readRDS("docs/modelAcc5.rds")
+ names(modelAcc5$coefficients) <- names(modelAcc5$coefficients) %>% str_replace_all("nm.nbr", "neighbourhood density") %>% str_replace_all("p.scr", "phonotactic score") %>% str_replace_all("Exp1.score", "identification task score")
+ 
 clm_table(modelAcc5, caption="Table 6: Fixed Effects of the Best Wellformedness Rating Task Model", label=NA)
 remove(modelAcc5)
 ```
 
 As with the Word Identification task, we retrieve the Variance Inflation Factor (VIF) for each fixed effect in this model. As shown in Table 7, all fixed effects have a VIF < 5, meaning that all fixed effects are within an acceptable range.
 ```{r VIF for wellformedness model, fig.width=6, fig.height=4, fig.cap=""}
-#modelAcc5_lmer <- lmer(as.integer(enteredResponse) ~ c.(score.shortv) * c.(Exp1.score) + c.(score.shortv) * c.(norm.neighbors) + (1 + c.(score.shortv) + c.(norm.neighbors)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask)
+#modelAcc5_lmer <- lmer(as.integer(enteredResponse) ~ c.(p.scr) * c.(Exp1.score) + c.(p.scr) * c.(nm.nbr) + (1 + c.(p.scr) + c.(nm.nbr)|workerId) + (1 + c.(Exp1.score)|word), data=wellFormTask)
 #write_rds(modelAcc5_lmer, "docs/modelAcc5_lmer.rds")
-read_rds("docs/modelAcc5_lmer.rds") %>%
-  vif.mer() %>%
+modelAcc5_lmer <- readRDS("docs/modelAcc5_lmer.rds")
+modelAcc5_vif <- vif.mer(modelAcc5_lmer)
+ names(modelAcc5_vif) <- names(modelAcc5_vif) %>% str_replace_all("nm.nbr", "neighbourhood density") %>% str_replace_all("p.scr", "phonotactic score") %>% str_replace_all("Exp1.score", "identification task score") %>% str_replace_all("[\\(\\)]", "") %>%  str_replace_all("c\\.", "(centered)")  %>% str_replace_all("(\\(centered\\))(.{1,})", "\\2 \\1")
+modelAcc5_vif %>%
   data.frame() %>%
   rownames_to_column(var = "Factor") %>%
   setNames(c("Factor", "VIF")) %>%
@@ -1256,17 +1254,17 @@ read_rds("docs/modelAcc5_lmer.rds") %>%
 ```
 
 
-For ease of interpretation, we plot the interaction between performance in the Identification Task and sensitivity to phonotactic score in the Wellformedness Rating Task, using the same method described in the Detailed Materials and Method Supplement of Oh et al. (2020). This plot is shown in Figure 6: in general, participants with a higher Identification Task score will give ill-formed non-words lower scores and well-formed words higher scores, whereas participants with a lower Identification Task score will give all non-words ratings closer to 3 ("unsure").
+For ease of interpretation, we plot the interaction between performance in the Identification Task and sensitivity to phonotactic score in the Wellformedness Rating Task, using the same method described in the Detailed Materials and Method Supplement of Oh et al. (2020). This plot is shown in Figure 7: in general, participants with a higher Identification Task score will give ill-formed non-words lower scores and well-formed words higher scores, whereas participants with a lower Identification Task score will give all non-words ratings closer to 3 ("unsure").
 
-```{r fig.width = 8, fig.height=6, fig.cap="Figure 6: Relationship Between Identification Task Score, Wellformedness Rating, and Phonotactic Score."}
+```{r fig.width = 8, fig.height=6, fig.cap="Figure 7: Relationship Between Identification Task Score, Wellformedness Rating, and Phonotactic Score."}
 modelAcc5 <- readRDS("docs/modelAcc5.rds")
 
 
-fig3.mean <- clm_plotdat(modelAcc5, c("Exp1.score", "score.shortv"), xlevels=list(score.shortv=25, Exp1.score=c(0,1)), type="mean") %>%
+fig3.mean <- clm_plotdat(modelAcc5, c("Exp1.score", "p.scr"), xlevels=list(p.scr=25, Exp1.score=c(0,1)), type="mean") %>%
   mutate(
     Exp1.score = factor(Exp1.score, labels=c("low (0 point difference)", "high (1 point difference)")) %>% fct_relevel("high (1 point difference)")
   ) %>%
-  ggplot(., aes(x=score.shortv, y=pred, color=Exp1.score, fill=Exp1.score)) +
+  ggplot(., aes(x=p.scr, y=pred, color=Exp1.score, fill=Exp1.score)) +
     geom_ribbon(aes(ymin=lci, ymax=uci), alpha=0.3, color=NA) +
     geom_line(size=1) +
     xlab("Phonotactic score") +
@@ -1281,11 +1279,11 @@ fig3.mean <- clm_plotdat(modelAcc5, c("Exp1.score", "score.shortv"), xlevels=lis
       panel.background = element_blank()
     )
 
-fig3.dist <- clm_plotdat(modelAcc5, c("Exp1.score", "score.shortv"), xlevels=list(score.shortv=25, Exp1.score=c(0,1)), type="dist") %>%
+fig3.dist <- clm_plotdat(modelAcc5, c("Exp1.score", "p.scr"), xlevels=list(p.scr=25, Exp1.score=c(0,1)), type="dist") %>%
   mutate(
      Exp1.score = factor(Exp1.score, labels=c("low (0 point difference)", "high (1 point difference)")) %>% fct_relevel("high (1 point difference)")
   ) %>%
-  ggplot(., aes(x=score.shortv, y=pred, color=Exp1.score, fill=Exp1.score)) +
+  ggplot(., aes(x=p.scr, y=pred, color=Exp1.score, fill=Exp1.score)) +
     geom_ribbon(aes(ymin=lci, ymax=uci), alpha=0.3, color=NA) +
     geom_line(size=1) +
     xlab("Phonotactic score") +

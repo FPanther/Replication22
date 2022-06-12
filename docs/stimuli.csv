@@ -1,0 +1,1043 @@
+word.freq,pair.number,freq.category,type,item,n.phonemes,n.morae,n.syllables,cv.shape,wordshape,has.diphthong,has.longv,contained.words,n.neighbors,mean.neighbor.logfreq,neighbors,score.longv,score.shortv,tert_value,tert_count,tert_sd,poss.neighbors,norm.neighbors
+2,7,low,nonword,aNu,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,4.15,"aku, anu, ahu, aNo, apu, paNu, maNu, aNa, aru, aNi, au, atu",-1.22725,-1.18775,low,low,low,87,0.138
+0,58,unattested,nonword,fiao,4,3,2,CVVV,cvv2,TRUE,FALSE,"fia, ao",9,1.597,"faiao, firo, fao, fio, fia, niao, fito, feao, feiao",-1.147,-1.1508,low,low,low,127,0.071
+0,285,unattested,nonword,noe,3,2,1,CVV,cv2,TRUE,FALSE,NA,10,3.757,"hoe, toe, moe, nae, noke, koe, noa, Noe, none, noi",-1.14525,-1.1405,low,low,low,88,0.114
+0,110,unattested,nonword,ieke,4,3,3,VVCV,vvcv,FALSE,FALSE,eke,14,2.331,"peke, hieke, meke, heke, tieke, iere, eke, feke, pieke, reke, keke, neke, teke, ike",-1.1222,-1.1294,low,low,low,126,0.111
+0,510,unattested,nonword,uoro,4,3,3,VVCV,vvcv,FALSE,FALSE,oro,9,3.041,"poro, roro, kuoro, horo, puoro, tuoro, toro, koro, oro",-1.1068,-1.1114,low,low,low,126,0.071
+8,511,mid,nonword,upu,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,3.581,"upa, unu, uru, kupu, umu, utu, apu, uhu, ipu, uku, tupu",-1.13925,-1.10775,low,low,low,87,0.126
+0,120,unattested,nonword,iru,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,2.925,"uru, ira, ihu, inu, imu, iro, iri, oru, aru, ipu, miru",-1.10225,-1.09525,low,low,low,87,0.126
+1205,119,high,nonword,iroa,4,3,3,VCVV,vcvv,FALSE,FALSE,"iro, roa",9,2.413,"ioa, ira, iro, oroa, miroa, iria, iNoa, eroa, roa",-1.0762,-1.086,low,low,low,117,0.077
+0,92,unattested,nonword,hoio,4,3,2,CVVV,cv2v,TRUE,FALSE,"hoi, io",10,1.962,"ioio, hoiho, hopo, hono, hoko, hoto, Noio, koio, hoi, horo",-1.0592,-1.07,low,low,low,127,0.079
+3458,298,high,nonword,Nui,3,2,2,CVV,cvv,FALSE,FALSE,NA,9,4.121,"rui, tui, hui, nui, mui, Noi, kui, NAi, ui",-1.066,-1.06575,low,low,low,88,0.102
+0,406,unattested,nonword,riei,4,3,2,CVVV,cvv2,TRUE,FALSE,NA,6,2.711,"riri, rei, ripi, rifi, riki, riNi",-1.0822,-1.0622,low,low,low,127,0.047
+4,4,low,nonword,aihu,4,3,2,VVCV,v2cv,TRUE,FALSE,"ai, ihu",5,2.57,"ihu, kihu, aitu, ahu, aihe",-1.0684,-1.0602,low,low,low,126,0.04
+1,524,low,nonword,weo,3,2,2,CVV,cvv,FALSE,FALSE,NA,12,1.972,"weto, wao, keo, reo, teo, peo, wea, weu, wero, weko, eo, feo",-1.06775,-1.05675,low,low,low,88,0.136
+0,252,unattested,nonword,moio,4,3,2,CVVV,cv2v,TRUE,FALSE,"moi, io",8,1.711,"ioio, moto, moi, moko, momo, Noio, koio, moho",-1.1212,-1.0544,low,low,low,127,0.063
+3,497,low,nonword,tuo,3,2,2,CVV,cvv,FALSE,FALSE,NA,5,3.003,"tao, tui, teo, tua, tio",-1.0885,-1.054,low,low,low,88,0.057
+1,309,low,nonword,oNo,3,2,2,VCV,vcv,FALSE,FALSE,NA,9,2.968,"aNo, oko, ono, NoNo, roNo, iNo, oho, oNe, oro",-1.05625,-1.0495,low,low,low,87,0.103
+0,26,unattested,nonword,eheu,4,3,3,VCVV,vcvv,FALSE,FALSE,heu,4,0.761,"ehu, heu, iheu, aheu",-1.052,-1.0494,low,low,low,117,0.034
+1099,15,high,nonword,aui,3,3,2,VVV,v2v,TRUE,FALSE,"au, ui",21,3.805,"auhi, rui, hui, nui, mui, taui, aue, au, afi, ui, ati, tui, ari, kaui, ahi, ai, kui, auE, aNi, aufi, aua",-1.065,-1.04225,low,low,low,117,0.179
+4,116,low,nonword,ipa,3,2,2,VCV,vcv,FALSE,FALSE,NA,17,2.845,"ina, tipa, ipo, epa, apa, ipu, hipa, upa, kipa, ioa, ira, iwa, opa, ia, ita, ika, ripa",-1.03975,-1.03975,low,low,low,87,0.195
+0,159,unattested,nonword,koeu,4,3,2,CVVV,cv2v,TRUE,FALSE,koe,11,1.394,"keu, koehu, koeau, koau, koru, koea, kou, koe, koeo, konu, kohu",-1.1082,-1.0388,low,low,low,127,0.087
+0,461,unattested,nonword,teu,3,2,2,CVV,cvv,FALSE,FALSE,NA,13,3.607,"keu, tea, te, tou, tOu, teo, weu, tau, tAu, tei, heu, reu, tiu",-1.04175,-1.0345,low,low,low,88,0.148
+0,346,unattested,nonword,peu,3,2,2,CVV,cvv,FALSE,FALSE,NA,14,2.282,"keu, pei, peau, pea, peru, peo, weu, pehu, pau, piu, pou, heu, reu, penu",-1.06175,-1.03375,low,low,low,88,0.159
+1,318,low,nonword,otua,4,3,3,VCVV,vcvv,FALSE,FALSE,tua,7,2.634,"orua, atua, utua, rotua, ohua, tua, ota",-1.0142,-1.0322,low,low,low,117,0.06
+0,117,unattested,nonword,ipi,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,3.263,"iri, ihi, hipi, ipo, iti, pipi, ipu, ripi, iwi, iki, tipi",-1.00875,-1.03025,low,low,low,87,0.126
+1,297,low,nonword,Nua,3,2,2,CVV,cvv,FALSE,FALSE,NA,10,5.438,"kua, tua, ua, Naua, mua, pua, hua, rua, Nuha, aua",-1.0235,-1.028,low,low,low,88,0.114
+0,5,unattested,nonword,aiwa,4,3,2,VVCV,v2cv,TRUE,FALSE,"ai, iwa",6,3.459,"aiNa, awa, iwa, kiwa, hiwa, piwa",-1.0392,-1.0274,low,low,low,126,0.048
+0,340,unattested,nonword,pauo,4,3,2,CVVV,cv2v,TRUE,FALSE,pau,3,3.812,"paNo, pau, pao",-1.0606,-1.0246,low,low,low,127,0.024
+91,486,mid,nonword,tuea,4,3,3,CVVV,cvvv,FALSE,FALSE,ea,17,2.177,"toea, tutea, tuha, tufa, uea, tea, tuNa, taea, tuia, tua, tukea, tupea, tuna, tuta, puea, tupa, turea",-1.0676,-1.022,low,low,low,127,0.134
+0,310,unattested,nonword,onoi,4,3,2,VCVV,vcv2,TRUE,FALSE,"ono, noi",8,1.608,"oroi, noi, inoi, oni, oioi, ono, nonoi, okoi",-1.0052,-1.018,low,low,low,117,0.068
+0,503,unattested,nonword,uhe,3,2,2,VCV,vcv,FALSE,FALSE,NA,10,2.064,"uho, uha, ure, uhi, uhu, ihe, ue, he, ute, Ehe",-1.0225,-1.01775,low,low,low,87,0.115
+9,284,mid,nonword,Noa,3,2,2,CVV,cvv,FALSE,FALSE,NA,13,3.759,"ioa, Nota, moa, koa, Noi, poa, toa, noa, iNoa, Noe, hoa, roa, Naoa",-1.0205,-1.0175,low,low,low,88,0.148
+7,89,mid,nonword,hiu,3,2,2,CVV,cvv,FALSE,FALSE,NA,15,3.122,"hOu, riu, himu, hau, hie, hou, niu, kiu, piu, hia, fiu, heu, hinu, hiku, tiu",-1.092,-1.016,low,low,low,88,0.17
+14,513,mid,nonword,uro,3,2,2,VCV,vcv,FALSE,FALSE,NA,10,2.898,"ura, uru, uri, iro, uto, uho, aro, ure, ero, oro",-1.073,-1.0125,low,low,low,87,0.115
+11,504,mid,nonword,uire,4,3,3,VVCV,vvcv,FALSE,FALSE,ui,6,1.759,"pire, uere, uira, tire, rire, ure",-1.0176,-1.0124,low,low,low,126,0.048
+0,317,unattested,nonword,otoi,4,3,2,VCVV,vcv2,TRUE,FALSE,toi,6,2.074,"oroi, toi, oioi, oti, totoi, okoi",-1.0126,-1.0108,low,low,low,117,0.051
+0,415,unattested,nonword,roui,4,3,2,CVVV,cv2v,TRUE,FALSE,"rou, ui",10,1.247,"romi, houi, rui, roi, rohi, roki, ropi, rowi, rou, rori",-1.007,-1.0104,low,low,low,127,0.079
+0,311,unattested,nonword,onu,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,3.113,"unu, anu, inu, one, ohu, oni, ono, tonu, oru, ona, honu, konu",-1.031,-1.0085,low,low,low,87,0.138
+93,316,mid,nonword,oto,3,2,2,VCV,vcv,FALSE,FALSE,NA,16,2.761,"ato, koto, oko, Noto, poto, oho, toto, oro, ota, roto, moto, uto, ono, ito, hoto, oti",-0.99525,-1.007,low,low,low,87,0.184
+6,501,low,nonword,uaka,4,3,3,VVCV,vvcv,FALSE,FALSE,"ua, aka",20,2.39,"uka, tuaka, uara, taka, uaki, aka, raka, faka, auaka, kuaka, haka, kaka, unaka, puaka, uaua, naka, waka, maka, uaNa, paka",-1.018,-1.0038,low,low,low,126,0.159
+0,29,unattested,nonword,eNi,3,2,2,VCV,vcv,FALSE,FALSE,NA,8,0.339,"heNi, ANi, eNia, eti, eNa, emi, aNi, eNe",-1.014,-1.00275,low,low,low,87,0.092
+10,509,mid,nonword,une,3,2,2,VCV,vcv,FALSE,FALSE,NA,10,1.96,"unu, ene, one, ine, ure, pune, hune, kune, ute, ue",-0.99925,-1.0025,low,low,low,87,0.115
+0,439,unattested,nonword,taoe,4,3,2,CVVV,cv2v,TRUE,FALSE,tao,9,3.345,"paoe, tao, toe, tare, tame, tane, tae, take, tahe",-1.0388,-0.9992,low,low,low,127,0.071
+2,25,low,nonword,eha,3,2,2,VCV,vcv,FALSE,FALSE,NA,16,2.244,"keha, eNa, epa, uha, weha, aha, neha, ehu, ha, aeha, peha, eka, ehE, oha, ea, ehua",-1.0275,-0.997,low,low,low,87,0.184
+1,28,low,nonword,eko,3,2,2,VCV,vcv,FALSE,FALSE,NA,15,2.375,"neko, ko, meko, reko, eo, keko, eke, oko, teko, weko, ako, eku, ero, eka, feko",-1.00475,-0.996,low,low,low,87,0.172
+109,313,mid,nonword,opi,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,1.976,"ori, popi, opa, oni, kopi, oi, ohi, ropi, hopi, ope, oti",-0.9935,-0.99475,medium,low,low,87,0.126
+2,121,low,nonword,ite,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,3.058,"ete, te, rite, ike, ine, kite, ate, iti, ito, ita, ihe, ute",-0.982,-0.99275,medium,low,low,87,0.138
+0,304,unattested,nonword,oheu,4,3,3,VCVV,vcvv,FALSE,FALSE,heu,4,1.423,"heu, iheu, ohu, aheu",-0.982,-0.9866,medium,low,low,117,0.034
+3,306,low,nonword,omi,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,1.492,"romi, ori, komi, emi, oni, Ami, oma, oi, momi, ohi, oti",-0.98175,-0.983,medium,low,low,87,0.126
+10028,282,high,nonword,nio,3,2,2,CVV,cvv,FALSE,FALSE,NA,10,2.579,"niko, niho, fio, pio, niu, io, niao, Aio, nao, tio",-0.97975,-0.9825,medium,low,low,88,0.114
+139,122,high,nonword,itoi,4,3,2,VCVV,vcv2,TRUE,FALSE,"ito, toi",4,4.027,"iti, toi, inoi, ito",-0.9788,-0.9744,medium,low,low,117,0.034
+87,507,mid,nonword,umi,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,1.804,"numi, humi, uri, ufi, umu, emi, uhi, Ami, uki, kumi, uma, ui",-0.9675,-0.97425,medium,low,low,87,0.138
+13,30,mid,nonword,eri,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,2.139,"ori, ari, uri, iri, heri, reri, emi, weri, Neri, ero, eti, keri",-0.97375,-0.972,medium,low,low,87,0.138
+6,27,low,nonword,ehi,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,2.077,"ehu, ihi, ahi, emi, Ihi, uhi, ohi, kehi, eti, ehE, wehi",-0.9845,-0.9715,medium,low,low,87,0.126
+1,60,low,nonword,fino,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,3.001,"mino, rino, fio, fano, tino, fito, firo, kino",-0.9992,-0.971,medium,low,low,106,0.075
+0,308,unattested,nonword,oNi,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,1.462,"ori, NoNi, oni, oi, ohi, ANi, oti, toNi, aNi, oNe, hoNi",-0.9755,-0.96975,medium,low,low,87,0.126
+4,65,low,nonword,haio,4,3,2,CVVV,cv2v,TRUE,FALSE,"hai, io",7,2.057,"hao, taio, hako, Naio, kaio, hai, hamo",-0.9814,-0.9694,medium,low,low,127,0.055
+0,23,unattested,nonword,awi,3,2,2,VCV,vcv,FALSE,FALSE,NA,9,4.696,"ati, ari, ahi, awa, ai, iwi, aNi, afi, awe",-1.01525,-0.96625,medium,low,low,87,0.103
+7,347,mid,nonword,piao,4,3,2,CVVV,cvv2,TRUE,FALSE,"pia, ao",10,2.035,"piro, pia, pao, pUao, piako, pio, piko, pito, piau, niao",-0.9832,-0.9652,medium,low,low,127,0.079
+51,266,mid,nonword,nai,3,2,1,CVV,cv2,TRUE,FALSE,NA,18,5.145,"tai, nui, mai, wai, kai, rai, nei, nae, pai, nau, nao, nati, fai, ai, naki, napi, hai, noi",-1.0025,-0.963,medium,low,low,88,0.205
+50,505,mid,nonword,uke,3,2,2,VCV,vcv,FALSE,FALSE,NA,16,2.31,"uka, ake, eke, ruke, uku, oke, ute, puke, nuke, huke, ure, uki, tuke, Ake, ike, ue",-0.9855,-0.94875,medium,low,low,87,0.184
+6116,522,high,nonword,wei,3,2,1,CVV,cv2,TRUE,FALSE,NA,13,4.552,"pei, rei, kei, weki, wea, weu, weri, wai, nei, hei, tei, wehi, mei",-0.9515,-0.943,medium,low,low,88,0.148
+642,112,high,nonword,iko,3,2,2,VCV,vcv,FALSE,FALSE,NA,19,2.978,"ko, hiko, ipo, oko, io, riko, iNo, iki, iho, iro, niko, ike, kiko, piko, ito, ako, tiko, ika, miko",-0.92125,-0.94175,medium,low,low,87,0.218
+0,20,unattested,nonword,awea,4,3,3,VCVV,vcvv,FALSE,FALSE,"awe, wea",8,1.908,"aweNa, rawea, awa, wea, anea, kawea, afea, awe",-0.9658,-0.9364,medium,low,low,117,0.068
+0,9,unattested,nonword,apao,4,3,2,VCVV,vcv2,TRUE,FALSE,"apa, pao",5,1.808,"papao, apo, apai, apa, pao",-0.9406,-0.9362,medium,low,low,117,0.043
+0,118,unattested,nonword,ipina,5,3,3,VCVCV,vcvcv,FALSE,FALSE,NA,0,0,,-0.938166667,-0.932166667,medium,low,low,135,0
+0,502,unattested,nonword,uhane,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"uha, hane",2,0.693,"upane, hane",-0.927333333,-0.927,medium,low,low,135,0.015
+0,302,unattested,nonword,nuru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,3.44,"auru, uru, ruru, kuru, turu, Nuru, huru, puru, muru, nuku",-0.9432,-0.9266,medium,low,low,106,0.094
+2713,51,high,nonword,fekua,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"feku, kua",5,2.303,"wekua, feNua, feua, fenua, feku",-0.980666667,-0.923333333,medium,low,low,136,0.037
+990,303,high,nonword,ohe,3,2,2,VCV,vcv,FALSE,FALSE,NA,20,2.503,"one, oha, rohe, ohi, oke, oho, mohe, pohe, Nohe, tohe, oNe, ohu, hohe, oue, ope, ihe, he, ore, Ehe, kohe",-0.9275,-0.92025,medium,low,low,87,0.23
+960,12,high,nonword,arou,4,3,2,VCVV,vcv2,TRUE,FALSE,"aro, rou",5,1.697,"aru, warou, aroA, rou, aro",-0.9486,-0.9174,medium,low,low,117,0.043
+33,16,mid,nonword,auku,4,3,2,VVCV,v2cv,TRUE,FALSE,"au, uku",12,3.175,"auru, aku, pauku, kuku, auau, tuku, ruku, muku, uku, mauku, nuku, puku",-0.9418,-0.9172,medium,low,low,126,0.095
+354,389,high,nonword,raea,4,3,2,CVVV,cv2v,TRUE,FALSE,"rae, ea",23,2.72,"rawa, raha, ranea, maea, rea, rae, raka, rapa, raua, raNea, raeNa, haea, waea, rara, rama, kaea, rawea, taea, raNa, paea, faea, rana, rata",-0.9494,-0.9154,medium,low,low,127,0.181
+1,527,low,nonword,wihu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,3,1.798,"kihu, ihu, wahu",-0.9228,-0.9152,medium,low,low,106,0.028
+0,287,unattested,nonword,Nohio,5,3,3,CVCVV,cvcvv,FALSE,FALSE,Nohi,3,0,"Nohi, Noio, pohio",-0.942,-0.914,medium,low,low,136,0.022
+0,399,unattested,nonword,rarue,5,3,3,CVCVV,cvcvv,FALSE,FALSE,raru,4,2.24,"Narue, raru, rare, rarua",-0.9315,-0.912833333,medium,low,low,136,0.029
+22,88,mid,nonword,hio,3,2,2,CVV,cvv,FALSE,FALSE,NA,9,2.906,"hiko, fio, pio, hie, hao, io, hia, Aio, tio",-0.98875,-0.9125,medium,low,low,88,0.102
+1,420,low,nonword,ruNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.6,"raNi, rui, uruNi, riNi, ruki, ruNa, ruri, tuNi, rINi, ruhi",-0.91,-0.9102,medium,low,low,106,0.094
+1,17,low,nonword,aupa,4,3,2,VVCV,v2cv,TRUE,FALSE,"au, upa",9,1.411,"upa, tupa, auta, apa, kupa, haupa, hupa, faupa, aua",-0.9274,-0.9098,medium,low,low,126,0.071
+689,111,high,nonword,iha,3,2,2,VCV,vcv,FALSE,FALSE,NA,20,3.307,"ina, ihu, Niha, miha, ihia, riha, uha, ioa, iho, ira, aha, iwa, ha, ihi, piha, ia, ita, ihe, ika, oha",-0.91675,-0.9085,medium,low,low,87,0.23
+0,31,unattested,nonword,faio,4,3,2,CVVV,cv2v,TRUE,FALSE,"fai, io",11,2.087,"faNo, faiA, faiao, kaio, fao, fio, fai, fano, taio, faro, Naio",-0.9208,-0.9074,medium,low,low,127,0.087
+1,263,low,nonword,munu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.541,"unu, Nunu, muna, mumu, manu, maunu, hunu, mutu, mAnu, mAunu, tunu, mOunu, muru, muku, muhu",-0.904,-0.902,medium,low,medium,106,0.142
+2411,115,high,nonword,iNi,3,2,2,VCV,vcv,FALSE,FALSE,NA,10,2.894,"iri, riNi, ihi, iti, miNi, ANi, iNo, iwi, aNi, iki",-0.9415,-0.89775,medium,low,medium,87,0.115
+0,299,unattested,nonword,numa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,2.179,"numia, numi, nama, nuka, nuia, uma",-0.9124,-0.8974,medium,low,medium,106,0.057
+0,290,unattested,nonword,Noni,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,1.061,"moni, Neni, Nohi, honi, NoNi, Noi, koni, oni, poni, noni",-0.9184,-0.8962,medium,low,medium,106,0.094
+3226,485,high,nonword,tue,3,2,2,CVV,cvv,FALSE,FALSE,NA,13,3.931,"hue, ture, tui, te, tute, tuke, toe, tua, tae, oue, aue, ue, tupe",-0.957,-0.89325,medium,low,medium,88,0.148
+305,13,high,nonword,arua,4,3,3,VCVV,vcvv,FALSE,FALSE,"aru, rua",12,3.201,"rua, ara, atua, urua, warua, apua, orua, ahua, rarua, aru, uarua, aua",-0.9164,-0.892,medium,low,medium,117,0.103
+0,260,unattested,nonword,muiri,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"mui, iri",3,3.241,"miri, muri, mOiri",-0.885833333,-0.890666667,medium,low,medium,136,0.022
+0,151,unattested,nonword,keNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,3.076,"keNo, heNi, kehi, kei, kINi, keri",-0.901,-0.8894,medium,low,medium,106,0.057
+3,300,low,nonword,numu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.729,"kumu, numi, umu, mumu, tumu, oumu, namu, humu, nuku",-0.8932,-0.8872,medium,low,medium,106,0.085
+0,315,unattested,nonword,otake,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ota, take",1,7.214,take,-0.909833333,-0.8835,medium,low,medium,135,0.007
+3,2,low,nonword,ahe,3,2,2,VCV,vcv,FALSE,FALSE,NA,17,3.355,"are, afe, tahe, ake, ate, aue, ahu, awe, aha, aho, aihe, ahi, nahe, aheu, ihe, he, Ehe",-0.96075,-0.88225,medium,low,medium,87,0.195
+1461,276,high,nonword,nea,3,2,2,CVV,cvv,FALSE,FALSE,NA,17,3.776,"mea, rea, pea, anea, nei, noa, tea, uea, kea, fea, hea, neha, wea, enea, inea, nefa, ea",-0.90425,-0.88175,medium,low,medium,88,0.193
+0,267,unattested,nonword,Nairo,5,3,2,CVVCV,cv2cv,TRUE,FALSE,iro,4,2.464,"tairo, Naio, NOiro, Naro",-0.906166667,-0.878833333,medium,low,medium,136,0.029
+0,59,unattested,nonword,fina,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.91,"faina, ina, fira, fiua, fika, fena, hina, fia, Afina, fana, fita, mina, kina, tina",-0.8988,-0.8784,medium,low,medium,106,0.132
+0,53,unattested,nonword,feNe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,1.709,"feke, meNe, NeNe, fere, eNe, feNu",-0.901,-0.8768,medium,low,medium,106,0.057
+1,237,low,nonword,meni,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,4,3.383,"Neni, mene, moni, mei",-0.8738,-0.8768,medium,low,medium,106,0.038
+0,508,unattested,nonword,umuhi,5,3,3,VCVCV,vcvcv,FALSE,FALSE,umu,1,0,uruhi,-0.8795,-0.876666667,medium,low,medium,135,0.007
+0,50,unattested,nonword,fehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,1.443,"fepu, nehu, ehu, fenu, kehu, pehu, rehu, feau, feNu, feku",-0.8874,-0.8718,medium,low,medium,106,0.094
+0,314,unattested,nonword,opuri,5,3,3,VCVCV,vcvcv,FALSE,FALSE,puri,2,1.417,"opuru, puri",-0.913333333,-0.8715,medium,low,medium,135,0.015
+0,271,unattested,nonword,Naunu,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"Nau, unu",4,0.978,"taunu, maunu, Nunu, paunu",-0.916833333,-0.87,medium,low,medium,136,0.029
+0,331,unattested,nonword,panoi,5,3,2,CVCVV,cvcv2,TRUE,FALSE,noi,5,0.636,"paoi, pani, panoni, kanoi, tanoi",-0.879333333,-0.87,medium,low,medium,136,0.037
+0,512,unattested,nonword,uriki,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"uri, riki",3,3,"ariki, riki, umiki",-0.876166667,-0.869,medium,low,medium,135,0.022
+1,307,low,nonword,onahi,5,3,3,VCVCV,vcvcv,FALSE,FALSE,ona,1,0.693,unahi,-0.877,-0.868833333,medium,low,medium,135,0.007
+0,264,unattested,nonword,Nafe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,0.199,"Naue, Nae, Nafi, afe, fafe, NafA, kafe, Nare, Nake",-0.8946,-0.8674,medium,low,medium,106,0.085
+196,410,high,nonword,riwi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.155,"riki, riNi, riri, iwi, rifi, ripi, rowi, kiwi, hiwi",-0.8928,-0.8656,medium,low,medium,106,0.085
+0,514,unattested,nonword,wahui,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"wahu, hui",2,0.347,"nahui, wahu",-0.878166667,-0.864833333,medium,low,medium,136,0.015
+12,155,mid,nonword,kinu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.999,"inu, kanu, kihu, kini, hinu, kiu, konu, kina, kino",-0.88,-0.8634,medium,low,medium,106,0.085
+3670,419,high,nonword,rumu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.996,"kumu, umu, mumu, ruru, tumu, rutu, oumu, rimu, humu, ruku, remu",-0.8664,-0.8628,medium,low,medium,106,0.104
+0,312,unattested,nonword,opero,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ope, pero",1,0,pero,-0.8665,-0.8625,medium,low,medium,135,0.007
+179,232,high,nonword,mehe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,1.797,"mere, mene, rehe, mete, kehe, meNe, meke, nehe, pehe, meho, Nehe, wehe, tehe, maehe, mohe",-0.8712,-0.861,medium,low,medium,106,0.142
+43,289,mid,nonword,noNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,1.149,"noi, noni, nohi, NoNi, toNi, noti, hoNi",-0.9502,-0.8608,medium,low,medium,106,0.066
+0,241,unattested,nonword,mimu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,1.372,"timu, imu, mimi, himu, mumu, miru, rimu",-0.8512,-0.8596,medium,low,medium,106,0.066
+0,414,unattested,nonword,roNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.548,"romi, raNi, roi, riNi, NoNi, rohi, roki, roNo, ropi, rori, rowi, toNi, rINi, hoNi",-0.8648,-0.8582,medium,low,medium,106,0.132
+0,416,unattested,nonword,rouku,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"rou, uku",3,1.43,"roku, ruku, mouku",-0.881833333,-0.858166667,medium,low,medium,136,0.022
+13,506,mid,nonword,umene,5,3,3,VCVCV,vcvcv,FALSE,FALSE,mene,4,2.238,"umere, mene, Amene, unene",-0.897333333,-0.8565,medium,low,medium,135,0.03
+0,403,unattested,nonword,reNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.63,"raNi, rei, riNi, reri, reti, heNi, repi, reNa, rINi",-0.8678,-0.856,medium,low,medium,106,0.085
+0,525,unattested,nonword,wetua,5,3,3,CVCVV,cvcvv,FALSE,FALSE,tua,5,0.636,"wekua, wepua, ketua, wetea, weta",-0.870166667,-0.854333333,medium,low,medium,136,0.037
+29,277,mid,nonword,Nehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,1.992,"nehu, ehu, Nahu, Neru, kehu, pehu, rehu, Nehe",-0.8588,-0.8528,medium,low,medium,106,0.075
+1,18,low,nonword,aure,4,3,2,VVCV,v2cv,TRUE,FALSE,"au, ure",12,1.812,"ture, rure, are, auru, pure, Naure, aute, aurei, ure, aue, auare, hure",-0.8672,-0.8526,medium,low,medium,126,0.095
+3,272,low,nonword,naura,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"nau, ura",2,4.023,"taura, paura",-0.871333333,-0.852166667,medium,low,medium,136,0.015
+0,48,unattested,nonword,fatiu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"fati, tiu",4,2.352,"fatia, fati, fatu, atiu",-0.879166667,-0.849666667,medium,low,medium,136,0.029
+1,83,low,nonword,henu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,1.082,"henui, heru, hunu, hinu, honu, heu, fenu, penu",-0.8544,-0.8486,medium,low,medium,106,0.075
+13,283,mid,nonword,Niri,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,3.147,"wiri, hiri, firi, iri, Nira, riri, Nari, Neri, tiri, kiri, miri, piri",-0.8496,-0.8478,medium,low,medium,106,0.113
+2,521,low,nonword,wehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.257,"nehu, weha, wahu, ehu, weku, wepu, weu, kehu, pehu, rehu, wehe, wehi, weru",-0.8572,-0.8472,medium,low,medium,106,0.123
+0,301,unattested,nonword,Nuri,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.638,"huri, uri, puri, turi, Nari, Neri, Nuru, muri, ruri",-0.852,-0.847,medium,low,medium,106,0.085
+0,94,unattested,nonword,hokoe,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"hoko, koe",3,2.644,"hokoa, hokoi, hoko",-0.867833333,-0.846666667,medium,low,medium,136,0.022
+1,462,low,nonword,tewa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,1.784,"tea, teNa, tefa, tawa, taewa, pewa, hewa, teka, teoa, tewe, rewa, kewa, tera",-0.8584,-0.8454,medium,low,medium,106,0.123
+0,305,unattested,nonword,omari,5,3,3,VCVCV,vcvcv,FALSE,FALSE,oma,1,0,omaki,-0.850666667,-0.8445,medium,low,medium,135,0.007
+0,186,unattested,nonword,kunene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kune, nene",3,0,"konene, unene, kuene",-0.871857143,-0.844285714,medium,low,medium,154,0.019
+1,239,low,nonword,mihu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,2.129,"mahu, ihu, miha, kihu, mihi, miru, muhu",-0.8694,-0.8422,medium,low,medium,106,0.066
+11,238,mid,nonword,meru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.4,"mere, heru, maru, peru, Neru, miru, weru, muru",-0.8688,-0.842,medium,low,medium,106,0.075
+2,146,low,nonword,kateo,5,3,3,CVCVV,cvcvv,FALSE,FALSE,teo,3,2.332,"katea, koteo, kato",-0.883833333,-0.841833333,medium,low,medium,136,0.022
+8,361,mid,nonword,pokua,5,3,3,CVCVV,cvcvv,FALSE,FALSE,kua,4,2.233,"poua, pakua, pokea, poka",-0.903333333,-0.841833333,medium,low,medium,136,0.029
+0,479,unattested,nonword,tonumi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tonu, numi",2,0.347,"tanumi, tAnumi",-0.859857143,-0.841285714,medium,low,medium,154,0.013
+36,391,mid,nonword,raia,4,3,2,CVVV,cv2v,TRUE,FALSE,"rai, ia",23,2.367,"rUia, raima, rawa, raha, raka, rai, rapa, raua, rOia, araia, rara, reia, waia, Araia, rama, rIia, raina, iaia, raNa, rana, ruia, rafia, rata",-0.8848,-0.8406,medium,low,medium,127,0.181
+30,8,mid,nonword,apako,5,3,3,VCVCV,vcvcv,FALSE,FALSE,apa,0,0,,-0.865,-0.8405,medium,low,medium,135,0
+0,293,unattested,nonword,nori,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,1.64,"ori, tori, noi, noti, nohi, hori, kori, pori, noni, rori",-0.8752,-0.8398,medium,low,medium,106,0.094
+0,153,unattested,nonword,kerunu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,0,0,,-0.876857143,-0.838285714,medium,low,medium,154,0
+4,279,low,nonword,nere,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,3.062,"mere, rere, uere, here, pere, fere, kere, tere, nehe, neke, iere, Nere",-0.8582,-0.838,medium,low,medium,106,0.113
+0,398,unattested,nonword,rarea,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"rare, rea",16,1.081,"rerea, rurea, ranea, warea, rearea, rorea, raNea, parea, rarua, rara, Narea, rare, rawea, karea, tarea, marea",-0.855,-0.8375,medium,low,medium,136,0.118
+0,210,unattested,nonword,maNute,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,maNu,0,0,,-0.885,-0.837285714,medium,low,medium,154,0
+0,411,unattested,nonword,roaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,roa,5,1.528,"raki, ruaki, roaka, riaki, roki",-0.849666667,-0.837166667,medium,low,medium,136,0.037
+1,249,low,nonword,moeri,5,3,2,CVVCV,cv2cv,TRUE,FALSE,moe,2,1.282,"moari, mouri",-0.8425,-0.836666667,medium,low,medium,136,0.015
+2,157,low,nonword,koai,4,3,2,CVVV,cvv2,TRUE,FALSE,"koa, ai",16,2.137,"koki, koi, poai, kohi, komi, koti, koau, koa, koni, koati, kai, kopi, koapi, kori, koaia, kopai",-0.9532,-0.8366,medium,low,medium,127,0.126
+0,469,unattested,nonword,tirio,5,3,3,CVCVV,cvcvv,FALSE,FALSE,tiri,3,3.141,"tiria, tiro, tiri",-0.888,-0.836333333,medium,low,medium,136,0.022
+6,294,low,nonword,noro,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.626,"noho, poro, roro, nono, noko, horo, toro, koro, oro",-0.8436,-0.836,medium,low,medium,106,0.085
+16,79,mid,nonword,hehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.012,"heru, nehu, ehu, hahu, kehu, pehu, huhu, rehu, heu",-0.8646,-0.8358,medium,low,medium,106,0.085
+73,296,mid,nonword,noto,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.696,"koto, roto, moto, noti, nono, noko, poto, hoto, Noto, toto, noho",-0.8486,-0.835,medium,low,medium,106,0.104
+0,268,unattested,nonword,Naoro,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"Nao, oro",6,2.197,"paoro, Naora, Naore, Naoko, Naro, Nahoro",-0.881666667,-0.834833333,medium,low,medium,136,0.044
+0,154,unattested,nonword,kinoro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kino,0,0,,-0.845571429,-0.834285714,medium,low,medium,154,0
+131,233,mid,nonword,mehi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.377,"meihi, mihi, meho, mAhi, mohi, kehi, wehi, mahi, mei",-0.844,-0.8336,medium,low,medium,106,0.085
+33,114,mid,nonword,ini,3,2,2,VCV,vcv,FALSE,FALSE,NA,16,3.481,"tini, ina, ine, inA, inei, inoi, oni, iti, wini, iwi, nini, iki, inu, iri, ihi, kini",-0.84175,-0.8335,medium,low,medium,87,0.184
+15,422,mid,nonword,rute,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.6,"rure, tute, aute, rite, rutu, rupe, ruke, ute, rate",-0.8594,-0.8322,medium,low,medium,106,0.085
+0,382,unattested,nonword,pumi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,2.432,"puni, numi, humi, puri, kumi, puhi",-0.8562,-0.8304,medium,low,medium,106,0.057
+4,244,low,nonword,minu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.751,"mino, inu, manu, miru, mAnu, hinu, mina, mine",-0.8314,-0.8298,medium,low,medium,106,0.075
+18,405,mid,nonword,rewe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.358,"rere, rehe, rawe, tewe, reme, reke, rewa, repe, ewe",-0.8728,-0.8294,medium,low,medium,106,0.085
+18,388,mid,nonword,pupe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.094,"pape, pure, rupe, pune, pepe, pupU, tupe, puke",-0.8782,-0.8292,medium,low,medium,106,0.075
+1,402,low,nonword,renei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,nei,2,3.561,"reneti, rAnei",-0.842166667,-0.828666667,medium,low,medium,136,0.015
+0,481,unattested,nonword,toura,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"tou, ura",6,1.005,"toua, tora, toera, houra, taura, tAura",-0.8655,-0.827833333,medium,low,medium,136,0.044
+1,518,low,nonword,wanu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.583,"anu, waku, wahu, kanu, manu, wau, tanu, nanu, waru, ranu, wana, wani",-0.8592,-0.8278,medium,low,medium,106,0.113
+7,288,mid,nonword,Nona,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.26,"Nota, kona, Nana, rona, pona, tona, ona, NAna",-0.853,-0.8276,medium,low,medium,106,0.075
+2,477,low,nonword,toNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,4.504,"toko, toro, NoNo, taNo, toNa, roNo, toNi, toto, tomo, tono",-0.853,-0.827,medium,low,medium,106,0.094
+0,349,unattested,nonword,pihu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.698,"ihu, pihi, kihu, pihe, piha, pehu, piu, piau, pahu",-0.8762,-0.8266,medium,low,medium,106,0.085
+1,6,low,nonword,amaro,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ama, maro",2,1.869,"maro, amaru",-0.896333333,-0.826,medium,low,medium,135,0.015
+5,278,low,nonword,Neke,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.294,"Nene, NeNe, eke, feke, reke, keke, neke, Nere, Nake, peke, Naeke, meke, heke, Nehe, Neki, teke",-0.8232,-0.826,medium,low,medium,106,0.151
+132,245,mid,nonword,miore,5,3,3,CVVCV,cvvcv,FALSE,FALSE,ore,4,2.33,"fiore, kiore, hiore, more",-0.837333333,-0.825166667,medium,low,medium,136,0.029
+0,489,unattested,nonword,tuhio,5,3,3,CVCVV,cvcvv,FALSE,FALSE,tuhi,2,4.993,"tuhi, tuhia",-0.901666667,-0.8245,medium,low,medium,136,0.015
+11,281,mid,nonword,niki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.778,"nika, niti, piki, riki, niko, kiki, naki, tiki, nOki, hiki, wiki, miki, neki, nini, iki",-0.832,-0.824,medium,low,medium,106,0.142
+11,408,mid,nonword,rini,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.658,"tini, riki, riNi, rino, riri, kini, rifi, wini, ripi, nini",-0.8604,-0.824,medium,low,medium,106,0.094
+243,86,high,nonword,hiNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,5,2.389,"hiNa, hiko, iNo, heNo, miNo",-0.864,-0.8236,medium,low,medium,106,0.047
+9,24,mid,nonword,awiri,5,3,3,VCVCV,vcvcv,FALSE,FALSE,wiri,2,1.609,"wiri, kawiri",-0.841666667,-0.823333333,medium,low,medium,135,0.015
+2,383,low,nonword,pumu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.372,"pOmu, kumu, umu, mumu, tumu, oumu, humu, putu, puru, pAmu, puku",-0.8456,-0.822,medium,low,medium,106,0.104
+12,158,mid,nonword,koene,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"koe, ene",7,0.5,"kene, koeae, konene, koere, koeke, kuene, toene",-0.892833333,-0.821666667,medium,medium,medium,136,0.051
+0,418,unattested,nonword,rukui,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"ruku, kui",3,1.967,"ruki, ruku, rukua",-0.841333333,-0.821,medium,medium,medium,136,0.022
+0,472,unattested,nonword,toata,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"toa, ata",11,1.524,"tuata, moata, tioata, hoata, tiata, toati, tata, poata, koata, toatoa, toaNa",-0.844333333,-0.820833333,medium,medium,medium,136,0.081
+3,174,low,nonword,kotoa,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"koto, toa",10,1.434,"koroa, koto, kokoa, kota, ketoa, kotia, motoa, totoa, kAtoa, katoa",-0.842333333,-0.820333333,medium,medium,medium,136,0.074
+47,78,mid,nonword,hehi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,3.451,"heoi, hemi, hUhi, hAhi, heri, heNi, kehi, hihi, wehi, hei",-0.8582,-0.8198,medium,medium,medium,106,0.094
+1282,438,high,nonword,taoa,4,3,2,CVVV,cv2v,TRUE,FALSE,tao,22,3.995,"tana, tao, taua, tawa, taka, tioa, teoa, tara, toa, tapa, tata, taha, maoa, faoa, paoa, taona, taea, tama, taoNa, haoa, waoa, Naoa",-0.8792,-0.8194,medium,medium,medium,127,0.173
+0,329,unattested,nonword,paniu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"pani, niu",4,1.416,"poniu, pUniu, pania, pani",-0.840333333,-0.818833333,medium,medium,medium,136,0.029
+86,97,mid,nonword,honifa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"honi, nifa",1,0,honia,-0.842714286,-0.818571429,medium,medium,medium,154,0.006
+0,258,unattested,nonword,muhe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,3,0,"muhu, muha, mohe",-0.8216,-0.8172,medium,medium,medium,106,0.028
+5793,466,high,nonword,tinu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,4.911,"tini, timu, inu, tiu, tanu, tonu, hinu, tino, tunu, tina, tipu",-0.8624,-0.8168,medium,medium,medium,106,0.104
+131,526,mid,nonword,wihi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,4.044,"wiri, tihi, kihi, wAhi, pihi, ihi, mihi, witi, wini, wiki, hihi, wehi",-0.8158,-0.8162,medium,medium,medium,106,0.113
+0,459,unattested,nonword,tehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.899,"nehu, ehu, tahu, kehu, tohu, pehu, rehu, tehe, tIehu",-0.8228,-0.816,medium,medium,medium,106,0.085
+0,344,unattested,nonword,peteo,5,3,3,CVCVV,cvcvv,FALSE,FALSE,teo,1,0,peto,-0.839666667,-0.815833333,medium,medium,medium,136,0.007
+0,352,unattested,nonword,piru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.691,"pUru, pirau, piro, peru, piau, miru, pire, paru, piu, pira, puru, piri",-0.8652,-0.8154,medium,medium,medium,106,0.113
+0,80,unattested,nonword,hekei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"heke, kei",3,2.402,"heke, hekeri, hekea",-0.838833333,-0.813666667,medium,medium,medium,136,0.022
+0,195,unattested,nonword,mahao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"maha, hao",8,1.68,"maho, maha, maiao, hahao, makao, mamao, mahau, maihao",-0.8895,-0.8135,medium,medium,medium,136,0.059
+14,437,mid,nonword,taNutu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nutu,4,0.677,"tatutu, tUNutu, taNuru, haNutu",-0.840142857,-0.813428571,medium,medium,medium,154,0.026
+0,482,unattested,nonword,touru,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"tou, uru",4,2.535,"tauru, tAuru, turu, toru",-0.842833333,-0.813333333,medium,medium,medium,136,0.029
+0,496,unattested,nonword,tunanu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tuna, nanu",1,0,kunanu,-0.845142857,-0.813142857,medium,medium,medium,154,0.006
+3,286,low,nonword,noha,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.865,"toha, neha, naha, nohi, nohu, oha, roha, noa, koha, poha, noho",-0.8496,-0.8122,medium,medium,medium,106,0.104
+4618,413,high,nonword,roNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,2.913,"roma, rANa, aroNa, roha, ruNa, riNa, roNo, rota, rora, aoNa, raNa, rona, roaNa, toNa, koNa, reNa, hoNa, roa, poNa",-0.8304,-0.8122,medium,medium,medium,106,0.179
+0,291,unattested,nonword,Nopeke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,peke,0,0,,-0.836428571,-0.812,medium,medium,medium,154,0
+2,261,low,nonword,muke,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.114,"nuke, huke, meke, moke, muka, ruke, tuke, puke, muku",-0.827,-0.8118,medium,medium,medium,106,0.085
+0,246,unattested,nonword,mito,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,1.578,"rito, mino, tito, moto, meto, ito, mato, miti, pito, fito, mita, miro, miko, miNo",-0.8276,-0.8104,medium,medium,medium,106,0.132
+1,96,low,nonword,hoNe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,1.85,"hone, hoNeA, hoe, hote, hohe, hope, hore, hoNa, oNe, hoNi",-0.8258,-0.8102,medium,medium,medium,106,0.094
+0,471,unattested,nonword,toaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,toa,7,2.265,"topaki, toati, toari, tiaki, toki, taki, tuaki",-0.8355,-0.809833333,medium,medium,medium,136,0.051
+0,412,unattested,nonword,rohu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.065,"nohu, rou, rohi, ohu, rotu, rehu, tohu, roha, rohe, roku, kohu, rahu, roru",-0.8376,-0.8092,medium,medium,medium,106,0.123
+0,109,unattested,nonword,hute,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,1.203,"hue, haute, huke, tute, aute, hutu, hEte, hote, huti, hume, hune, hAte, ute, hure",-0.8482,-0.8082,medium,medium,medium,106,0.132
+188,390,high,nonword,rahe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.159,"rahi, rehe, raha, rare, rawe, rake, rae, raho, rahA, rohe, nahe, rahu, rate, rape, tahe",-0.8416,-0.8072,medium,medium,medium,106,0.142
+1,64,low,nonword,hahe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.568,"hahae, hape, haha, hahu, hane, hake, nahe, hohe, hae, hare, tahe",-0.8498,-0.8064,medium,medium,medium,106,0.104
+1,169,low,nonword,koNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.297,"koki, koi, kohi, komi, koti, NoNi, koni, kINi, kopi, kori, koNa, toNi, hoNi",-0.826,-0.8056,medium,medium,medium,106,0.123
+0,280,unattested,nonword,nete,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.713,"ete, mete, nehe, kete, neti, neke, wete, tete",-0.8328,-0.8048,medium,medium,medium,106,0.075
+0,3,unattested,nonword,ahini,5,3,3,VCVCV,vcvcv,FALSE,FALSE,ahi,0,0,,-0.865333333,-0.804,high,medium,medium,135,0
+0,325,unattested,nonword,pakao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"paka, kao",6,0.634,"pIkao, makao, papao, takao, kakao, paka",-0.833333333,-0.8035,high,medium,medium,136,0.044
+24,365,mid,nonword,poNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,3.307,"paNo, popo, poho, poro, pono, NoNo, poko, roNo, poto, poNa",-0.8292,-0.8032,high,medium,medium,106,0.094
+6660,150,high,nonword,keihi,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"kei, ihi",8,0.661,"kOihi, kihi, meihi, kuihi, keiha, koihi, kehi, reihi",-0.816333333,-0.803,high,medium,medium,136,0.059
+5,431,low,nonword,taNae,5,3,2,CVCVV,cvcv2,TRUE,FALSE,Nae,1,0,taNai,-0.833333333,-0.8025,high,medium,medium,136,0.007
+0,262,unattested,nonword,munaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"muna, naki",0,0,,-0.812714286,-0.802,high,medium,medium,154,0
+80,66,mid,nonword,hanae,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"hana, nae",6,1.212,"honae, hahae, hanake, kanae, hana, hane",-0.816,-0.801333333,high,medium,medium,136,0.044
+3,265,low,nonword,nahu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,20,1.732,"nehu, nohu, wahu, hahu, Nahu, natu, naha, namu, nau, kahu, ahu, pahu, mahu, tahu, naho, nanu, naku, nahe, nahui, rahu",-0.8192,-0.801,high,medium,medium,106,0.189
+0,487,unattested,nonword,tufi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.718,"tui, tAfi, ufi, tuNi, tuhi, tafi, tuki, turi, tufa, tAufi, aufi",-0.8184,-0.8002,high,medium,medium,106,0.104
+0,84,unattested,nonword,hiaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,hia,7,3.17,"haki, tiaki, huaki, hiki, hiako, riaki, hiakai",-0.866833333,-0.798833333,high,medium,medium,136,0.051
+11,98,mid,nonword,hoNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.587,"hopo, heNo, hoko, hoto, NoNo, roNo, hoNa, hono, horo, hoNi",-0.8174,-0.7988,high,medium,medium,106,0.094
+0,10,unattested,nonword,araro,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ara, raro",5,3.53,"arero, aroro, aroaro, ararA, raro",-0.828333333,-0.7985,high,medium,medium,135,0.037
+0,292,unattested,nonword,Nora,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.872,"Nota, Noru, hora, Nira, Nara, Nore, Naora, kora, tora, pora, rora, ora",-0.833,-0.7984,high,medium,medium,106,0.113
+53,409,mid,nonword,riwa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,3.006,"rawa, riua, Oriwa, iwa, rita, rima, riha, rika, rifa, riNa, rewa, kiwa, ripa, hiwa, piwa",-0.8354,-0.7976,high,medium,medium,106,0.142
+0,63,unattested,nonword,haera,5,3,2,CVVCV,cv2cv,TRUE,FALSE,hae,7,3.105,"taera, haeNa, haerea, haea, haere, hara, haira",-0.829,-0.796833333,high,medium,medium,136,0.051
+13,61,mid,nonword,fioro,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"fio, oro",5,1.194,"tioro, pioro, feoro, fiore, firo",-0.808166667,-0.7965,high,medium,medium,136,0.037
+0,515,unattested,nonword,waira,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"wai, ira",8,2.287,"wara, waia, waiora, wairua, weira, wira, waina, haira",-0.823,-0.795666667,high,medium,medium,136,0.059
+1,397,low,nonword,rani,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.136,"hani, Arani, rahi, raNi, rana, raki, kani, rai, pani, rari, ranu, rafi, rapi, wani",-0.8324,-0.7954,high,medium,medium,106,0.132
+552,22,high,nonword,awete,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"awe, wete",4,0.52,"wete, awere, aweke, mawete",-0.837,-0.795333333,high,medium,medium,135,0.03
+6,235,low,nonword,meki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.681,"maki, meke, teki, weki, meko, meka, Neki, miki, moki, mei, neki",-0.8032,-0.7952,high,medium,medium,106,0.104
+0,133,unattested,nonword,kaoro,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"kao, oro",8,1.922,"kauoro, karo, kuoro, karoro, kUoro, kaoho, paoro, koro",-0.823,-0.795166667,high,medium,medium,136,0.059
+0,464,unattested,nonword,tinaNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tina,1,0,hinaNi,-0.835857143,-0.794714286,high,medium,medium,154,0.006
+851,474,high,nonword,toho,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,4.552,"poho, toha, tohe, toko, tohu, toro, moho, tohi, oho, toto, tomo, noho, tono",-0.8092,-0.7944,high,medium,medium,106,0.123
+0,187,unattested,nonword,kunu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.251,"unu, kupu, kumu, Nunu, kanu, kuku, kuru, kune, hunu, kutu, kounu, tunu, kuhu, konu",-0.8254,-0.7942,high,medium,medium,106,0.132
+9,417,mid,nonword,ruaka,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"rua, aka",8,1.196,"puaka, tuaka, roaka, riaka, raka, auaka, kuaka, ruaki",-0.804,-0.794166667,high,medium,medium,136,0.059
+0,384,unattested,nonword,puNai,5,3,2,CVCVV,cvcv2,TRUE,FALSE,puNa,2,1.386,"puNaa, puNa",-0.860333333,-0.793666667,high,medium,medium,136,0.015
+0,476,unattested,nonword,tomi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.205,"romi, tori, toi, toti, komi, toki, toemi, toma, momi, tohi, tAmi, toNi, tomo",-0.8266,-0.7936,high,medium,medium,106,0.123
+0,523,unattested,nonword,wena,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.141,"rena, weha, weka, weta, wea, fena, wAna, wene, wana, wera, pena, wOna",-0.8126,-0.7936,high,medium,medium,106,0.113
+4,520,low,nonword,wato,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.555,"weto, wao, ato, wati, waho, waro, kato, mato, wata, rato",-0.8254,-0.793,high,medium,medium,106,0.094
+0,214,unattested,nonword,marao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,mara,10,1.94,"mariao, maiao, marau, tarao, makao, maro, mara, marae, mamao, maruao",-0.863166667,-0.792833333,high,medium,medium,136,0.074
+18,190,mid,nonword,kuro,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.065,"kurI, karo, kuoro, kuru, kero, kueo, kura, kiro, koro",-0.8432,-0.7926,high,medium,medium,106,0.085
+1,330,low,nonword,pano,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.539,"paNo, pana, mano, pono, pao, pani, fano, kano, pane",-0.8204,-0.7922,high,medium,medium,106,0.085
+0,251,unattested,nonword,mohoko,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"moho, hoko",2,0.549,"hohoko, mohoao",-0.803285714,-0.791857143,high,medium,medium,154,0.013
+0,274,unattested,nonword,nawahi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nawa,2,1.445,"nawaki, nanahi",-0.793142857,-0.791428571,high,medium,medium,154,0.013
+0,208,unattested,nonword,manui,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"manu, nui",3,2.066,"manu, manei, manua",-0.817833333,-0.79,high,medium,medium,136,0.022
+1,75,low,nonword,haupe,5,3,2,CVVCV,cv2cv,TRUE,FALSE,hau,4,0.576,"haute, hape, haupa, haupU",-0.842666667,-0.789333333,high,medium,medium,136,0.029
+4,101,low,nonword,huahi,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"hua, ahi",4,1.568,"huaNi, huihi, huaki, auahi",-0.813833333,-0.789166667,high,medium,medium,136,0.029
+0,517,unattested,nonword,waNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,4.163,"raNi, wati, taNi, aNi, wai, wani",-0.8064,-0.7888,high,medium,medium,106,0.057
+9,135,mid,nonword,kapepe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kape, pepe",3,0.768,"kapene, tapepe, karepe",-0.804714286,-0.788714286,high,medium,medium,154,0.019
+0,172,unattested,nonword,koreo,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"kore, reo",5,2.66,"kore, koteo, koeo, korio, koro",-0.866666667,-0.788,high,medium,medium,136,0.037
+33,178,mid,nonword,kuaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,kua,8,1.879,"huaki, kuiki, uaki, puaki, kuki, kuaka, ruaki, tuaki",-0.8355,-0.787333333,high,medium,medium,136,0.059
+371,483,high,nonword,tuahe,5,3,3,CVVCV,cvvcv,FALSE,FALSE,tua,2,0.347,"tahe, tuare",-0.839166667,-0.787,high,medium,medium,136,0.015
+1027,379,high,nonword,pui,3,2,2,CVV,cvv,FALSE,FALSE,NA,15,4.21,"pei, rui, puni, tui, hui, nui, puri, mui, kui, pai, poi, pua, puia, puhi, ui",-0.838,-0.7865,high,medium,medium,88,0.17
+0,295,unattested,nonword,Noti,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.877,"Nota, noti, koti, toti, Nohi, NoNi, Noi, Note, Noto, poti, oti",-0.796,-0.7864,high,medium,medium,106,0.104
+40,421,mid,nonword,rura,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,20,2.46,"rufa, rure, ura, rera, rOra, rurea, ruha, mura, ruNa, runa, pura, rurua, rara, rora, ruru, hura, kura, ruia, rua, ruri",-0.809,-0.7864,high,medium,medium,106,0.189
+0,366,unattested,nonword,poNoro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,2,0.347,"paNoro, NoNoro",-0.793142857,-0.786285714,high,medium,medium,154,0.013
+0,460,unattested,nonword,tenana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nana,1,5.82,tinana,-0.808571429,-0.786,high,medium,medium,154,0.006
+17,179,mid,nonword,kuhe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.32,"kuha, kehe, kAhe, kuhi, kume, kune, kuhu, kuhI, kohe",-0.809,-0.7846,high,medium,medium,106,0.085
+67,495,mid,nonword,tumi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.239,"tui, numi, tAmi, humi, tumu, tuhi, tuki, turi, kumi, tuNi",-0.8192,-0.7844,high,medium,medium,106,0.094
+6,62,low,nonword,fire,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.798,"fira, firi, tire, fere, firo, pire, rire, fiore, fare",-0.808,-0.784,high,medium,medium,106,0.085
+0,323,unattested,nonword,pahoNo,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,0,0,,-0.829285714,-0.783857143,high,medium,medium,154,0
+0,14,unattested,nonword,atiri,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ati, tiri",3,0.536,"atiti, tiri, atiru",-0.8385,-0.783833333,high,medium,medium,135,0.022
+187,229,high,nonword,mawa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,3.492,"pawa, rawa, tawa, mata, maea, hawa, maewa, maha, mara, nawa, kawa, mama, maoa, maNa, awa, maka, mana",-0.8236,-0.7834,high,medium,medium,106,0.16
+0,465,unattested,nonword,tinene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nene,0,0,,-0.829285714,-0.783285714,high,medium,medium,154,0
+218,11,high,nonword,arete,5,3,3,VCVCV,vcvcv,FALSE,FALSE,are,0,0,,-0.828166667,-0.782666667,high,medium,medium,135,0
+14,131,mid,nonword,kaNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,3.235,"raNi, kaNa, taNi, kafi, kapi, kaui, kahi, kOaNi, kINi, kani, kai, kami, kati, aNi, kari",-0.8064,-0.7826,high,medium,medium,106,0.142
+218,248,high,nonword,moatu,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"moa, atu",5,4.162,"foatu, motu, matu, moata, hoatu",-0.783833333,-0.7825,high,medium,medium,136,0.037
+0,336,unattested,nonword,paruNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,paru,1,0,paruhi,-0.806428571,-0.782428571,high,medium,medium,154,0.006
+803,356,high,nonword,poara,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"poa, ara",9,1.892,"peara, porara, poare, poaka, para, poari, poata, pora, pouara",-0.846166667,-0.781833333,high,medium,medium,136,0.066
+113,386,mid,nonword,puNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,5,3.151,"puni, puNa, puhi, puri, tuNi",-0.8534,-0.7818,high,medium,medium,106,0.047
+1732,393,high,nonword,ramu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.521,"rama, rau, rimu, namu, tamu, kamu, ranu, raru, remu, hamu, raku, rahu, rapu",-0.7836,-0.781,high,medium,medium,106,0.123
+9,91,mid,nonword,hohu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.52,"horu, nohu, hohou, hahu, hohO, ohu, tohu, huhu, hotu, hou, honu, hohe, hopu, kohu",-0.8328,-0.7802,high,medium,medium,106,0.132
+0,81,unattested,nonword,hena,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.207,"rena, heia, hema, hea, hana, huna, hewa, fena, hina, heka, heua, heNa, pena",-0.8028,-0.78,high,medium,medium,106,0.123
+527,228,high,nonword,mauma,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"mau, uma",5,2.292,"mauNa, maumau, mama, maufa, hauma",-0.7955,-0.78,high,medium,medium,136,0.037
+1516,236,high,nonword,meNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.549,"teNa, mea, muNa, mema, maNa, meNe, mANa, meiNa, eNa, heNa, meka, reNa, moeNa",-0.7796,-0.78,high,medium,medium,106,0.123
+0,21,unattested,nonword,awera,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"awe, wera",4,1.197,"aweNa, wera, awere, mawera",-0.811333333,-0.779833333,high,medium,medium,135,0.03
+0,395,unattested,nonword,rane,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.507,"rare, rawe, rake, rae, ranea, hane, tane, ranu, rana, rate, rape, pane",-0.8066,-0.7784,high,medium,medium,106,0.113
+0,108,unattested,nonword,hunahi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,huna,2,0.347,"unahi, tunahi",-0.799714286,-0.778,high,medium,medium,154,0.013
+22,102,mid,nonword,huaka,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"hua, aka",10,2.025,"puaka, tuaka, huaki, haka, huata, auaka, kuaka, huka, huaNa, huakau",-0.781833333,-0.777833333,high,medium,medium,136,0.074
+0,103,unattested,nonword,huara,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"hua, ara",11,1.34,"huarea, huarau, uara, hara, huata, hura, huaroa, huare, huaora, huaNa, huarua",-0.792833333,-0.777666667,high,medium,medium,136,0.081
+0,124,unattested,nonword,kahea,5,3,3,CVCVV,cvcvv,FALSE,FALSE,hea,12,1.669,"kakea, kaha, kaea, nahea, karea, mahea, katea, kamea, kawea, kapea, kohea, kahera",-0.805833333,-0.777666667,high,medium,medium,136,0.088
+3,68,low,nonword,hano,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.788,"hani, hamo, mano, hana, hane, hao, fano, kano, hono, hako",-0.8156,-0.7776,high,medium,medium,106,0.094
+8,205,mid,nonword,manao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"mana, nao",9,2.434,"mano, manako, maiao, manuao, manoao, makao, nanao, mana, mamao",-0.792333333,-0.7775,high,medium,medium,136,0.066
+0,240,unattested,nonword,mihuru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,huru,1,3.664,mahuru,-0.793428571,-0.776714286,high,medium,medium,154,0.006
+0,132,unattested,nonword,kanoni,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kano, noni",7,0.793,"kanono, kanoi, kanohi, tanoni, kaunoni, panoni, kanone",-0.826571429,-0.775571429,high,medium,medium,154,0.045
+0,181,unattested,nonword,kuke,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.018,"nuke, huke, kake, kukU, kuku, kuki, kume, kuka, ruke, koke, tuke, keke, kune, puke",-0.7918,-0.7752,high,medium,medium,106,0.132
+1,176,low,nonword,kotunu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tunu,1,0,kounu,-0.803714286,-0.775142857,high,medium,medium,154,0.006
+193,182,high,nonword,kuma,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.207,"kuha, kua, kumu, kOuma, kama, kupa, kuta, kumua, kufa, kuka, kura, kuia, kume, koma, kumi, uma",-0.8006,-0.774,high,medium,medium,106,0.151
+0,99,unattested,nonword,hoNore,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nore,4,0,"haNore, NoNore, hoNere, hohore",-0.789857143,-0.773714286,high,medium,medium,154,0.026
+0,164,unattested,nonword,kohio,5,3,3,CVCVV,cvcvv,FALSE,FALSE,kohi,6,1.359,"kohia, pohio, kohi, koio, korio, kohiko",-0.836666667,-0.7735,high,medium,medium,136,0.044
+3428,87,high,nonword,hino,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,4.267,"mino, hiko, rino, hine, hina, hinu, tino, hono, kino",-0.8422,-0.7728,high,medium,medium,106,0.085
+0,475,unattested,nonword,tokine,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,toki,0,0,,-0.821714286,-0.772428571,high,medium,medium,154,0
+0,156,unattested,nonword,kire,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,4.11,"tire, kite, kere, kiro, pire, kiri, rire, kore, kAre, kiore, kare",-0.7926,-0.7718,high,medium,medium,106,0.104
+8733,341,high,nonword,pauri,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"pau, uri",9,2.675,"paura, puri, kauri, tauri, mauri, pOuri, pari, pauni, pairi",-0.808833333,-0.771166667,high,medium,medium,136,0.066
+0,269,unattested,nonword,Narina,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nari,1,0,Nakina,-0.810857143,-0.768428571,high,medium,medium,154,0.006
+53,342,mid,nonword,pawe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.685,"paoe, nawe, pawa, pake, rawe, pape, pae, wawe, paowe, pare, kawe, pane, awe",-0.8368,-0.7682,high,medium,medium,106,0.123
+1,443,low,nonword,tapeno,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,0,0,,-0.803857143,-0.768142857,high,medium,medium,154,0
+1,368,low,nonword,ponuku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nuku,1,1.792,panuku,-0.804,-0.766857143,high,medium,medium,154,0.006
+24,250,mid,nonword,moha,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,1.708,"moka, moua, toha, maha, roha, muha, moIa, miha, koha, poha, mohe, moea, moa, mohua, mAha, mohi, mohoa, oha, moho",-0.819,-0.7666,high,medium,medium,106,0.179
+56,407,mid,nonword,rina,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,22,2.276,"ina, rita, rika, hina, riNa, runa, riena, riana, mina, riha, tina, rena, riua, raina, rona, rino, rifa, reina, rana, ripa, kina, rima",-0.8048,-0.7664,high,medium,medium,106,0.208
+5,202,low,nonword,manai,5,3,2,CVCVV,cvcv2,TRUE,FALSE,mana,3,3.38,"manei, manaia, mana",-0.810166667,-0.766166667,high,medium,medium,136,0.022
+138,257,high,nonword,moru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.666,"Noru, motu, maru, horu, toru, koru, oru, more, miru, muru, roru",-0.7962,-0.7658,high,medium,medium,106,0.104
+0,104,unattested,nonword,huheke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,heke,3,0,"muheke, auheke, hAheke",-0.783857143,-0.765571429,high,medium,medium,154,0.019
+3,259,low,nonword,muhi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,3.069,"auhi, kuhi, mui, mihi, mahi, mAhi, tuhi, uhi, mohi, muha, muri, puhi, muhu, ruhi",-0.7756,-0.7652,high,medium,medium,106,0.132
+16,126,mid,nonword,kaini,5,3,2,CVVCV,cv2cv,TRUE,FALSE,kai,3,2.652,"kini, kuini, kani",-0.7865,-0.764166667,high,medium,medium,136,0.022
+0,134,unattested,nonword,kapehe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kape, pehe",2,0,"kapene, kanehe",-0.781428571,-0.763428571,high,medium,medium,154,0.013
+8,478,mid,nonword,tonoki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tono,0,0,,-0.778714286,-0.763428571,high,medium,medium,154,0
+0,231,unattested,nonword,maweri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,weri,2,0,"Naweri, mawera",-0.785428571,-0.763285714,high,medium,medium,154,0.013
+0,197,unattested,nonword,mahoNo,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,maho,0,0,,-0.798428571,-0.762571429,high,medium,medium,154,0
+1,354,low,nonword,pite,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,3.691,"pire, piti, pito, rite, pihe, kite, pine",-0.8052,-0.7614,high,medium,medium,106,0.066
+7,450,mid,nonword,tariu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"tari, riu",5,3.501,"taria, mariu, taru, tari, tarau",-0.813833333,-0.760833333,high,medium,medium,136,0.037
+0,435,unattested,nonword,taNeNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,1,0,taNoNi,-0.811285714,-0.760428571,high,medium,medium,154,0.006
+0,19,unattested,nonword,awara,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"awa, wara",5,1.198,"wara, awata, awarua, awaNa, wawara",-0.794666667,-0.760333333,high,medium,medium,135,0.037
+68,516,mid,nonword,waNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,21,3.187,"kaNa, paNa, wana, waeNa, haNa, wata, aNa, waea, NaNa, wara, waia, faNa, maNa, raNa, awaNa, waka, uaNa, waha, UaNa, waoa, waoNa",-0.776,-0.7602,high,medium,medium,106,0.198
+126,355,mid,nonword,poaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,poa,6,3.563,"poaka, poari, paki, poki, puaki, poai",-0.800333333,-0.759833333,high,medium,medium,136,0.044
+475,191,high,nonword,kuto,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,1.339,"koto, kAuto, kutA, kuti, uto, kutu, kueo, kato, keto, kuta",-0.8116,-0.7598,high,medium,medium,106,0.094
+28,434,mid,nonword,taNeke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,4,0.347,"tapeke, takeke, taNere, taweke",-0.801285714,-0.759571429,high,medium,medium,154,0.026
+3,273,low,nonword,Nawa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.397,"NawE, pawa, rawa, tawa, Nana, NawI, hawa, awa, Nara, Nata, nawa, kawa, NaNa, Naua, Naoa",-0.8368,-0.7576,high,medium,medium,106,0.142
+40,255,mid,nonword,monu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,3.966,"motu, moni, manu, tonu, mAnu, mone, honu, konu",-0.8098,-0.757,high,medium,medium,106,0.075
+4,185,low,nonword,kuna,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,2.958,"kuha, kua, kEna, muna, huna, runa, kupa, puna, kuta, tuna, kuka, kura, kuia, kana, kune, kufa, kona, kina",-0.7968,-0.7568,high,medium,medium,106,0.17
+4,227,low,nonword,mauki,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"mau, uki",6,1.793,"mauri, maki, mauku, mahuki, maiki, mauti",-0.79,-0.756333333,high,medium,medium,136,0.044
+0,433,unattested,nonword,tanawe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tana, nawe",1,0.693,nanawe,-0.804,-0.756142857,high,medium,medium,154,0.006
+18,360,mid,nonword,poku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.651,"poau, poka, poko, roku, pou, poki, poke, paku, puku",-0.8002,-0.756,high,medium,medium,106,0.085
+18,446,mid,nonword,tapo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.223,"tako, tao, tapou, tapu, kapo, tapI, tapa, apo, taio, taNo, taro, tapi",-0.8034,-0.7558,high,medium,medium,106,0.113
+128,401,mid,nonword,reki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.344,"rei, riki, teki, reti, ruki, reke, reka, neki, rIki, weki, reri, reko, roki, raki, repi, Neki",-0.7712,-0.7556,high,medium,medium,106,0.151
+708,367,high,nonword,ponu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.821,"pone, pono, poau, pou, pUnu, poni, pona, tonu, poniu, honu, konu, penu",-0.8086,-0.7554,high,medium,medium,106,0.113
+0,149,unattested,nonword,kawiki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wiki,3,1.175,"Nawiki, kawiri, kawiti",-0.789142857,-0.755142857,high,medium,medium,154,0.019
+41,49,mid,nonword,fato,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.25,"faNo, ato, Afato, fata, fao, fati, kato, mato, fano, fatu, fito, rato, faro",-0.7962,-0.7544,high,medium,medium,106,0.123
+5,242,low,nonword,miNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,1.99,"mANa, mira, riNa, miha, miNi, mina, AiNa, miNo, hiNa, tiNa, muNa, maNa, meiNa, oiNa, mita, aiNa",-0.7602,-0.7542,high,medium,medium,106,0.151
+0,275,unattested,nonword,Nawene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wene,1,0,hawene,-0.810142857,-0.753285714,high,medium,medium,154,0.006
+0,70,unattested,nonword,hanumu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,2,0.549,"hamumu, hanumi",-0.77,-0.753142857,high,medium,medium,154,0.013
+3,201,low,nonword,mamu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.404,"mau, maru, mahu, mumu, manu, mapu, namu, tamu, maNu, kamu, matu, hamu, mama, mamau",-0.769,-0.7514,high,medium,medium,106,0.132
+0,142,unattested,nonword,karono,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,karo,3,0.536,"kanono, karona, karoro",-0.798285714,-0.751,high,medium,medium,154,0.019
+2,47,low,nonword,fate,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.506,"mate, fata, fae, ate, fati, fatu, fafe, fare, rate",-0.8092,-0.7496,high,medium,medium,106,0.085
+0,353,unattested,nonword,pitai,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"pita, tai",3,2.771,"pUtai, pAtai, piti",-0.784666667,-0.7495,high,medium,medium,136,0.022
+0,230,unattested,nonword,maweke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,5,0.866,"mawete, mawehe, raweke, aweke, taweke",-0.773,-0.749,high,medium,medium,154,0.032
+0,334,unattested,nonword,pariwi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,pari,1,0,pahiwi,-0.779857143,-0.749,high,medium,medium,154,0.006
+57,328,mid,nonword,paNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,3.296,"paoi, raNi, paNo, pUaNi, pati, taNi, paki, paNa, paNu, pani, pai, pari, papi, aNi, pahi",-0.7712,-0.748,high,medium,medium,106,0.142
+0,387,unattested,nonword,puniti,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"puni, niti",1,0,pOniti,-0.809,-0.747714286,high,medium,medium,154,0.006
+3,247,low,nonword,moaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,moa,3,2.406,"moki, moari, maki",-0.762666667,-0.747666667,high,medium,medium,136,0.022
+33,458,mid,nonword,tawiki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wiki,4,0.693,"tawaki, taiki, Nawiki, tapiki",-0.822571429,-0.746714286,high,medium,medium,154,0.026
+3,350,low,nonword,pina,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,21,2.23,"pAina, piana, ina, pia, hina, piwa, pira, mina, pika, puna, pAna, tina, pana, pine, piha, pona, pinea, paina, pena, kina, piua",-0.801,-0.7464,high,medium,medium,106,0.198
+724,373,high,nonword,potu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,3.082,"motu, pota, potau, poau, patu, rotu, hotu, putu, poti, pou, poto, pUtu",-0.7922,-0.7464,high,medium,medium,106,0.113
+0,189,unattested,nonword,kurewa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,rewa,3,0.693,"kOrewa, kurefa, kArewa",-0.781857143,-0.746142857,high,medium,medium,154,0.019
+0,363,unattested,nonword,ponete,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,pone,1,0,porete,-0.788714286,-0.745428571,high,medium,medium,154,0.006
+0,184,unattested,nonword,kumeke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kume, meke",5,1.17,"kumete, tumeke, komeke, kumeme, kOmeke",-0.794571429,-0.745,high,medium,medium,154,0.032
+34,57,mid,nonword,feto,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,0.798,"weto, fetE, fetU, meto, fero, feti, fito, keto, Afeto, feao, peto, feko, feta, feo",-0.768,-0.7446,high,medium,medium,106,0.132
+0,152,unattested,nonword,kerehu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kere, rehu",7,0.198,"kArehu, rerehu, kOrehu, kurehu, terehu, kIrehu, karehu",-0.753,-0.744571429,high,medium,medium,154,0.045
+12,52,mid,nonword,feNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,1.527,"teNa, faNa, feiNa, feua, fea, feNua, afeNa, heNa, fena, reNa, eNa, feta, feNu, fera",-0.7634,-0.7444,high,medium,medium,106,0.132
+259,100,high,nonword,hoti,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,2.368,"koti, toti, honi, hote, hoki, hoi, hoNi, houi, hEti, noti, huti, hori, hIti, hotu, hoto, poti, hopi, heoti, oti",-0.769,-0.744,high,medium,medium,106,0.179
+0,128,unattested,nonword,kakiro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kiro,1,0,kokiro,-0.761142857,-0.743857143,high,medium,medium,154,0.006
+395,470,high,nonword,tite,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.685,"titi, tito, tute, rite, tike, tire, tote, kite, tAte, tete, tihe",-0.8108,-0.7438,high,medium,medium,106,0.104
+0,211,unattested,nonword,maoro,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"mao, oro",7,1.577,"maoho, paoro, maero, maro, maopo, maroro, maioro",-0.7915,-0.743166667,high,high,medium,136,0.051
+0,46,unattested,nonword,farure,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"faru, rure",3,0,"karure, parure, marure",-0.771428571,-0.742571429,high,high,medium,154,0.019
+5,193,low,nonword,maere,5,3,2,CVVCV,cv2cv,TRUE,FALSE,mae,15,2.337,"mere, maiere, maire, waere, Naere, paere, maero, makere, maene, mahere, mIere, haere, mare, marere, maehe",-0.771333333,-0.7425,high,high,medium,136,0.11
+41,127,mid,nonword,kaiti,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"kai, iti",11,2.069,"kUiti, kaitui, kOiti, kaitA, kapiti, kawiti, kaitia, kaitu, waiti, raiti, kati",-0.742666667,-0.742333333,high,high,medium,136,0.081
+0,38,unattested,nonword,faNare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"faNa, Nare",2,0.347,"NaNare, paNare",-0.782142857,-0.741714286,high,high,medium,154,0.013
+0,225,unattested,nonword,matui,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"matu, tui",4,2.51,"matua, mati, patui, matu",-0.782,-0.741,high,high,medium,136,0.029
+609,41,high,nonword,faNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,4.761,"faNo, raNi, faNa, taNi, aNi, fai, fati",-0.7812,-0.7406,high,high,medium,106,0.066
+3,270,low,nonword,Nariri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"Nari, riri",2,1.32,"kariri, Nahiri",-0.777142857,-0.740571429,high,high,medium,154,0.013
+0,396,unattested,nonword,raNere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nere,2,0,"haNere, taNere",-0.771285714,-0.740285714,high,high,medium,154,0.013
+0,113,unattested,nonword,inaka,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ina, naka",6,0.414,"unaka, minaka, inaNa, inaki, naka, Enaka",-0.748666667,-0.739666667,high,high,medium,135,0.044
+0,55,unattested,nonword,feroki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"fero, roki",5,0.139,"fekoki, feroni, feroku, fIroki, fetoki",-0.769285714,-0.739428571,high,high,medium,154,0.032
+0,234,unattested,nonword,mekere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"meke, kere",2,2.359,"hekere, makere",-0.741714286,-0.737857143,high,high,medium,154,0.013
+0,343,unattested,nonword,petaro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,taro,3,0,"petako, peraro, pewaro",-0.771428571,-0.737857143,high,high,medium,154,0.019
+0,144,unattested,nonword,karou,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"karo, rou",6,1.518,"karu, karoa, karo, kareu, warou, korou",-0.761666667,-0.737833333,high,high,medium,136,0.044
+33,374,mid,nonword,puahu,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"pua, ahu",5,1.238,"pouahu, puahou, pukahu, pahu, puehu",-0.827833333,-0.737166667,high,high,medium,136,0.037
+0,480,unattested,nonword,torawa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tora, rawa",4,0.549,"tarawa, tirawa, tUrawa, tArawa",-0.784142857,-0.737,high,high,medium,154,0.026
+0,95,unattested,nonword,hoNare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hoNa, Nare",2,0,"hoNere, poNare",-0.768285714,-0.735857143,high,high,medium,154,0.013
+0,351,unattested,nonword,piriNo,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,piri,3,1.528,"piriho, piriNa, piriNi",-0.774571429,-0.735571429,high,high,medium,154,0.019
+2,192,low,nonword,kutuki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kutu, tuki",2,3.349,"kuruki, tutuki",-0.756571429,-0.735142857,high,high,medium,154,0.013
+0,44,unattested,nonword,faraNo,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"fara, raNo",2,0,"fafaNo, faraNi",-0.762428571,-0.735,high,high,medium,154,0.013
+0,223,unattested,nonword,matehe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mate, tehe",4,0.52,"mawehe, maehe, matihe, matohe",-0.803714286,-0.735,high,high,medium,154,0.026
+2,376,low,nonword,puhane,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"puha, hane",2,0.549,"puhake, pohane",-0.766285714,-0.734714286,high,high,medium,154,0.013
+1,484,low,nonword,tuahi,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"tua, ahi",7,2.632,"tuhi, tuaNi, tunahi, tahi, tuaki, tuari, auahi",-0.776833333,-0.7345,high,high,medium,136,0.051
+0,440,unattested,nonword,tapapi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tapa, papi",2,1.832,"tapahi, tapape",-0.785857143,-0.734142857,high,high,medium,154,0.013
+0,463,unattested,nonword,tinahi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tina,2,0.549,"tAinahi, tunahi",-0.774714286,-0.733571429,high,high,medium,154,0.013
+0,107,unattested,nonword,hukura,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kura,3,0,"tukura, houkura, haukura",-0.762142857,-0.733,high,high,medium,154,0.019
+0,362,unattested,nonword,ponani,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,pona,0,0,,-0.777857143,-0.732857143,high,high,medium,154,0
+0,492,unattested,nonword,tukane,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tuka,0,0,,-0.783571429,-0.732857143,high,high,medium,154,0
+0,428,unattested,nonword,takonu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tako, konu",1,0,takonui,-0.784857143,-0.731857143,high,high,medium,154,0.006
+2,454,low,nonword,tauku,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"tau, uku",8,2.47,"pauku, tauru, taku, taunu, tuku, tanuku, mauku, taukI",-0.7855,-0.731666667,high,high,medium,136,0.059
+1,332,low,nonword,panu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,2.437,"kanu, manu, patu, tanu, paru, ranu, pane, pahu, pana, anu, paunu, pUnu, nanu, paNu, pani, pau, paku, papu, penu",-0.7556,-0.7316,high,high,medium,106,0.179
+0,364,unattested,nonword,ponihi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,poni,3,0.366,"pouihi, konihi, panihi",-0.755428571,-0.731142857,high,high,medium,154,0.019
+7,82,mid,nonword,hene,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.641,"kene, mene, ene, Nene, hone, here, heke, pene, hane, wene, hune, tene, hine",-0.7474,-0.7308,high,high,medium,106,0.123
+104,378,mid,nonword,puhu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.462,"muhu, puhau, puru, puehu, pehu, huhu, putu, pAuhu, puku, puha, kuhu, puhi, pahu, uhu",-0.7786,-0.7308,high,high,medium,106,0.132
+0,136,unattested,nonword,kapito,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kapi, pito",2,1.099,"kapiti, kOpito",-0.77,-0.730142857,high,high,medium,154,0.013
+158,106,high,nonword,huku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,2.655,"kuku, hunu, haku, humu, tuku, ruku, uku, nuku, huke, hutu, huhu, hiku, huru, huki, huka, muku, puku",-0.7522,-0.7294,high,high,medium,106,0.16
+6,468,low,nonword,tireke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tire, reke",3,0,"tieke, tAreke, toreke",-0.781142857,-0.728714286,high,high,medium,154,0.019
+15,436,mid,nonword,tani,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,3.441,"hani, tini, tana, tai, wani, taki, kani, tanu, tane, tanoi, taui, taNi, tIni, pani, tafi, tahi, tari, tapi",-0.808,-0.7284,high,high,medium,106,0.17
+0,42,unattested,nonword,fanu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.13,"anu, kanu, manu, fenu, fau, tanu, nanu, faru, fano, ranu, fatu, fana",-0.7698,-0.7276,high,high,medium,106,0.113
+0,491,unattested,nonword,tuhuna,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,huna,6,3.677,"tauhuna, tukuna, tupuna, tAhuna, tahuna, kuhuna",-0.771857143,-0.727571429,high,high,medium,154,0.039
+0,499,unattested,nonword,turaku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tura, raku",2,1.805,"puraku, turaki",-0.786,-0.727571429,high,high,medium,154,0.013
+1823,447,high,nonword,tarae,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"tara, rae",8,3.009,"tare, tarau, tara, tarai, tarao, marae, tarare, karae",-0.76,-0.727,high,high,medium,136,0.059
+26,90,mid,nonword,hohi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,20,2.08,"honi, rohi, ohi, hoki, hoi, hoNi, houi, kohi, nohi, Nohi, hUhi, hAhi, hohO, hori, mohi, hohe, hopi, tohi, hihi, houhi",-0.75,-0.7268,high,high,medium,106,0.189
+0,321,unattested,nonword,pahero,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,5,0.599,"patero, paheno, pahemo, pawero, paheko",-0.765428571,-0.726571429,high,high,medium,154,0.032
+2,377,low,nonword,puhe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.035,"pure, pihe, pehe, pune, puha, puke, puhi, pohe",-0.7778,-0.726,high,high,medium,106,0.075
+0,432,unattested,nonword,taNahu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nahu,1,1.386,NaNahu,-0.767142857,-0.725857143,high,high,medium,154,0.006
+347,35,high,nonword,fako,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,1.937,"tako, nako, faNo, Nako, mako, rako, feako, fao, faka, fano, ako, faro, feko, hako",-0.7406,-0.7248,high,high,medium,106,0.132
+0,222,unattested,nonword,matanu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mata, tanu",4,2.189,"matanA, matau, matanui, mataku",-0.800857143,-0.722714286,high,high,medium,154,0.026
+0,220,unattested,nonword,marona,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maro, rona",1,0,karona,-0.766571429,-0.722428571,high,high,medium,154,0.006
+0,67,unattested,nonword,haNiri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,1,0.693,hakiri,-0.773571429,-0.721714286,high,high,medium,154,0.006
+0,177,unattested,nonword,kouri,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"kou, uri",5,1.513,"kori, koiri, kauri, mouri, koure",-0.820833333,-0.7215,high,high,medium,136,0.037
+133,85,mid,nonword,hini,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.939,"hani, tini, hiri, honi, hipi, kini, hina, hiki, wini, hinu, hihi, nini, hine, hiwi",-0.7852,-0.7206,high,high,medium,106,0.132
+18,400,mid,nonword,rawera,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"rawe, wera",3,0.597,"rEwera, mawera, rawea",-0.746714286,-0.720428571,high,high,medium,154,0.019
+0,494,unattested,nonword,tukuhi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tuku, kuhi",1,0,tuhuhi,-0.761428571,-0.720142857,high,high,medium,154,0.006
+3438,54,high,nonword,feri,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,1.891,"feuri, firi, reri, heri, fere, weri, feori, fera, fero, Neri, feti, feoi, ferU, keri",-0.7488,-0.72,high,high,medium,106,0.132
+0,372,unattested,nonword,pote,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.407,"poue, pota, pone, tote, hote, mote, poto, Note, poti, pore, poke, pohe",-0.7986,-0.72,high,high,medium,106,0.113
+0,394,unattested,nonword,raNare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"raNa, Nare",2,0.347,"NaNare, paNare",-0.749571429,-0.72,high,high,medium,154,0.013
+0,224,unattested,nonword,matehu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,mate,2,0,"manehu, matohu",-0.783142857,-0.718857143,high,high,medium,154,0.013
+1,71,low,nonword,hapera,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hape, pera",0,0,,-0.766,-0.718285714,high,high,medium,154,0
+0,493,unattested,nonword,tukira,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tuki,5,0.757,"tukura, pukira, tukiNa, tukirae, tukia",-0.763857143,-0.717,high,high,medium,154,0.032
+488,36,high,nonword,faku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.686,"aku, Naku, waku, kaku, taku, fau, naku, haku, faru, faka, fatu, raku, paku, feku",-0.749,-0.7164,high,high,medium,106,0.132
+4,69,low,nonword,hanu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,1.926,"hani, kanu, manu, hahu, hana, hane, tanu, hunu, haku, ranu, hamu, anu, nanu, hau, hinu, honu, haru",-0.7478,-0.7158,high,high,medium,106,0.16
+1,375,low,nonword,puara,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"pua, ara",10,1.395,"peara, puaNa, puaka, puare, puata, uara, para, puaroa, pura, pouara",-0.784,-0.715666667,high,high,medium,136,0.074
+21,371,mid,nonword,poru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,2.397,"horu, toru, koru, poau, paru, oru, pou, pore, pora, puru, pUru, Noru, poro, peru, porou, pUoru, pori, roru",-0.772,-0.7154,high,high,medium,106,0.17
+0,180,unattested,nonword,kuhiki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kuhi, hiki",1,0,kuiki,-0.749571429,-0.715285714,high,high,medium,154,0.006
+6,490,low,nonword,tuhu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,3.097,"tumu, tohu, tuhui, tuku, tuha, kuhu, tupu, tutu, tAuhu, tahu, huhu, tuhi, uhu, turu, tunu, tuohu, muhu",-0.7708,-0.715,high,high,medium,106,0.16
+24,40,mid,nonword,fani,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,3.08,"hani, fai, fati, kani, pani, fano, fana, wani",-0.7708,-0.7148,high,high,medium,106,0.075
+0,129,unattested,nonword,kanahu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kana,3,0.231,"kanapu, nanahu, kanaku",-0.745428571,-0.714714286,high,high,medium,154,0.019
+1,488,low,nonword,tuhe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.738,"ture, tute, tohe, tuhi, tuha, tuke, tehe, tupe, tahe, tihe",-0.773,-0.7128,high,high,medium,106,0.094
+0,320,unattested,nonword,pahe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,1.782,"pahU, paoe, pake, pape, tahe, pae, pihe, pahI, pehe, nahe, pane, pahi, pare, pahu, pohe",-0.7828,-0.7124,high,high,medium,106,0.142
+489,404,high,nonword,rete,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.518,"ete, mete, rere, rehe, rite, reta, reti, kete, reme, reke, repe, wete, tete, rate",-0.7284,-0.711,high,high,medium,106,0.132
+10,39,mid,nonword,fanawa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"fana, nawa",5,1.859,"fanaNa, kanawa, faiawa, fanaia, manawa",-0.732714286,-0.710428571,high,high,medium,154,0.032
+336,348,high,nonword,pihana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"piha, hana",5,1.271,"piana, peihana, paihana, pUhana, pihaNa",-0.748285714,-0.710142857,high,high,medium,154,0.032
+344,338,high,nonword,patau,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"pata, tau",11,2.244,"pata, potau, paetau, katau, pUtau, patu, parau, matau, patou, tatau, pItau",-0.751833333,-0.709833333,high,high,medium,136,0.081
+0,345,unattested,nonword,petiri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"peti, tiri",0,0,,-0.746428571,-0.709428571,high,high,medium,154,0
+631,166,high,nonword,koho,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,20,2.392,"koto, keho, koko, kaho, kaoho, moho, koeo, oho, komo, kono, kAho, koha, poho, kohi, kohI, kohu, koio, koro, noho, kohe",-0.745,-0.7086,high,high,medium,106,0.189
+3,209,low,nonword,manuku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"manu, nuku",6,0.981,"panuku, tanuku, makuku, manunu, mauku, matuku",-0.734571429,-0.708142857,high,high,medium,154,0.039
+3,140,low,nonword,karene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kare,4,1.651,"kareni, kapene, karere, karepe",-0.744714286,-0.707857143,high,high,medium,154,0.026
+26,212,mid,nonword,maraNe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,mara,4,2.855,"marake, maraNa, marae, marare",-0.748857143,-0.707714286,high,high,medium,154,0.026
+5,93,low,nonword,hoke,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,20,2.515,"toke, hoe, hote, roke, hoko, hake, noke, hoake, hore, oke, poke, hoka, hone, huke, heke, moke, hohe, hope, koke, hoki",-0.7424,-0.7068,high,high,medium,106,0.189
+0,473,unattested,nonword,tohere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tohe, here",3,0.649,"tAhere, toiere, iohere",-0.719285714,-0.705285714,high,high,medium,154,0.019
+33,188,mid,nonword,kure,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,3.653,"ture, rure, pure, kurI, kune, kere, koure, kuru, ure, kume, kura, kore, kAre, kare, hure",-0.73,-0.7052,high,high,medium,106,0.142
+38,256,mid,nonword,moreke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"more, reke",2,0,"koreke, toreke",-0.736428571,-0.703428571,high,high,medium,154,0.013
+1,457,low,nonword,tawe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,3.605,"nawe, tawa, rawe, tare, tewe, wawe, tame, tane, tae, take, kawe, tahe, awe",-0.8112,-0.7032,high,high,medium,106,0.123
+0,452,unattested,nonword,tarohe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taro, rohe",4,0,"parohe, tarore, karohe, takohe",-0.741428571,-0.702571429,high,high,medium,154,0.026
+12,198,mid,nonword,makake,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maka, kake",5,1.311,"marake, pakake, mahake, makawe, makaka",-0.721571429,-0.701142857,high,high,medium,154,0.032
+0,358,unattested,nonword,pohuku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,2,0,"pohuka, kohuku",-0.784857143,-0.700714286,high,high,medium,154,0.013
+0,226,unattested,nonword,matuke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"matu, tuke",2,1.242,"matike, matuku",-0.756714286,-0.700571429,high,high,medium,154,0.013
+0,74,unattested,nonword,hareke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hare, reke",3,0.88,"hOreke, harere, hakeke",-0.741428571,-0.698857143,high,high,medium,154,0.019
+0,183,unattested,nonword,kumata,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,mata,4,0,"kAmata, kuata, kOmata, kumama",-0.754285714,-0.697857143,high,high,medium,154,0.026
+1,451,low,nonword,tariwa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tari,5,2.548,"tarawa, tariwai, tariNa, taraiwa, taria",-0.744285714,-0.697,high,high,medium,154,0.032
+0,215,unattested,nonword,marei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"mare, rei",7,0.527,"karei, mareti, mUrei, marea, mare, uarei, manei",-0.728166667,-0.696333333,high,high,medium,136,0.051
+0,326,unattested,nonword,pakoru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,koru,4,1.128,"pakora, pakohu, pakaru, pakore",-0.756571429,-0.695857143,high,high,medium,154,0.026
+1,72,low,nonword,harahu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hara, rahu",3,0,"harau, rarahu, haranu",-0.737571429,-0.695571429,high,high,medium,154,0.019
+0,253,unattested,nonword,mokare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"moka, kare",0,0,,-0.741857143,-0.694714286,high,high,medium,154,0
+0,445,unattested,nonword,tapire,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tapi, pire",2,2.047,"tapere, tapore",-0.755,-0.694,high,high,medium,154,0.013
+172,218,high,nonword,mariNa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,riNa,8,2.414,"mariuNa, maraNa, hariNa, pariNa, muriNa, mariNi, tariNa, mahiNa",-0.731857143,-0.693857143,high,high,medium,154,0.052
+108,175,mid,nonword,kotu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,1.55,"motu, koto, koau, koutu, koti, koru, rotu, kutu, kotI, konu, kotA, hotu, kou, ketu, kotE, kotau, kota, kohu",-0.74,-0.6936,high,high,medium,106,0.17
+0,147,unattested,nonword,kaweki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kawe, weki",2,0,"Naweki, kaweka",-0.722714286,-0.692857143,high,high,medium,154,0.013
+0,160,unattested,nonword,kohaku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"koha, haku",1,0,kohuku,-0.759857143,-0.692285714,high,high,medium,154,0.006
+0,123,unattested,nonword,kaharu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kaha, haru",3,0.231,"kakaru, kaiaru, kuharu",-0.727857143,-0.691857143,high,high,medium,154,0.019
+0,243,unattested,nonword,minaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mina, naki",2,0,"inaki, minaka",-0.702142857,-0.691571429,high,high,high,154,0.013
+0,170,unattested,nonword,koperu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kope, peru",2,0,"toperu, kopenu",-0.785142857,-0.691,high,high,high,154,0.013
+4,500,low,nonword,tureke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"ture, reke",6,0.744,"tueke, tAreke, tumeke, toreke, taureke, tufeke",-0.740857143,-0.690857143,high,high,high,154,0.039
+0,43,unattested,nonword,farana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"fara, rana",1,0,farara,-0.715142857,-0.690714286,high,high,high,154,0.006
+2,148,low,nonword,kawero,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kawe, wero",3,0.597,"kaiwero, pawero, kawereo",-0.718,-0.690428571,high,high,high,154,0.019
+205,423,high,nonword,tafaro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,faro,4,0.275,"tafero, fafaro, tafiro, tauaro",-0.772857143,-0.689714286,high,high,high,154,0.026
+0,206,unattested,nonword,maNare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maNa, Nare",6,0.347,"mamare, maNarU, NaNare, paNare, maNaru, marare",-0.747857143,-0.688571429,high,high,high,154,0.039
+0,381,unattested,nonword,pukiri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kiri,3,0,"pakiri, pukira, pAkiri",-0.724857143,-0.688428571,high,high,high,154,0.019
+0,519,unattested,nonword,waraka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"wara, raka",7,1.685,"waraki, araka, raraka, karaka, paraka, taraka, waraNa",-0.716142857,-0.687714286,high,high,high,154,0.045
+4,429,low,nonword,takuhi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taku, kuhi",4,1.865,"takuahi, tapuhi, takahi, takuhe",-0.734571429,-0.686571429,high,high,high,154,0.026
+357,392,high,nonword,rakaro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"raka, karo",1,0,makaro,-0.720571429,-0.686,high,high,high,154,0.006
+0,76,unattested,nonword,haweri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,weri,1,0,Naweri,-0.760857143,-0.685571429,high,high,high,154,0.006
+1,327,low,nonword,pakure,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,paku,4,1.259,"pahure, pakere, parure, pakore",-0.734142857,-0.685285714,high,high,high,154,0.026
+1,426,low,nonword,tahene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tahe,1,0.693,tuhene,-0.729571429,-0.685285714,high,high,high,154,0.006
+223,380,high,nonword,puki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,3.005,"puaki, pukA, ruki, tuki, puke, puni, puka, piki, puri, paki, pAki, kuki, huki, uki, pIki, poki, puhi, puku",-0.7362,-0.685,high,high,high,106,0.17
+0,221,unattested,nonword,marori,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maro, rori",6,0.299,"karori, parori, maroro, marore, tarori, marohi",-0.728857143,-0.683857143,high,high,high,154,0.039
+4,219,low,nonword,maroki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maro, roki",3,1.758,"maroke, moroki, marohi",-0.721285714,-0.682857143,high,high,high,154,0.019
+103,34,mid,nonword,fake,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.746,"wake, pake, fae, kake, nake, rake, ake, hake, faka, feke, take, fEke, fafe, Nake, fare",-0.7116,-0.6826,high,high,high,106,0.142
+0,453,unattested,nonword,taruri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taru, ruri",3,1.628,"tarori, tauri, tahuri",-0.718571429,-0.682428571,high,high,high,154,0.019
+9,369,mid,nonword,porei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"pore, rei",8,1.034,"purei, pUrei, pArei, perei, aporei, porai, pori, pore",-0.734166667,-0.682166667,high,high,high,136,0.059
+3,168,low,nonword,komiki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"komi, miki",1,5.533,komiti,-0.741714286,-0.682142857,high,high,high,154,0.006
+0,254,unattested,nonword,monana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nana,3,2.23,"konana, moana, manana",-0.715142857,-0.681428571,high,high,high,154,0.019
+0,337,unattested,nonword,pataha,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pata, taha",5,0.717,"pataNa, patahua, paraha, paetaha, tataha",-0.732142857,-0.681,high,high,high,154,0.032
+0,456,unattested,nonword,taure,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"tau, ure",9,1.863,"ture, tEure, tauru, Naure, tare, taura, tauri, taurea, taute",-0.727333333,-0.680666667,high,high,high,136,0.066
+0,145,unattested,nonword,karuru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"karu, ruru",7,0.824,"karure, koruru, kOruru, haruru, Naruru, maruru, karurua",-0.706857143,-0.680571429,high,high,high,154,0.045
+0,498,unattested,nonword,turaka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tura, raka",7,1.446,"turapa, auraka, tuaka, tEraka, turaki, taraka, puraka",-0.735285714,-0.680142857,high,high,high,154,0.045
+0,335,unattested,nonword,parora,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,rora,6,0.75,"paora, parori, paroro, parore, pakora, parera",-0.733,-0.678857143,high,high,high,154,0.039
+2,130,low,nonword,kanake,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kana, nake",7,1.472,"kaneke, kanae, anake, kanaku, hanake, panake, fanake",-0.706571429,-0.678142857,high,high,high,154,0.045
+0,357,unattested,nonword,poheke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pohe, heke",2,0.805,"paheke, pUheke",-0.746857143,-0.678,high,high,high,154,0.013
+0,167,unattested,nonword,kohoki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,hoki,3,0.231,"kokoki, kohuki, hohoki",-0.725857143,-0.677714286,high,high,high,154,0.019
+200,45,high,nonword,fari,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,3.889,"ari, firi, fai, fati, Nari, fara, rari, faro, faru, hari, pari, fare, tari, kari",-0.7066,-0.6768,high,high,high,106,0.132
+0,77,unattested,nonword,hawete,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wete,3,0,"hawene, hatete, mawete",-0.770142857,-0.676714286,high,high,high,154,0.019
+4,455,low,nonword,tauna,5,3,2,CVVCV,cv2cv,TRUE,FALSE,tau,13,3.34,"tana, taua, tauNa, taona, taura, tuna, tauia, taruna, taina, taunu, tauta, tahuna, rauna",-0.718,-0.673,high,high,high,136,0.096
+2,143,low,nonword,karora,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"karo, rora",7,0.559,"karori, karona, karore, karoa, kaiora, karera, karoro",-0.722857143,-0.672142857,high,high,high,154,0.045
+0,37,unattested,nonword,fanana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"fana, nana",5,0.717,"fanaNa, panana, manana, anana, fanaia",-0.702,-0.671714286,high,high,high,154,0.032
+7,141,mid,nonword,karina,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kari,2,0.693,"karona, karia",-0.707714286,-0.671285714,high,high,high,154,0.013
+0,430,unattested,nonword,tamona,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,2,0.693,"tapona, taona",-0.724285714,-0.670428571,high,high,high,154,0.013
+0,161,unattested,nonword,kohawa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"koha, hawa",2,0.347,"kohara, kotawa",-0.767571429,-0.667285714,high,high,high,154,0.013
+0,339,unattested,nonword,patoro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,toro,7,0.666,"paoro, paNoro, pUtoro, patero, paroro, patooro, paeoro",-0.694428571,-0.667285714,high,high,high,154,0.045
+1193,385,high,nonword,punaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"puna, naki",4,0.347,"puiaki, pAnaki, puaki, pInaki",-0.725428571,-0.667142857,high,high,high,154,0.026
+0,444,unattested,nonword,tapera,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,pera,6,1.48,"taera, tapepa, tapeha, tafera, tauera, tapere",-0.712714286,-0.667142857,high,high,high,154,0.039
+6,217,low,nonword,mariki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,riki,6,1.937,"ariki, mariNi, mariko, makiki, marihi, maiki",-0.698428571,-0.664285714,high,high,high,154,0.039
+0,467,unattested,nonword,tiraka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tira, raka",7,1.691,"tiaka, hiraka, tEraka, tiraki, tirawa, taraka, miraka",-0.734,-0.663857143,high,high,high,154,0.045
+0,216,unattested,nonword,marete,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,mare,4,0.677,"mareti, marere, mawete, mirete",-0.700142857,-0.663571429,high,high,high,154,0.026
+0,448,unattested,nonword,tarihi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tari, rihi",6,0.593,"tarioi, tauihi, karihi, marihi, rarihi, arihi",-0.707571429,-0.663142857,high,high,high,154,0.039
+0,370,unattested,nonword,porohi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"poro, rohi",0,0,,-0.687571429,-0.662428571,high,high,high,154,0
+4,125,low,nonword,kahuru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kahu, huru",5,2.015,"kahuku, kahurua, Nahuru, mahuru, kOhuru",-0.681857143,-0.661142857,high,high,high,154,0.032
+0,173,unattested,nonword,kotira,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"koti, tira",3,0.88,"katira, kotia, kotiNa",-0.730285714,-0.660571429,high,high,high,154,0.019
+0,322,unattested,nonword,pahiki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pahi, hiki",4,0.52,"pahika, pahiwi, pahiko, pahaki",-0.709428571,-0.658714286,high,high,high,154,0.026
+0,424,unattested,nonword,tafita,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tafi, fita",3,3.466,"tafito, tafia, tafiti",-0.739285714,-0.658,high,high,high,154,0.019
+1,427,low,nonword,takete,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"take, kete",4,1.563,"tiakete, takeke, takere, taokete",-0.696857143,-0.657714286,high,high,high,154,0.026
+38,442,mid,nonword,tapati,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tapa, pati",2,1.832,"tapahi, tapatu",-0.707571429,-0.657,high,high,high,154,0.013
+35,163,mid,nonword,kohini,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kohi,2,1.32,"kohinu, kIhini",-0.713142857,-0.656285714,high,high,high,154,0.013
+0,196,unattested,nonword,mahare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maha, hare",6,1.558,"mamare, mahake, mahara, mahere, mahore, marare",-0.694571429,-0.652,high,high,high,154,0.039
+76,324,mid,nonword,pahuru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pahu, huru",5,2.87,"pahuhu, paNuru, Nahuru, pahure, mahuru",-0.696428571,-0.651285714,high,high,high,154,0.032
+24,449,mid,nonword,tariki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tari, riki",8,1.107,"ariki, taraiki, tOriki, tapiki, tarikai, tiriki, tarioi, taiki",-0.697571429,-0.651,high,high,high,154,0.052
+0,199,unattested,nonword,makaru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maka, karu",9,1.382,"mawaru, kakaru, makaro, mamaru, mafaru, maNaru, makau, pakaru, makuru",-0.682857143,-0.649,high,high,high,154,0.058
+0,425,unattested,nonword,tahari,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taha, hari",6,2.391,"tatari, tawari, tahaki, hahari, tahuri, taiari",-0.696142857,-0.648714286,high,high,high,154,0.039
+0,56,unattested,nonword,fetere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tere,2,0.805,"feteke, tetere",-0.674428571,-0.648,high,high,high,154,0.013
+0,165,unattested,nonword,kohira,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kohi, hira",6,1.521,"kohika, kohara, kohiNa, kohia, kohera, kohura",-0.725142857,-0.646714286,high,high,high,154,0.039
+0,359,unattested,nonword,pokari,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"poka, kari",4,2.881,"pIkari, pUkari, poari, pakari",-0.683,-0.646285714,high,high,high,154,0.026
+0,200,unattested,nonword,makore,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mako, kore",7,0.732,"makora, makorA, makere, makorea, pakore, marore, mahore",-0.696857143,-0.642571429,high,high,high,154,0.045
+1,203,low,nonword,manake,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mana, nake",8,1.531,"marake, mahake, anake, panake, hanake, manako, manaka, fanake",-0.667857143,-0.642,high,high,high,154,0.052
+0,73,unattested,nonword,haraka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hara, raka",9,1.749,"harakoa, araka, raraka, karaka, haraki, paraka, taraka, hahaka, hiraka",-0.677571429,-0.639571429,high,high,high,154,0.058
+0,137,unattested,nonword,karahi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kara, rahi",9,0.786,"karaehi, karihi, karohi, korahi, karahU, karani, kauahi, rarahi, karahui",-0.669714286,-0.638714286,high,high,high,154,0.058
+357,213,high,nonword,maraNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mara, raNi",6,2.057,"mariNi, maraNa, maiaNi, maraNai, mataNi, faraNi",-0.662857143,-0.634714286,high,high,high,154,0.039
+0,171,unattested,nonword,korei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"kore, rei",5,3.82,"karei, kori, konei, kore, kUrei",-0.703166667,-0.632833333,high,high,high,136,0.037
+0,441,unattested,nonword,tapare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tapa, pare",10,0.792,"tapape, taupare, taware, uapare, tIpare, tUpare, tarare, papare, tapere, tapore",-0.687714286,-0.632285714,high,high,high,154,0.065
+0,333,unattested,nonword,parana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"para, rana",8,1.29,"paraia, paraha, parata, parUna, paraka, parani, paraNa, panana",-0.662,-0.631285714,high,high,high,154,0.052
+31,138,mid,nonword,karana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kara, rana",7,3.18,"karona, karauna, karapa, karaka, karani, karawa, karaNa",-0.652857143,-0.625142857,high,high,high,154,0.045
+1,162,low,nonword,kohiki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kohi, hiki",3,0.231,"kohika, kohuki, kohiko",-0.668714286,-0.622857143,high,high,high,154,0.019
+209,139,high,nonword,karara,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kara, rara",10,2.222,"farara, marara, karaka, kakara, korara, karapa, karera, kararua, karawa, karaNa",-0.638571429,-0.618,high,high,high,154,0.065
+176,32,high,nonword,fakara,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"faka, kara",13,1.731,"fakarea, fakarae, farara, pakara, fakaea, fakarua, fakaroa, fakaira, kakara, fakaora, fakarau, fakaura, fakaara",-0.639714286,-0.614,high,high,high,154,0.084
+0,204,unattested,nonword,manaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mana, naki",5,2.203,"manaaki, mahaki, manako, manaka, mafaki",-0.636571429,-0.612428571,high,high,high,154,0.032
+3,2,low,word,ato,3,2,2,VCV,vcv,FALSE,FALSE,NA,18,3.225,"aNo, atu, apo, ao, ako, kato, aro, ate, ata, rato, uto, ati, atA, aho, ito, mato, atoa, amo",-0.944,-0.895,NA,NA,NA,87,0.207
+0,3,unattested,word,atiti,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ati, titi",3,1.261,"atiati, titi, matiti",-0.8575,-0.805833333,NA,NA,NA,135,0.022
+4,4,low,word,aihe,4,3,2,VVCV,v2cv,TRUE,FALSE,"ai, ihe",4,1.445,"ihe, pihe, tihe, maihe",-1.0754,-1.0576,NA,NA,NA,126,0.032
+0,5,unattested,word,aufi,4,3,2,VVCV,v2cv,TRUE,FALSE,"au, ufi",4,1.793,"auhi, faufi, ufi, afi",-1.0306,-1.0178,NA,NA,NA,126,0.032
+1,6,low,word,amaru,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ama, maru",2,2.912,"maru, mamaru",-0.895666667,-0.826666667,NA,NA,NA,135,0.015
+2,7,low,word,ufi,3,2,2,VCV,vcv,FALSE,FALSE,NA,8,2.648,"ui, ufa, uki, uri, afi, ufia, uhi, aufi",-1.19675,-1.19675,NA,NA,NA,87,0.092
+30,8,mid,word,arero,5,3,3,VCVCV,vcvcv,FALSE,FALSE,are,2,0.347,"aroro, afero",-0.8735,-0.835333333,NA,NA,NA,135,0.015
+0,9,unattested,word,apai,4,3,2,VCVV,vcv2,TRUE,FALSE,"apa, pai",4,4.335,"ahai, pai, papai, apa",-0.9348,-0.9458,NA,NA,NA,117,0.034
+0,10,unattested,word,aroro,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"aro, roro",6,2.338,"paroro, roro, arero, karoro, aroaro, maroro",-0.828,-0.793333333,NA,NA,NA,135,0.044
+218,11,high,word,ariki,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ari, riki",2,1.805,"arihi, riki",-0.823666667,-0.782333333,NA,NA,NA,135,0.015
+960,12,high,word,anei,4,3,2,VCVV,vcv2,TRUE,FALSE,nei,5,4.078,"nei, anea, Enei, inei, manei",-0.9456,-0.896,NA,NA,NA,117,0.043
+305,13,high,word,atua,4,3,3,VCVV,vcvv,FALSE,FALSE,"atu, tua",12,4.014,"ata, atu, utua, aua, apua, patua, natua, fatua, matua, ahua, atoa, tua",-0.9146,-0.9052,NA,NA,NA,117,0.103
+0,14,unattested,word,arihi,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ari, rihi",5,2.343,"rarihi, karihi, marihi, ariki, arihia",-0.835333333,-0.796333333,NA,NA,NA,135,0.037
+1099,15,high,word,aua,3,3,2,VVV,v2v,TRUE,FALSE,"au, ua",30,4.981,"taua, ama, aha, rua, raua, apua, auau, kaua, atua, ahua, au, ua, aue, haua, aka, apa, aNa, ata, mua, uaua, auE, ana, pua, ara, auta, awa, Naua, kua, hua, tua",-1.0325,-0.97,NA,NA,NA,117,0.256
+33,16,mid,word,aute,4,3,2,VVCV,v2cv,TRUE,FALSE,"au, ute",10,1.187,"haute, paute, ate, ute, kaute, auta, taute, aue, tute, autO",-0.9388,-0.9138,NA,NA,NA,126,0.079
+1,17,low,word,auhi,4,3,2,VVCV,v2cv,TRUE,FALSE,"au, uhi",8,2.823,"tuhi, puhi, ahi, aufi, kuhi, uhi, auahi, ruhi",-0.9212,-0.9014,NA,NA,NA,126,0.063
+1,18,low,word,auru,4,3,2,VVCV,v2cv,TRUE,FALSE,"au, uru",14,2.702,"tauru, ruru, auau, kuru, muru, huru, turu, uru, puru, aru, mauru, aurau, rauru, Nuru",-0.8604,-0.8532,NA,NA,NA,126,0.111
+0,19,unattested,word,awere,5,3,3,VCVCV,vcvcv,FALSE,FALSE,awe,1,0,aweke,-0.7875,-0.761833333,NA,NA,NA,135,0.007
+0,20,unattested,word,anea,4,3,3,VCVV,vcvv,FALSE,FALSE,NA,9,1.903,"wanea, anei, nanea, ranea, afea, ana, enea, manea, inea",-0.9658,-0.9176,NA,NA,NA,117,0.077
+0,21,unattested,word,aweke,5,3,3,VCVCV,vcvcv,FALSE,FALSE,awe,4,0.736,"awere, taweke, raweke, aweko",-0.811666667,-0.789,NA,NA,NA,135,0.03
+552,22,high,word,anake,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ana, nake",6,1.235,"panake, fanake, aoake, anahe, hanake, nake",-0.8365,-0.794166667,NA,NA,NA,135,0.044
+0,23,unattested,word,afe,3,2,2,VCV,vcv,FALSE,FALSE,NA,9,2.828,"kafe, ate, afea, afi, awe, fafe, are, aue, ake",-1.0225,-0.954,NA,NA,NA,87,0.103
+9,24,mid,word,awaNa,5,3,3,VCVCV,vcvcv,FALSE,FALSE,awa,5,0.774,"araNa, awata, aweNa, kawaNa, aNaNa",-0.842666667,-0.819666667,NA,NA,NA,135,0.037
+2,25,low,word,uha,3,2,2,VCV,vcv,FALSE,FALSE,NA,23,1.945,"ufa, uho, ha, aha, oha, uia, ura, uhia, uNa, uea, uhu, ua, tuha, uta, uka, puha, upa, Nuha, kuha, ruha, uma, muha, uhi",-1.0345,-1.02375,NA,NA,NA,87,0.264
+0,26,unattested,word,iheu,4,3,3,VCVV,vcvv,FALSE,FALSE,"ihe, heu",5,1.16,"ihe, iheua, heu, aheu, ihu",-1.028,-1.0332,NA,NA,NA,117,0.043
+6,27,low,word,ehu,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,2.619,"rehu, ahu, pehu, ehE, ihu, ohu, uhu, nehu, ehua, eku, kehu",-0.9795,-0.97725,NA,NA,NA,87,0.126
+1,28,low,word,ero,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,1.6,"Nero, oro, pero, kero, wero, eo, iro, aro, tero, fero, eroa",-0.99275,-0.99275,NA,NA,NA,87,0.126
+0,29,unattested,word,eti,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,2.245,"neti, Ati, ati, teti, reti, ete, oti, feti, emi, Oti, peti, iti",-0.9905,-0.96525,NA,NA,NA,87,0.138
+13,30,mid,word,uhi,3,2,2,VCV,vcv,FALSE,FALSE,NA,17,2.21,"auhi, uho, tuhi, ahi, uki, uri, uha, uhia, ohi, uhu, ufi, ruhi, ui, puhi, Ihi, ihi, kuhi",-0.9665,-0.956,NA,NA,NA,87,0.195
+0,31,unattested,word,paoi,4,3,2,CVVV,cv2v,TRUE,FALSE,"pao, oi",14,2.878,"poi, pioi, paoe, pani, peoi, pao, paoia, pati, paoa, papi, pari, pai, pahi, paki",-0.9194,-0.908,NA,NA,NA,127,0.11
+176,32,high,word,pakari,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"paka, kari",7,0.842,"pakaru, pakiri, kakari, pUkari, parari, pakara, pIkari",-0.648142857,-0.602285714,NA,NA,NA,154,0.045
+103,34,mid,word,raki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,23,2.284,"rahi, roki, riaki, haki, maki, rai, raNi, raku, rake, rIki, ruaki, raka, ruki, rako, rari, riki, uaki, rapi, taki, naki, rafi, Naki, paki",-0.7126,-0.6854,NA,NA,NA,106,0.217
+347,35,high,word,hoko,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.679,"hoka, toko, koko, moko, horo, hono, hopo, hoki, hokoa, poko, hoto, hiko, oko, hako, noko, hokoi",-0.7342,-0.7294,NA,NA,NA,106,0.151
+488,36,high,word,faNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,2.464,"paNa, fara, haNa, fata, UaNa, faNo, raNa, faea, faka, fana, aNa, maNa, OfaNa, faNaa, kaNa, NaNa, uaNa, faoa",-0.754,-0.7188,NA,NA,NA,106,0.17
+0,37,unattested,word,farara,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"fara, rara",1,3.466,marara,-0.700714286,-0.683571429,NA,NA,NA,154,0.006
+0,38,unattested,word,poNare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"poNa, Nare",3,0,"poare, paNare, poNere",-0.774857143,-0.737142857,NA,NA,NA,154,0.019
+10,39,mid,word,kanawa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kana, nawa",5,1.563,"manawa, kanapa, karawa, kaiawa, kakawa",-0.729571429,-0.707714286,NA,NA,NA,154,0.032
+24,40,mid,word,kani,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,1.803,"hani, kati, koni, kano, pani, kafi, kari, kai, kana, kahi, kanoi, kini, wani, kapi, kanu, kania, kaui, kami",-0.7618,-0.7104,NA,NA,NA,106,0.17
+609,41,high,word,mano,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.477,"maro, manu, fano, kano, mino, mako, maho, mana, mao, mato",-0.7834,-0.7452,NA,NA,NA,106,0.094
+0,42,unattested,word,faru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,3.588,"Naru, maru, fara, karu, waru, fatu, fEru, raru, farau, haru, taru, fau, paru, aru, faro, fare",-0.7614,-0.725,NA,NA,NA,106,0.151
+0,43,unattested,word,kakere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kake, kere",6,2.271,"takere, kauere, karere, kakare, makere, pakere",-0.714428571,-0.701571429,NA,NA,NA,154,0.039
+0,44,unattested,word,feteNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,1,0,fefeNi,-0.769,-0.737571429,NA,NA,NA,154,0.006
+200,45,high,word,firi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,3.095,"riri, wiri, iri, piri, fioi, fira, hiri, fiti, firo, firia, tiri, kiri, fifi, miri",-0.6914,-0.678,NA,NA,NA,106,0.132
+0,46,unattested,word,perori,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pero, rori",4,0.275,"pIrori, pUrori, pOrori, parori",-0.770285714,-0.742571429,NA,NA,NA,154,0.026
+2,47,low,word,Nare,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,23,2.149,"Naru, tare, Naere, hare, Naro, Nake, Narue, mare, Nara, Nari, Nae, Nore, rare, Naore, ware, pare, Narea, kare, Nere, are, Naure, fare, Naue",-0.793,-0.7472,NA,NA,NA,106,0.217
+0,48,unattested,word,makiu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"maki, kiu",3,3.29,"mariu, makau, maki",-0.888166667,-0.852833333,NA,NA,NA,136,0.022
+41,49,mid,word,fatu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.851,"fata, fitu, atu, foatu, fau, natu, fatua, fati, tatu, faru, Natu, matu, patu",-0.7762,-0.7456,NA,NA,NA,106,0.123
+0,50,unattested,word,feku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,0.748,"weku, fenu, fepu, feke, feNu, feau, feko, eku, fekI",-0.893,-0.8538,NA,NA,NA,106,0.085
+2713,51,high,word,fenua,5,3,3,CVCVV,cvcvv,FALSE,FALSE,fenu,5,1.732,"penua, feua, fenu, feNua, fena",-0.987166667,-0.935333333,NA,NA,NA,136,0.037
+12,52,mid,word,hoNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.95,"toNi, hoNia, hoi, hori, hopi, hoNa, hoki, honi, houi, NoNi, heNi",-0.7572,-0.7404,NA,NA,NA,106,0.104
+0,53,unattested,word,Nehe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.769,"pehe, Nene, Nere, NeNe, wehe, kehe, Naehe, Nohe, tehe, rehe, nehe",-0.8874,-0.8732,NA,NA,NA,106,0.104
+3438,54,high,word,fare,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.4,"fara, tare, fafe, hare, mare, rare, ware, pare, kare, Nare, fere, are, fae, faro, faru",-0.746,-0.7074,NA,NA,NA,106,0.142
+0,55,unattested,word,fetoki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,toki,2,0,"fekoki, fetoko",-0.770428571,-0.730571429,NA,NA,NA,154,0.013
+0,56,unattested,word,feteke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,teke,0,0,,-0.682,-0.648571429,NA,NA,NA,154,0
+34,57,mid,word,fero,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,0.901,"afero, ero, pero, wero, ferU, fera, tero, feko, feao, Nero, feoro, kero, fere, firo, faro, feo",-0.7636,-0.7344,NA,NA,NA,106,0.151
+0,58,unattested,word,feao,4,3,2,CVVV,cvv2,TRUE,FALSE,"fea, ao",8,2.005,"feiao, fao, fea, feau, feo, feako, fero, feko",-1.1388,-1.117,NA,NA,NA,127,0.063
+0,59,unattested,word,rafi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.129,"rifi, tafi, raki, rahi, Nafi, rai, rari, raNi, afi, rIfi, rapi, kafi, rafia",-0.8986,-0.8716,NA,NA,NA,106,0.123
+1,60,low,word,feNu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,5,0.277,"feau, fenu, fepu, feNua, feku",-1.024,-0.9464,NA,NA,NA,106,0.047
+13,61,mid,word,fiore,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"fio, ore",2,2.445,"hiore, kiore",-0.816333333,-0.787,NA,NA,NA,136,0.015
+6,62,low,word,firo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.67,"kiro, fira, tiro, fito, piro, firi, riro, fero, faro, fio, iro, miro, fAiro",-0.8088,-0.7862,NA,NA,NA,106,0.123
+0,63,unattested,word,haupa,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"hau, upa",8,1.098,"hauta, haupU, hupa, hauma, hapa, hauNa, faupa, haua",-0.827,-0.783666667,NA,NA,NA,136,0.059
+1,64,low,word,kame,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.376,"kare, kafe, tame, kamu, kamea, kake, kamo, kape, kama, kawe, kume, kami",-0.8468,-0.8084,NA,NA,NA,106,0.113
+4,65,low,word,Naio,4,3,2,CVVV,cv2v,TRUE,FALSE,io,8,1.533,"NOio, Nao, taio, Nako, eNaio, Naro, Noio, kaio",-0.978,-0.9602,NA,NA,NA,127,0.063
+80,66,mid,word,horoi,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"horo, roi",9,1.12,"horomi, toroi, horo, roroi, horoia, oroi, hori, horoa, hokoi",-0.811666667,-0.8105,NA,NA,NA,136,0.066
+0,67,unattested,word,haNere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nere,7,1.296,"haNore, haNeNe, haere, harere, heNere, taNere, hoNere",-0.785,-0.723428571,NA,NA,NA,154,0.045
+3,68,low,word,kano,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.901,"kono, fano, kaho, kino, kapo, kani, kamo, kao, mano, kato, kanu, kana, karo, kaio, kanoi",-0.82,-0.7768,NA,NA,NA,106,0.142
+4,69,low,word,Nara,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,22,2.872,"Naoa, Nana, Naru, fara, rara, Nira, mara, wara, Naro, Naora, Nata, Nari, Narea, kara, tara, para, NaNa, uara, Nare, ara, Naua, hara",-0.7448,-0.704,NA,NA,NA,106,0.208
+0,70,unattested,word,hanumi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,numi,3,1.397,"tanumi, henumi, haumi",-0.778142857,-0.760285714,NA,NA,NA,154,0.019
+1,71,low,word,tapeha,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,peha,2,1.099,"tUpeha, tapepa",-0.774285714,-0.725571429,NA,NA,NA,154,0.013
+1,72,low,word,harore,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,rore,9,0.378,"haNore, karore, hamore, harare, harere, tarore, hahore, parore, marore",-0.736571429,-0.688142857,NA,NA,NA,154,0.058
+0,73,unattested,word,haraki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hara, raki",3,0.536,"hahaki, waraki, paraki",-0.677571429,-0.639571429,NA,NA,NA,154,0.019
+0,74,unattested,word,kaneke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,neke,5,0.774,"paneke, kaieke, kOneke, kauneke, kanehe",-0.740428571,-0.707714286,NA,NA,NA,154,0.032
+1,75,low,word,maene,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"mae, ene",5,1.914,"manene, maehe, mafene, faene, mene",-0.845833333,-0.7775,NA,NA,NA,136,0.037
+0,76,unattested,word,tawaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tawa,8,0.626,"tawaka, tahaki, tawake, tawari, tafaki, tawai, taiaki, nawaki",-0.764142857,-0.686285714,NA,NA,NA,154,0.052
+0,77,unattested,word,hawene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wene,0,0,,-0.775428571,-0.693142857,NA,NA,NA,154,0
+47,78,mid,word,hinu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.142,"ehinu, hina, hiku, hine, himu, hunu, inu, honu",-0.8542,-0.7992,NA,NA,NA,106,0.075
+16,79,mid,word,nehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.937,"rehu, neha, pehu, nehua, Anehu, ehu, nohu, nehe, kehu",-0.8688,-0.8382,NA,NA,NA,106,0.085
+0,80,unattested,word,hokoi,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"hoko, koi",7,3.806,"horoi, hokoa, hoko, kokoi, hoki, okoi, hIkoi",-0.838666667,-0.826833333,NA,NA,NA,136,0.051
+0,81,unattested,word,reNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,2.521,"reaNa, riNa, refa, eNa, raNa, teNa, rera, reia, repa, rANa, rea, reka, raeNa, rena, rewa, heNa, ruNa, reta",-0.8002,-0.7848,NA,NA,NA,106,0.17
+7,82,mid,word,wete,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.885,"wetea, wehe, ete, mete, weta, tete, kete, weto, wene",-0.749,-0.7212,NA,NA,NA,106,0.085
+1,83,low,word,peho,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.275,"pehe, pehu, poho, pero, pAho, peo, pIho, peha, peto, keho, meho",-0.852,-0.8416,NA,NA,NA,106,0.104
+0,84,unattested,word,tuaNi,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"tua, aNi",6,1.563,"taNi, tuaki, tuari, huaNi, tuNi, tuNaNi",-0.865,-0.7875,NA,NA,NA,136,0.044
+133,85,mid,word,hono,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.385,"kono, honoa, hoko, horo, hopo, honi, ono, pono, uhono, hone, tono, honu, hoto, nono",-0.7842,-0.7482,NA,NA,NA,106,0.132
+243,86,high,word,kino,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.498,"kono, kano, mino, kini, kiro, kiko, tino, kina, kimo, rino",-0.8646,-0.8328,NA,NA,NA,106,0.094
+3428,87,high,word,tino,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,3.701,"tio, mino, kino, tiro, timo, tito, tiko, tina, tono, rino, tini",-0.8474,-0.787,NA,NA,NA,106,0.104
+22,88,mid,word,tio,3,2,2,CVV,cvv,FALSE,FALSE,NA,16,2.491,"pio, taio, tiro, timo, tito, tiko, teo, tioa, tino, Aio, tao, fio, tiA, io, tiu, tia",-1.02125,-0.94825,NA,NA,NA,88,0.182
+7,89,mid,word,weu,3,2,2,CVV,cvv,FALSE,FALSE,NA,9,1.27,"wea, weku, wau, wepu, weru, wAu, heu, reu, keu",-1.084,-1.0755,NA,NA,NA,88,0.102
+26,90,mid,word,mohi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.596,"Nohi, moho, rohi, kohi, emohi, ohi, moni, moki, mAhi, mihi, nohi, moi, momi, mahi, tohi, mohe",-0.7522,-0.7168,NA,NA,NA,106,0.151
+9,91,mid,word,hape,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.093,"rape, nape, pape, hapU, hapi, hae, hapa, hane, hare, kape, hope, hake, hapI",-0.8254,-0.775,NA,NA,NA,106,0.123
+0,92,unattested,word,koio,4,3,2,CVVV,cv2v,TRUE,FALSE,"koi, io",12,1.985,"kono, koto, koko, koia, komo, koeo, koro, Noio, korio, koi, kaio, ioio",-1.052,-0.9976,NA,NA,NA,127,0.094
+5,93,low,word,huki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,3.423,"kuki, huti, uki, haki, humi, hui, huke, hukia, tuki, ruki, hoki, huaki, hiki, huri, huka, hEki",-0.7456,-0.7198,NA,NA,NA,106,0.151
+0,94,unattested,word,honae,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"hona, nae",2,0.896,"hone, konae",-0.873333333,-0.849833333,NA,NA,NA,136,0.015
+0,95,unattested,word,poNere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nere,3,0,"pokere, poNare, hoNere",-0.756,-0.738571429,NA,NA,NA,154,0.019
+1,96,low,word,Nohe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.631,"pohe, Nohi, Noe, kohe, Nehe, Note, hohe, tohe, rohe, Nore, mohe",-0.8314,-0.8188,NA,NA,NA,106,0.104
+86,97,mid,word,tanifa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nifa,0,0,,-0.856857143,-0.800428571,NA,NA,NA,154,0
+11,98,mid,word,raNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,3.07,"raNA, aNo, paNo, taNo, rako, rato, faNo, raNa, raNi, raho, roNo, raro",-0.8106,-0.7836,NA,NA,NA,106,0.113
+0,99,unattested,word,paNore,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"paNo, Nore",7,0.704,"haNore, pINore, paNoro, paNare, pahore, pakore, parore",-0.802,-0.779285714,NA,NA,NA,154,0.045
+259,100,high,word,rahi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,22,2.784,"raihi, rohi, raha, ahi, rai, raNi, raho, kahi, pahi, rOhi, rEhi, ruhi, raki, Arahi, rari, rafi, tahi, mahi, rapi, rahA, rIhi, rahu",-0.7678,-0.7406,NA,NA,NA,106,0.208
+4,101,low,word,hoake,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"hoa, ake",2,0.805,"hake, aoake",-0.813666667,-0.795333333,NA,NA,NA,136,0.015
+22,102,mid,word,huaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,hua,7,1.52,"tuaki, puaki, haki, huki, uaki, huaNi, ruaki",-0.782833333,-0.776833333,NA,NA,NA,136,0.051
+0,103,unattested,word,tuare,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"tua, are",10,2.081,"tIare, tare, tuari, auare, tuere, tuarA, puare, ture, huare, tuarea",-0.794166667,-0.760666667,NA,NA,NA,136,0.074
+0,104,unattested,word,muheke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,heke,1,0,auheke,-0.779857143,-0.773142857,NA,NA,NA,154,0.006
+158,106,high,word,moko,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,2.09,"moho, hoko, toko, meko, poko, miko, momo, mako, moka, mokoa, mokoA, noko, moki, koko, moke, moto, oko",-0.7508,-0.737,NA,NA,NA,106,0.16
+0,107,unattested,word,tukura,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tuku, kura",6,1.853,"tukua, tukuna, tukuNa, tuakura, tukurua, tukuroa",-0.756714286,-0.715428571,NA,NA,NA,154,0.039
+0,108,unattested,word,tunahi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tuna,1,0.693,unahi,-0.802142857,-0.776,NA,NA,NA,154,0.006
+0,109,unattested,word,humi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.418,"huti, kumi, huki, hume, haumi, numi, huri, hemi, hui, humu",-0.8498,-0.8034,NA,NA,NA,106,0.094
+0,110,unattested,word,uere,4,3,3,VVCV,vvcv,FALSE,FALSE,ue,13,2.724,"iere, ueue, rere, umere, Nere, tuere, ure, fere, mere, tere, kere, here, pere",-1.1438,-1.137,NA,NA,NA,126,0.103
+689,111,high,word,iwa,3,2,2,VCV,vcv,FALSE,FALSE,NA,11,4.351,"ina, kiwa, iwi, piwa, ioa, ia, awa, ira, hiwa, ika, ita",-0.916,-0.89475,NA,NA,NA,87,0.126
+642,112,high,word,ika,3,2,2,VCV,vcv,FALSE,FALSE,NA,22,2.924,"rika, ina, ka, hika, eka, nika, oka, ioa, ikia, Aka, aka, uka, ioka, iwa, iki, ia, tika, ira, ike, pika, fika, ita",-0.9165,-0.907,NA,NA,NA,87,0.253
+0,113,unattested,word,inaki,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ina, naki",2,0,"naki, inati",-0.747166667,-0.739333333,NA,NA,NA,135,0.015
+33,114,mid,word,iri,3,2,2,VCV,vcv,FALSE,FALSE,NA,19,3.451,"riri, iria, ori, iAri, uri, hiri, firi, ari, iwi, iro, piri, wiri, ihi, iki, tiri, ira, kiri, miri, iti",-0.844,-0.84875,NA,NA,NA,87,0.218
+2411,115,high,word,ora,3,2,2,VCV,vcv,FALSE,FALSE,NA,24,1.611,"ofa, oia, rora, ura, oha, ori, oro, oria, oka, opa, ota, ona, orea, orua, ore, hora, oroa, pora, tora, oma, ara, kora, ira, oru",-0.9485,-0.89,NA,NA,NA,87,0.276
+4,116,low,word,apo,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,3.179,"apa, aNo, kapo, ao, ako, aho, ato, apU, aro, ipo, apu, amo",-1.0415,-1.03775,NA,NA,NA,87,0.138
+0,117,unattested,word,upa,3,2,2,VCV,vcv,FALSE,FALSE,NA,16,1.755,"ufa, uia, ura, opa, uha, uNa, uea, kupa, ua, uta, uka, epa, apa, hupa, uma, tupa",-1.0215,-1.01425,NA,NA,NA,87,0.184
+0,118,unattested,word,ikura,5,3,3,VCVCV,vcvcv,FALSE,FALSE,kura,3,3.031,"akura, Ukura, kura",-0.942666667,-0.937166667,NA,NA,NA,135,0.022
+1205,119,high,word,iNoa,4,3,3,VCVV,vcvv,FALSE,FALSE,iNo,2,1.199,"ioa, iNo",-1.0496,-1.0666,NA,NA,NA,117,0.017
+0,120,unattested,word,ipo,3,2,2,VCV,vcv,FALSE,FALSE,NA,8,2.637,"iho, ripo, apo, iNo, io, ipu, iro, ito",-1.091,-1.09625,NA,NA,NA,87,0.092
+2,121,low,word,epa,3,2,2,VCV,vcv,FALSE,FALSE,NA,8,2.817,"upa, ea, eNa, eka, opa, pepa, repa, apa",-0.9845,-0.9885,NA,NA,NA,87,0.092
+139,122,high,word,inoi,4,3,2,VCVV,vcv2,TRUE,FALSE,noi,4,0.909,"inoia, inohi, noi, inei",-0.9748,-0.9802,NA,NA,NA,117,0.034
+0,123,unattested,word,kanaku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kana, naku",1,0.693,kanapu,-0.727571429,-0.696285714,NA,NA,NA,154,0.006
+0,124,unattested,word,maheu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,heu,5,1.447,"maheua, aheu, mahau, mahea, mahu",-0.806,-0.771,NA,NA,NA,136,0.037
+4,125,low,word,karore,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"karo, rore",9,1.266,"harore, karori, karoro, karohe, karure, tarore, karere, parore, marore",-0.689714286,-0.648285714,NA,NA,NA,154,0.058
+16,126,mid,word,maire,5,3,2,CVVCV,cv2cv,TRUE,FALSE,mai,5,0.636,"mairO, mare, maiere, matire, maihe",-0.797333333,-0.767333333,NA,NA,NA,136,0.037
+41,127,mid,word,kauri,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"kau, uri",5,2.251,"mauri, kauria, kari, kaui, tauri",-0.7405,-0.721166667,NA,NA,NA,136,0.037
+0,128,unattested,word,taNoro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,taNo,3,0,"paNoro, haNoro, taioro",-0.757142857,-0.730714286,NA,NA,NA,154,0.019
+0,129,unattested,word,manehu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mane, nehu",2,0.347,"manehau, mOnehu",-0.744571429,-0.711428571,NA,NA,NA,154,0.013
+2,130,low,word,fanake,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"fana, nake",3,2.471,"panake, anake, hanake",-0.709714286,-0.680857143,NA,NA,NA,154,0.019
+14,131,mid,word,toNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.805,"toi, toNa, toki, tuNi, toti, taNi, tori, hoNi, tohi, NoNi, toNia",-0.808,-0.7878,NA,NA,NA,106,0.104
+0,132,unattested,word,panoni,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,noni,1,0,tanoni,-0.826857143,-0.786714286,NA,NA,NA,154,0.006
+0,133,unattested,word,kounu,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"kou, unu",2,0.347,"koutu, konu",-0.823333333,-0.754833333,NA,NA,NA,136,0.015
+0,134,unattested,word,ramene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,mene,1,1.386,rUmene,-0.785142857,-0.762285714,NA,NA,NA,154,0.006
+9,135,mid,word,tapepe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,pepe,4,1.298,"tapepa, tapeke, tapape, tapere",-0.795571429,-0.759714286,NA,NA,NA,154,0.026
+0,136,unattested,word,kokiro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"koki, kiro",1,0.693,kokoro,-0.773714286,-0.727714286,NA,NA,NA,154,0.006
+0,137,unattested,word,parari,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"para, rari",10,1.681,"pararA, paraki, pakari, parori, pararE, parauri, parani, purari, parairi, parai",-0.660857143,-0.634857143,NA,NA,NA,154,0.065
+31,138,mid,word,marara,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mara, rara",11,1.593,"maraha, marare, marama, maraNa, mirara, maraua, mararI, amarara, matara, farara, mahara",-0.653571429,-0.634,NA,NA,NA,154,0.071
+209,139,high,word,karaka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kara, raka",12,2.07,"kauraka, araka, karapa, karaNa, paraka, karawa, karakia, raraka, kaiaka, kauaka, kawaka, taraka",-0.630142857,-0.599285714,NA,NA,NA,154,0.078
+3,140,low,word,parehe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pare, rehe",8,0,"panehe, pUrehe, pareho, paraehe, Narehe, parohe, parahe, parAhe",-0.743714286,-0.701,NA,NA,NA,154,0.052
+7,141,mid,word,kahika,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kahi, hika",4,0.866,"kauika, pahika, kaihika, kohika",-0.706285714,-0.673428571,NA,NA,NA,154,0.026
+0,142,unattested,word,kanono,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kano, nono",2,0.549,"kanone, manono",-0.823714286,-0.771571429,NA,NA,NA,154,0.013
+2,143,low,word,parori,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,rori,9,0.276,"paroro, karori, pIrori, perori, pUrori, tarori, pOrori, parari, parore",-0.722714286,-0.674,NA,NA,NA,154,0.058
+0,144,unattested,word,kotau,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"kota, tau",6,0.536,"katau, konau, kota, koeau, koau, potau",-0.767166667,-0.707166667,NA,NA,NA,136,0.044
+0,145,unattested,word,kahuku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kahu,2,0.549,"kohuku, kahuki",-0.713142857,-0.688142857,NA,NA,NA,154,0.013
+2,146,low,word,takeo,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"take, keo",5,2.639,"taNeo, takao, take, tako, takea",-0.886833333,-0.849,NA,NA,NA,136,0.037
+0,147,unattested,word,kaweka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kawe, weka",3,2.488,"kawaka, kawea, kaweNa",-0.725285714,-0.695714286,NA,NA,NA,154,0.019
+2,148,low,word,tapoko,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,poko,2,0.347,"tEpoko, tipoko",-0.718285714,-0.702714286,NA,NA,NA,154,0.013
+0,149,unattested,word,tahiwi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tahi, hiwi",5,2.175,"tuahiwi, pahiwi, tauiwi, tahiti, kahiwi",-0.787428571,-0.739571429,NA,NA,NA,154,0.032
+6660,150,high,word,reira,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"rei, ira",6,0.809,"weira, rera, peira, reia, reina, reiri",-0.814666667,-0.793833333,NA,NA,NA,136,0.044
+0,151,unattested,word,heNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,3.046,"heNo, heNa, heoi, heNia, hemi, hoNi, hei, heri",-0.9002,-0.8844,NA,NA,NA,106,0.075
+0,152,unattested,word,terehu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tere, rehu",5,0.555,"tUrehu, terehi, rerehu, terepu, tArehu",-0.765285714,-0.761285714,NA,NA,NA,154,0.032
+0,153,unattested,word,haNutu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nutu,1,0,haNuru,-0.877428571,-0.839142857,NA,NA,NA,154,0.006
+0,154,unattested,word,Nutoro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,toro,1,0,NAtoro,-0.844571429,-0.814571429,NA,NA,NA,154,0.006
+12,155,mid,word,nehe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.228,"pehe, neha, neke, wehe, kehe, nahe, nehu, tehe, Nehe, rehe",-0.8976,-0.8598,NA,NA,NA,106,0.094
+0,156,unattested,word,pape,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.13,"rape, nape, pane, paoe, papae, papa, papI, papA, pae, pare, pake, pepe, hape, kape, papi, papu",-0.7932,-0.772,NA,NA,NA,106,0.151
+2,157,low,word,pioi,4,3,2,CVVV,cvv2,TRUE,FALSE,"pio, oi",12,2.06,"poi, pifi, pipi, fioi, peoi, pio, piti, pihi, piki, paoi, piri, oioi",-0.9464,-0.8398,NA,NA,NA,127,0.094
+12,158,mid,word,faene,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"fae, ene",2,0.347,"faine, maene",-0.909666667,-0.8295,NA,NA,NA,136,0.015
+0,159,unattested,word,koeo,4,3,2,CVVV,cv2v,TRUE,FALSE,"koe, eo",14,1.662,"kono, koteo, koto, koea, koe, kAeo, keo, koko, koio, komo, kueo, koro, koeko, koero",-1.096,-1.0248,NA,NA,NA,127,0.11
+0,160,unattested,word,kohuke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kohu, huke",3,0,"kohuku, kohuki, kohuka",-0.763,-0.692857143,NA,NA,NA,154,0.019
+0,161,unattested,word,kotawa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kota, tawa",0,0,,-0.772714286,-0.673285714,NA,NA,NA,154,0
+1,162,low,word,kohika,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kohi, hika",6,1.636,"kahika, koheka, kohiko, kohia, kohuka, kohiNa",-0.680428571,-0.631,NA,NA,NA,154,0.039
+35,163,mid,word,kotiti,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"koti, titi",2,2.767,"kopiti, komiti",-0.708142857,-0.655857143,NA,NA,NA,154,0.013
+0,164,unattested,word,koniu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"koni, niu",6,0.268,"konau, koni, konu, kofiu, poniu, roniu",-0.839333333,-0.803666667,NA,NA,NA,136,0.044
+0,165,unattested,word,mahira,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mahi, hira",6,2.768,"mahora, mahura, mahiNa, mahia, matira, mahara",-0.724714286,-0.656857143,NA,NA,NA,154,0.039
+631,166,high,word,tuku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,4.122,"kuku, taku, ruku, tumu, tAku, nuku, puku, tunu, tuki, tuke, tOku, tukua, uku, turu, muku, tutu, tupu",-0.7446,-0.7048,NA,NA,NA,106,0.16
+0,167,unattested,word,kohuki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kohu, huki",5,0.22,"kohuku, kohukia, kohuke, kohuka, kahuki",-0.726714286,-0.663714286,NA,NA,NA,154,0.032
+3,168,low,word,korihi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kori, rihi",6,0.507,"korahi, karihi, konihi, korOhi, koihi, kirihi",-0.74,-0.667571429,NA,NA,NA,154,0.039
+1,169,low,word,miNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,2.552,"mimi, mihi, riNi, mANi, miti, miNo, miki, miri",-0.8216,-0.7834,NA,NA,NA,106,0.075
+0,170,unattested,word,kopenu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kope, penu",1,0,kopenua,-0.782285714,-0.704571429,NA,NA,NA,154,0.006
+0,171,unattested,word,karei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"kare, rei",7,1.213,"uarei, karea, kareu, kare, kareni, kUrei, kari",-0.7085,-0.676166667,NA,NA,NA,136,0.051
+0,172,unattested,word,makoa,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"mako, koa",9,1.062,"makora, mekoa, makoha, maoa, mako, pakoa, mokoa, maka, makaa",-0.865833333,-0.778333333,NA,NA,NA,136,0.066
+0,173,unattested,word,kohuka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kohu, huka",10,0.139,"kohukia, kUhuka, kohuki, kohuNa, kohuku, koheka, kohura, kohuke, pohuka, kohika",-0.735285714,-0.663857143,NA,NA,NA,154,0.065
+3,174,low,word,katea,5,3,3,CVCVV,cvcvv,FALSE,FALSE,tea,14,2.636,"karea, kaea, kapea, katoa, kawea, kamea, kautea, kata, kitea, kakea, akatea, katia, kOtea, matea",-0.840333333,-0.7995,NA,NA,NA,136,0.103
+108,175,mid,word,puku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,3.297,"puke, pauku, kuku, paku, ruku, uku, puru, muku, puka, nuku, tuku, pukA, putu",-0.7424,-0.6944,NA,NA,NA,106,0.123
+1,176,low,word,makenu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,make,0,0,,-0.808,-0.787142857,NA,NA,NA,154,0
+0,177,unattested,word,koure,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"kou, ure",4,2.265,"koute, koare, koere, kore",-0.826,-0.717,NA,NA,NA,136,0.029
+33,178,mid,word,kuaka,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"kua, aka",11,0.612,"kuka, auaka, kuata, kuika, puaka, kIaka, kaka, kuawa, kOaka, kauaka, tuaka",-0.836333333,-0.789166667,NA,NA,NA,136,0.081
+17,179,mid,word,kehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,1.631,"rehu, kuhu, kahu, kehi, ehu, koehu, keho, keha, kihu, pehu, kohu, kAhu, kehe, nehu, ketu, keu",-0.8074,-0.7954,NA,NA,NA,106,0.151
+0,180,unattested,word,kuriri,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,riri,2,1.32,"kOriri, kariri",-0.748285714,-0.733714286,NA,NA,NA,154,0.013
+0,181,unattested,word,rure,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.072,"rere, ruke, rupe, ruru, rOre, rurea, ure, rore, ruri, hure, ture, rire, pure, rare",-0.7868,-0.7718,NA,NA,NA,106,0.132
+193,182,high,word,kuhu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,2.011,"kupu, kuhI, kuku, muhu, kahu, uhu, kumu, kihu, huhu, kuha, kohu, kAhu, kuru, kuhua, kutu, kuhi, kehu",-0.805,-0.7816,NA,NA,NA,106,0.16
+0,183,unattested,word,tupata,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tupa, pata",4,0,"tuata, tupana, tOpata, taupata",-0.743428571,-0.675428571,NA,NA,NA,154,0.026
+0,184,unattested,word,kurehe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,rehe,4,0.621,"kIrehe, kaurehe, kurehu, korehe",-0.785428571,-0.758285714,NA,NA,NA,154,0.026
+4,185,low,word,komo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,1.88,"kono, koto, koko, tomo, koio, kemo, momo, koeo, koma, koro, kamo, komi, kimo",-0.7986,-0.7434,NA,NA,NA,106,0.123
+0,186,unattested,word,kumeme,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kume,2,0.896,"komeme, kumete",-0.881428571,-0.822571429,NA,NA,NA,154,0.013
+0,187,unattested,word,humu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,1.107,"huhu, oumu, hutu, umu, hamu, tumu, mumu, hume, huru, himu, humi, hunu, kumu",-0.8392,-0.7938,NA,NA,NA,106,0.123
+33,188,mid,word,kuru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,20,3.258,"kupu, kuku, karu, kuhu, huru, kAuru, puru, kumu, kurua, koru, auru, ruru, kOuru, kura, muru, uru, turu, kurI, kutu, Nuru",-0.7244,-0.7072,NA,NA,NA,106,0.189
+0,189,unattested,word,pohewa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pohe, hewa",1,0,pAhewa,-0.782,-0.718714286,NA,NA,NA,154,0.006
+18,190,mid,word,fano,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,2.963,"kano, mano, faro, fao, faNo, fana",-0.8428,-0.7992,NA,NA,NA,106,0.057
+475,191,high,word,Naro,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.803,"Naru, waro, Nako, Naio, Nara, raro, Nari, aro, Nao, maro, Nero, Nare, faro, karo, taro",-0.8142,-0.7684,NA,NA,NA,106,0.142
+2,192,low,word,kuruki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kuru, ruki",4,0.576,"puruki, kOruki, kauruki, turuki",-0.751714286,-0.733285714,NA,NA,NA,154,0.026
+5,193,low,word,maiki,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"mai, iki",5,2.175,"makiki, maihi, miki, taiki, maki",-0.7695,-0.719333333,NA,NA,NA,136,0.037
+0,195,unattested,word,tawao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"tawa, wao",8,1.276,"tawa, tarao, tatao, takao, wawao, tawai, taiao, tawau",-0.8865,-0.811,NA,NA,NA,136,0.059
+0,196,unattested,word,marare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mara, rare",11,1.161,"marara, mamare, marere, marake, harare, tarare, mararI, marae, marore, marure, murare",-0.687571429,-0.662428571,NA,NA,NA,154,0.071
+0,197,unattested,word,haNoro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,5,0,"haNore, paNoro, taNoro, haNaoro, hauoro",-0.795,-0.755714286,NA,NA,NA,154,0.032
+12,198,mid,word,pakake,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"paka, kake",5,1.489,"pakeke, panake, pIkake, pakakU, pakaka",-0.725428571,-0.689,NA,NA,NA,154,0.032
+0,199,unattested,word,makaro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maka, karo",1,0,makao,-0.683285714,-0.648428571,NA,NA,NA,154,0.006
+0,200,unattested,word,mahore,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maho, hore",6,1.216,"mUhore, mahora, mahere, pahore, hahore, marore",-0.697,-0.648857143,NA,NA,NA,154,0.039
+3,201,low,word,rehu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.107,"pehu, ehu, nehu, rehe, rehua, remu, rahu, reu, kehu",-0.7692,-0.7566,NA,NA,NA,106,0.085
+5,202,low,word,hawai,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"hawa, wai",6,0.116,"tawai, hiawai, hawa, hauwai, hIwai, huawai",-0.809333333,-0.7335,NA,NA,NA,136,0.044
+1,203,low,word,marake,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mara, rake",4,2.793,"maroke, marare, marae, mahake",-0.676,-0.644714286,NA,NA,NA,154,0.026
+0,204,unattested,word,manaka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mana, naka",8,1.411,"manaia, manawa, manako, makaka, minaka, manana, manaha, maiaka",-0.637857143,-0.612857143,NA,NA,NA,154,0.052
+8,205,mid,word,takao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"taka, kao",12,1.113,"taka, takaa, tarao, tatao, takapo, takeo, takai, taiao, tako, kakao, tawao, makao",-0.807666667,-0.783833333,NA,NA,NA,136,0.088
+0,206,unattested,word,taNere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nere,4,1.325,"takere, haNere, tatere, tapere",-0.747571429,-0.698571429,NA,NA,NA,154,0.026
+0,208,unattested,word,monoa,5,3,3,CVCVV,cvcvv,FALSE,FALSE,noa,9,0.551,"honoa, mohoa, tonoa, monoao, ponoa, monowa, motoa, mokoa, minoa",-0.8195,-0.802833333,NA,NA,NA,136,0.066
+3,209,low,word,makuru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kuru,6,0.611,"makuku, makura, mauru, Nakuru, maruru, mahuru",-0.726571429,-0.698857143,NA,NA,NA,154,0.039
+0,210,unattested,word,maNeNe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NeNe,1,0,haNeNe,-0.886142857,-0.826857143,NA,NA,NA,154,0.006
+0,211,unattested,word,koere,5,3,2,CVVCV,cv2cv,TRUE,FALSE,koe,8,1.633,"koure, koare, kore, koeke, koera, kere, koero, koeae",-0.792833333,-0.748666667,NA,NA,NA,136,0.059
+26,212,mid,word,makawe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maka, kawe",0,0,,-0.748285714,-0.707714286,NA,NA,NA,154,0
+357,213,high,word,mahara,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maha, hara",8,1.276,"marara, mahora, pahara, maihara, mahana, mahira, mahura, matara",-0.653857143,-0.617714286,NA,NA,NA,154,0.052
+0,214,unattested,word,tarao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,tara,8,2.706,"tarau, tara, tatao, takao, tarai, taiao, tawao, taro",-0.862833333,-0.778333333,NA,NA,NA,136,0.059
+0,215,unattested,word,manei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"mane, nei",2,3.434,"anei, manea",-0.730833333,-0.7015,NA,NA,NA,136,0.015
+0,216,unattested,word,torete,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tore,2,0,"porete, toreke",-0.707714286,-0.673142857,NA,NA,NA,154,0.013
+6,217,low,word,karihi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kari, rihi",9,0.947,"kariri, arihi, rarihi, marihi, karioi, kirihi, korihi, karohi, karipi",-0.692857143,-0.659714286,NA,NA,NA,154,0.058
+172,218,high,word,tariNa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tari, riNa",4,1.18,"tiriNa, pariNa, hariNa, taria",-0.731,-0.680714286,NA,NA,NA,154,0.026
+4,219,low,word,moroki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,roki,1,0,moruki,-0.726571429,-0.705,NA,NA,NA,154,0.006
+0,220,unattested,word,matoha,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mato, toha",5,0.904,"makoha, mateoha, maioha, matohe, matohu",-0.765714286,-0.701142857,NA,NA,NA,154,0.032
+0,221,unattested,word,tarori,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taro, rori",6,0.53,"tIrori, karori, tOrori, turori, tarore, parori",-0.726857143,-0.670714286,NA,NA,NA,154,0.039
+0,222,unattested,word,koranu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kora, ranu",1,0,konanu,-0.796571429,-0.718,NA,NA,NA,154,0.006
+0,223,unattested,word,matihe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mati, tihe",5,0.497,"matihei, matohe, matike, matire, maihe",-0.806142857,-0.731428571,NA,NA,NA,154,0.032
+0,224,unattested,word,matohu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mato, tohu",3,0.963,"matou, matohe, matoha",-0.780714286,-0.709571429,NA,NA,NA,154,0.019
+0,225,unattested,word,patui,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"patu, tui",3,3.81,"pati, patu, patua",-0.785833333,-0.765833333,NA,NA,NA,136,0.022
+0,226,unattested,word,matohe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mato, tohe",5,0,"matihe, mautohe, matoha, matohu, mOtohe",-0.760571429,-0.706428571,NA,NA,NA,154,0.032
+4,227,low,word,mauku,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"mau, uku",8,0.755,"pauku, maupu, mouku, mauru, muku, makuku, maunu, matuku",-0.796666667,-0.764833333,NA,NA,NA,136,0.059
+527,228,high,word,mauNa,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"mau, uNa",11,1.585,"maNa, mOuNa, muNa, maoNa, mouNa, maufa, hauNa, tauNa, pauNa, kauNa, NauNa",-0.795166667,-0.789833333,NA,NA,NA,136,0.081
+187,229,high,word,kiwa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,3.079,"kia, kita, iwa, kawa, piwa, kina, Okiwa, kewa, hiwa, kiwi, kipa",-0.8192,-0.7922,NA,NA,NA,106,0.104
+0,230,unattested,word,mawera,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wera,1,0,mafera,-0.772571429,-0.741142857,NA,NA,NA,154,0.006
+0,231,unattested,word,maheni,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,2,0.347,"muheni, maheno",-0.787142857,-0.754142857,NA,NA,NA,154,0.013
+179,232,high,word,wehe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.496,"pehe, wete, wehea, kehe, Owehe, wehi, tehe, Nehe, weha, rehe, nehe, wene",-0.886,-0.8688,NA,NA,NA,106,0.113
+131,233,mid,word,wehi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,2.484,"kehi, weri, weki, wAhi, weha, wehe",-0.8538,-0.8318,NA,NA,NA,106,0.057
+0,234,unattested,word,mekari,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"meka, kari",1,0,mAkari,-0.747714286,-0.733142857,NA,NA,NA,154,0.006
+6,235,low,word,meka,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,2.793,"omeka, weka, eka, meko, mea, mAka, heka, moka, mema, mekea, keka, reka, mekoa, peka, teka, muka, Omeka, maka, meke",-0.805,-0.799,NA,NA,NA,106,0.179
+1516,236,high,word,muri,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.903,"mAri, mura, turi, mui, uri, mOri, muru, ruri, huri, mauri, mouri, puri, Amuri, miri",-0.7786,-0.7788,NA,NA,NA,106,0.132
+1,237,low,word,muna,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,3.806,"mura, muNa, tuna, huna, muka, mua, puna, runa, mAna, mana, mina, mOna, muha, muia",-0.8644,-0.8512,NA,NA,NA,106,0.132
+11,238,mid,word,Neru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,0.956,"Naru, Nere, Nero, weru, Nuru, Neri, heru, peru, Noru",-0.87,-0.8482,NA,NA,NA,106,0.085
+1,239,low,word,miru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,3.317,"miUru, maru, mira, miro, muru, miri",-0.8856,-0.8624,NA,NA,NA,106,0.057
+0,240,unattested,word,moruru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,ruru,3,0.536,"koruru, mAruru, maruru",-0.795,-0.775571429,NA,NA,NA,154,0.019
+0,241,unattested,word,meto,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,0.822,"meko, meho, mete, moto, peto, mato, keto, weto",-0.8512,-0.8514,NA,NA,NA,106,0.075
+5,242,low,word,weka,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.137,"eka, heka, wera, keka, reka, waka, peka, wea, weku, weko, teka, weta, wekua, weki, weha, meka",-0.761,-0.7564,NA,NA,NA,106,0.151
+0,243,unattested,word,minaka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mina, naka",3,1.545,"miraka, manaka, minaia",-0.703428571,-0.691857143,NA,NA,NA,154,0.019
+4,244,low,word,namu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,1.642,"tamu, hamu, kamu, nanu, nau, natu, nama, naku",-0.8412,-0.842,NA,NA,NA,106,0.075
+132,245,mid,word,kiore,5,3,3,CVVCV,cvvcv,FALSE,FALSE,ore,4,4.692,"fiore, hiore, kore, kAore",-0.8405,-0.8225,NA,NA,NA,136,0.029
+0,246,unattested,word,mino,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.778,"minoa, kino, tino, miko, mano, miNo, mine, amino, mina, miro, rino",-0.8238,-0.8054,NA,NA,NA,106,0.104
+3,247,low,word,puaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,pua,7,1.58,"tuaki, puaka, huaki, uaki, puiaki, ruaki, paki",-0.772166667,-0.706833333,NA,NA,NA,136,0.051
+218,248,high,word,hoatu,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"hoa, atu",3,2.848,"foatu, hotu, hoata",-0.799333333,-0.795166667,NA,NA,NA,136,0.022
+1,249,low,word,koemi,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"koe, emi",3,0.231,"komi, koeti, toemi",-0.847166667,-0.8105,NA,NA,NA,136,0.022
+24,250,mid,word,poho,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,2.394,"pohe, moho, poro, poko, pAoho, popo, pohio, pIho, peho, poto, poha, paoho, pAho, pono, pUoho, pohU, noho, oho",-0.8218,-0.7608,NA,NA,NA,106,0.17
+0,251,unattested,word,kohoho,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,1,0,kahoho,-0.805142857,-0.777857143,NA,NA,NA,154,0.006
+0,252,unattested,word,toie,4,3,2,CVVV,cv2v,TRUE,FALSE,toi,7,2.9,"toi, tore, tote, toke, tohe, tope, toe",-1.1092,-1.0738,NA,NA,NA,127,0.055
+0,253,unattested,word,mokori,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"moko, kori",2,0,"mokorA, kokori",-0.743714286,-0.693571429,NA,NA,NA,154,0.013
+0,254,unattested,word,konana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kona, nana",6,0.299,"kopana, kEnana, konaua, konanu, konaka, kofana",-0.709571429,-0.664857143,NA,NA,NA,154,0.039
+40,255,mid,word,tanu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,3.701,"tau, manu, taku, tonu, ranu, tana, tatu, anu, tunu, tamu, taru, tapu, nanu, tahu, kanu, tane, taunu",-0.8208,-0.7458,NA,NA,NA,106,0.16
+38,256,mid,word,maroke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maro, roke",2,0.347,"marore, marake",-0.733714286,-0.699571429,NA,NA,NA,154,0.013
+138,257,high,word,raru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,26,2.505,"Naru, maru, rOru, rarI, rara, karu, rarau, raku, rarua, waru, ranu, rapu, raro, haru, rau, rare, taru, ruru, rari, paru, aru, rarA, faru, rahu, rauru, roru",-0.7932,-0.7744,NA,NA,NA,106,0.245
+0,258,unattested,word,muha,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,1.898,"mura, uha, maha, muhu, mAha, tuha, puha, muNa, Nuha, kuha, miha, ruha, muhua, muka, mua, muna, muia",-0.8236,-0.8094,NA,NA,NA,106,0.16
+3,259,low,word,nohi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.077,"Nohi, mohi, rohi, noti, kohi, noni, nEhi, noi, ohi, inohi, nohu, tohi, nAhi, noho",-0.7778,-0.7646,NA,NA,NA,106,0.132
+0,260,unattested,word,kuene,5,3,3,CVVCV,cvvcv,FALSE,FALSE,ene,2,0.549,"kune, kene",-0.888333333,-0.904,NA,NA,NA,136,0.015
+2,261,low,word,ruke,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.835,"tuke, nuke, rupe, ruki, ruku, reke, rake, roke, huke, rukea, puke, rure",-0.8392,-0.8128,NA,NA,NA,106,0.113
+0,262,unattested,word,muhani,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"muha, hani",3,0,"muhari, muheni, muhania",-0.813857143,-0.799428571,NA,NA,NA,154,0.019
+1,263,low,word,nifa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,4,1.006,"nefa, rifa, tifa, nika",-0.9038,-0.8986,NA,NA,NA,106,0.038
+0,264,unattested,word,Nafi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,1.742,"tafi, afi, kafi, NafA, Nari, rafi, Naki",-0.908,-0.8534,NA,NA,NA,106,0.066
+3,265,low,word,hewa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.655,"pewa, hawa, rewa, heNa, heka, heia, hea, hema, heua, kewa, hiwa",-0.8156,-0.805,NA,NA,NA,106,0.104
+51,266,mid,word,Nau,3,2,1,CVV,cv2,TRUE,FALSE,NA,19,3.706,"tau, Naru, Nahu, Naku, pau, nau, au, Natu, Napu, Nae, rau, Nao, fau, wau, mau, kau, hau, Naua, Naue",-1.06275,-0.97725,NA,NA,NA,88,0.216
+0,267,unattested,word,Naoki,5,3,2,CVVCV,cv2cv,TRUE,FALSE,Nao,3,0.981,"Naeki, Naoko, Naki",-0.9045,-0.8655,NA,NA,NA,136,0.022
+0,268,unattested,word,Naore,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"Nao, ore",6,0.645,"Naiore, Naure, Naora, Nare, Nore, Naere",-0.887833333,-0.8255,NA,NA,NA,136,0.044
+0,269,unattested,word,haNina,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,2,2.41,"haina, hakina",-0.816142857,-0.759571429,NA,NA,NA,154,0.013
+3,270,low,word,manini,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nini,0,0,,-0.781142857,-0.742571429,NA,NA,NA,154,0
+0,271,unattested,word,Naure,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"Nau, ure",4,0.621,"Naore, Naue, Naere, Nare",-0.919333333,-0.857666667,NA,NA,NA,136,0.029
+3,272,low,word,Naere,5,3,2,CVVCV,cv2cv,TRUE,FALSE,Nae,11,1.671,"Nahere, Nere, haere, Nare, Naehe, waere, paere, Naure, Naeke, Nafere, Naore",-0.873666667,-0.852833333,NA,NA,NA,136,0.081
+3,273,low,word,fenu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,1.482,"fepu, fenua, feNu, feau, penu, fena, feinu, feku",-0.8522,-0.7774,NA,NA,NA,106,0.075
+0,274,unattested,word,nawaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nawa,1,0,tawaki,-0.791,-0.785857143,NA,NA,NA,154,0.006
+0,275,unattested,word,Naweki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,weki,3,0,"Nawiki, Naeki, Naweri",-0.810857143,-0.759285714,NA,NA,NA,154,0.019
+1461,276,high,word,hui,3,2,2,CVV,cvv,FALSE,FALSE,NA,17,3.778,"huti, mui, huia, huki, kui, rui, humi, hei, tui, ui, hoi, hue, hai, huri, houi, hua, nui",-0.884,-0.8645,NA,NA,NA,88,0.193
+29,277,mid,word,Nutu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.118,"UNutu, hutu, utu, NuNu, Nunu, Nuru, rutu, kutu, Natu, mutu, tutu, putu",-0.859,-0.8628,NA,NA,NA,106,0.113
+5,278,low,word,noke,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.268,"none, poke, neke, toke, oke, moke, roke, noko, koke, nuke, nake",-0.8224,-0.8062,NA,NA,NA,106,0.104
+4,279,low,word,tehe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,1.869,"tiehe, tene, tihe, tahe, tete, tewe, Nehe, nehe, pehe, wehe, kehe, tepe, tere, tohe, teke, rehe",-0.8514,-0.8386,NA,NA,NA,106,0.151
+0,280,unattested,word,repe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.758,"rape, reme, rere, repo, rupe, pepe, reke, tepe, repa, repi, rehe",-0.8318,-0.8172,NA,NA,NA,106,0.104
+11,281,mid,word,momi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.527,"moki, mohi, romi, mimi, moi, momo, moni, momia, komi",-0.8316,-0.8206,NA,NA,NA,106,0.085
+10028,282,high,word,mea,3,2,2,CVV,cvv,FALSE,FALSE,NA,17,4.108,"me, fea, pea, uea, mei, mema, kea, moea, rea, moa, wea, ea, mua, hea, maea, tea, meka",-0.982,-0.97325,NA,NA,NA,88,0.193
+13,283,mid,word,Nuru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.573,"Naru, auru, ruru, NuNu, kuru, muru, huru, turu, uru, puru, Neru, Nutu, Nunu, Noru",-0.852,-0.8436,NA,NA,NA,106,0.132
+9,284,mid,word,rui,3,2,2,CVV,cvv,FALSE,FALSE,NA,14,3.248,"tui, ui, ruki, mui, roi, rei, rai, rua, ruia, kui, ruri, hui, nui, ruhi",-1.0045,-1.033,NA,NA,NA,88,0.159
+0,285,unattested,word,Noe,3,2,1,CVV,cv2,TRUE,FALSE,NA,10,3.213,"koe, Noi, Ne, Note, Nohe, Nore, hoe, toe, Nae, moe",-1.11675,-1.1055,NA,NA,NA,88,0.114
+3,286,low,word,nono,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,3.438,"kono, none, hono, nonoi, noni, ono, pono, noko, tono, noho",-0.8578,-0.8042,NA,NA,NA,106,0.094
+0,287,unattested,word,Narue,5,3,3,CVCVV,cvcvv,FALSE,FALSE,Naru,5,0.952,"Naru, Naruea, Naue, Nahue, Nare",-0.949,-0.908,NA,NA,NA,136,0.037
+7,288,mid,word,Note,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,0.833,"Nota, Noe, Notea, tote, Noto, Nohe, hote, mote, Nore",-0.8564,-0.831,NA,NA,NA,106,0.085
+43,289,mid,word,maNu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,3.232,"maNa, manu, maru, paNu, mau, maNA, mapu, maNO, matu, mahu",-0.9388,-0.8638,NA,NA,NA,106,0.094
+0,290,unattested,word,Neni,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,3,0,"Neki, Nene, Neri",-0.921,-0.9182,NA,NA,NA,106,0.028
+0,291,unattested,word,Nakeke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"Nake, keke",4,2.42,"pakeke, takeke, hakeke, Naeke",-0.838428571,-0.807857143,NA,NA,NA,154,0.026
+0,292,unattested,word,Nake,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.43,"Naku, Nako, kake, rake, wake, take, Naeke, hake, Nae, ake, nake, pake, Nare, Naue, Naki",-0.8268,-0.79,NA,NA,NA,106,0.142
+0,293,unattested,word,noni,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.238,"none, koni, noti, nonoi, honi, nohi, moni, nini, oni, noi, poni, nono",-0.8616,-0.8098,NA,NA,NA,106,0.113
+6,294,low,word,moho,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.492,"mohi, mohou, mohoa, poho, moko, oho, momo, maho, moto, noho, mohe, meho, maoho",-0.8434,-0.821,NA,NA,NA,106,0.123
+0,295,unattested,word,Neri,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.637,"reri, Neki, weri, Nere, Neni, Nero, UNeri, keri, Nari, heri, Neru",-0.7922,-0.7896,NA,NA,NA,106,0.104
+73,296,mid,word,nawe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.394,"nae, nape, wawe, awe, nahe, nawa, rawe, kawe, nake",-0.8508,-0.841,NA,NA,NA,106,0.085
+1,297,low,word,mui,3,2,2,CVV,cvv,FALSE,FALSE,NA,12,4.984,"tui, ui, moi, kui, mua, rui, muri, mei, mai, hui, muia, nui",-1.02275,-1.02875,NA,NA,NA,88,0.136
+3458,298,high,word,nui,3,2,2,CVV,cvv,FALSE,FALSE,NA,10,3.159,"tui, ui, mui, nuia, kui, numi, rui, nei, hui, noi",-1.041,-1.029,NA,NA,NA,88,0.114
+0,299,unattested,word,numi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,4,3.176,"humi, numia, kumi, nui",-0.9046,-0.8972,NA,NA,NA,106,0.038
+3,300,low,word,nini,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,1.581,"kini, noni, niti, wini, ninia, Anini, tini",-0.8934,-0.8856,NA,NA,NA,106,0.066
+0,301,unattested,word,Noru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.227,"Naru, horu, koru, Nuru, toru, Neru, Nore, oru, roru",-0.8626,-0.847,NA,NA,NA,106,0.085
+0,302,unattested,word,Nunu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,2.307,"unu, Nutu, tunu, hunu, NuNu, Nuru",-0.9412,-0.9364,NA,NA,NA,106,0.057
+990,303,high,word,ako,3,2,2,VCV,vcv,FALSE,FALSE,NA,18,3.445,"aNo, Nako, apo, ao, mako, nako, ato, aro, hako, aka, ake, rako, aku, ko, aho, oko, tako, amo",-0.95325,-0.9375,NA,NA,NA,87,0.207
+0,304,unattested,word,aheu,4,3,3,VCVV,vcvv,FALSE,FALSE,heu,5,2.91,"maheu, ahu, heu, iheu, ahau",-1.0086,-0.9562,NA,NA,NA,117,0.043
+0,305,unattested,word,omaki,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"oma, maki",3,0.649,"ohaki, maki, omakia",-0.86,-0.856,NA,NA,NA,135,0.022
+3,306,low,word,oru,3,2,2,VCV,vcv,FALSE,FALSE,NA,13,2.837,"horu, koru, ori, ohu, ora, oro, uru, toru, aru, orua, Noru, ore, roru",-0.9815,-0.952,NA,NA,NA,87,0.149
+1,307,low,word,unahi,5,3,3,VCVCV,vcvcv,FALSE,FALSE,NA,2,0,"unahia, tunahi",-0.876666667,-0.865,NA,NA,NA,135,0.015
+0,308,unattested,word,oni,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,2.579,"koni, ori, honi, noni, ono, one, moni, ohi, oti, ona, oi, poni",-0.96925,-0.96475,NA,NA,NA,87,0.138
+1,309,low,word,aNo,3,2,2,VCV,vcv,FALSE,FALSE,NA,14,3.43,"paNo, taNo, faNo, aNi, apo, raNo, ao, iNo, ako, aho, ato, aro, aNa, amo",-1.05375,-1.03675,NA,NA,NA,87,0.161
+0,310,unattested,word,oroi,4,3,2,VCVV,vcv2,TRUE,FALSE,"oro, roi",10,0.973,"horoi, toroi, roi, oroa, ori, oro, roroi, okoi, oroia, oioi",-0.9978,-1.0006,NA,NA,NA,117,0.085
+0,311,unattested,word,ene,3,2,2,VCV,vcv,FALSE,FALSE,NA,13,1.849,"Nene, tene, one, mene, eNe, ete, eke, pene, ewe, enea, ine, kene, wene",-1.025,-1.00175,NA,NA,NA,87,0.149
+0,312,unattested,word,aweko,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"awe, weko",2,0,"weko, aweke",-0.8675,-0.854666667,NA,NA,NA,135,0.015
+109,313,mid,word,ihu,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,2.539,"ihe, ahu, iho, iheu, ohu, ihi, imu, ehu, uhu, inu, ipu, kihu",-0.9895,-1.00075,NA,NA,NA,87,0.138
+0,314,unattested,word,opuru,5,3,3,VCVCV,vcvcv,FALSE,FALSE,puru,3,1.421,"puru, opurua, Apuru",-0.912,-0.863333333,NA,NA,NA,135,0.022
+0,315,unattested,word,otiki,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"oti, tiki",2,2.852,"tiki, hotiki",-0.911666667,-0.884666667,NA,NA,NA,135,0.015
+93,316,mid,word,oho,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,3.547,"uho, moho, poho, iho, oha, ohu, oro, ono, aho, ohi, oko, noho",-0.99275,-1.014,NA,NA,NA,87,0.138
+0,317,unattested,word,okoi,4,3,2,VCVV,vcv2,TRUE,FALSE,"oko, koi",7,0.987,"koi, kokoi, oko, oroi, okoia, oioi, hokoi",-1.0194,-1.0374,NA,NA,NA,117,0.06
+1,318,low,word,orua,4,3,3,VCVV,vcvv,FALSE,FALSE,"oru, rua",8,2.376,"oroa, rua, oria, urua, orea, ohua, oru, ora",-0.9946,-0.9886,NA,NA,NA,117,0.068
+0,320,unattested,word,pawa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,2.928,"paNa, tawa, pewa, papa, kawa, pana, paoa, paea, pata, hawa, rawa, para, pIwa, nawa, paka, awa, piwa",-0.784,-0.7174,NA,NA,NA,106,0.16
+0,321,unattested,word,pawero,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wero,3,0.231,"pUwero, patero, paweroa",-0.769714286,-0.728428571,NA,NA,NA,154,0.019
+0,322,unattested,word,pahaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,haki,7,1.959,"mahaki, hahaki, rahaki, tahaki, paraki, kahaki, papaki",-0.717428571,-0.651,NA,NA,NA,154,0.045
+0,323,unattested,word,paheno,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,3,0.999,"paheko, pahemo, maheno",-0.839142857,-0.790857143,NA,NA,NA,154,0.019
+76,324,mid,word,pahure,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pahu, hure",2,1.568,"pahore, parure",-0.702857143,-0.651428571,NA,NA,NA,154,0.013
+0,325,unattested,word,makao,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"maka, kao",10,1.597,"mikao, takao, mamao, mako, maiao, makau, maka, makaro, makaa, kakao",-0.829,-0.817666667,NA,NA,NA,136,0.074
+0,326,unattested,word,pakohu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kohu,2,1.589,"pUkohu, pakohe",-0.762571429,-0.698,NA,NA,NA,154,0.013
+1,327,low,word,pakohe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kohe,4,0,"takohe, parohe, pakore, pakohu",-0.738285714,-0.690857143,NA,NA,NA,154,0.026
+57,328,mid,word,fati,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,2.748,"fatia, fata, fai, mati, ati, oati, pati, wati, nati, fatu, feti, fIti, fiti, kati",-0.7712,-0.7298,NA,NA,NA,106,0.132
+0,329,unattested,word,poniu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,"poni, niu",4,0,"koniu, pUniu, poni, roniu",-0.845,-0.8215,NA,NA,NA,136,0.029
+1,330,low,word,ripi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.015,"hipi, riri, rifi, ripa, ropi, pipi, tipi, ripo, riNi, riki, rapi, rUpi, ripoi, repi, ripia",-0.8156,-0.7848,NA,NA,NA,106,0.142
+0,331,unattested,word,kanoi,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"kano, noi",4,2.539,"kano, tanoi, kani, kanohi",-0.879,-0.857166667,NA,NA,NA,136,0.029
+1,332,low,word,kanu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.396,"manu, kano, kapu, karu, kamu, ranu, kahu, kana, kOanu, konu, kaku, kani, nanu, tanu, kau, anu",-0.768,-0.7264,NA,NA,NA,106,0.151
+0,333,unattested,word,manana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mana, nana",7,2,"manaia, manawa, anana, manaka, panana, mahana, manaha",-0.660142857,-0.633,NA,NA,NA,154,0.045
+0,334,unattested,word,kahiwi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kahi, hiwi",3,0,"pahiwi, kOhiwi, tahiwi",-0.780285714,-0.748857143,NA,NA,NA,154,0.019
+0,335,unattested,word,pakora,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kora,7,0,"makora, pakorea, pakara, pakoa, paora, pakore, pakoNa",-0.736428571,-0.660571429,NA,NA,NA,154,0.045
+0,336,unattested,word,toreNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tore,3,1.897,"toremi, tIreNi, toroNi",-0.807285714,-0.776571429,NA,NA,NA,154,0.019
+0,337,unattested,word,pirara,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pira, rara",4,0.173,"mirara, piwara, porara, pArara",-0.729285714,-0.684285714,NA,NA,NA,154,0.026
+344,338,high,word,makau,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"maka, kau",10,1.594,"mamau, mOkau, marau, kakau, maka, mahau, makaa, makiu, matau, makao",-0.754666667,-0.7315,NA,NA,NA,136,0.074
+0,339,unattested,word,paroro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,roro,9,0.941,"paNoro, karoro, parori, paoro, aroro, pUroro, paeoro, parore, maroro",-0.695,-0.664,NA,NA,NA,154,0.058
+0,340,unattested,word,poue,4,3,2,CVVV,cv2v,TRUE,FALSE,"pou, ue",7,1.623,"pohe, poke, pone, pou, oue, poua, pore",-1.0454,-0.991,NA,NA,NA,127,0.055
+8733,341,high,word,haere,5,3,2,CVVCV,cv2cv,TRUE,FALSE,hae,9,1.135,"hiere, haerea, Naere, harere, hare, waere, haNere, paere, here",-0.809,-0.782166667,NA,NA,NA,136,0.066
+53,342,mid,word,tihe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.15,"ihe, tiehe, tihi, tike, tire, tahe, pihe, aihe, tohe, tihei, tehe",-0.8464,-0.769,NA,NA,NA,106,0.104
+0,343,unattested,word,petako,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tako,0,0,,-0.769857143,-0.748285714,NA,NA,NA,154,0
+0,344,unattested,word,taNeo,5,3,3,CVCVV,cvcvv,FALSE,FALSE,NA,4,1.431,"taNeao, taNo, maNeo, takeo",-0.841166667,-0.783166667,NA,NA,NA,136,0.029
+0,345,unattested,word,pakini,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"paki, kini",3,0.231,"pakihi, pakiri, takini",-0.746142857,-0.700285714,NA,NA,NA,154,0.019
+0,346,unattested,word,keu,3,2,2,CVV,cvv,FALSE,FALSE,NA,12,2.333,"kou, keo, kiu, keua, weu, heu, kau, kea, ketu, reu, kei, kehu",-1.05225,-1.04325,NA,NA,NA,88,0.136
+7,347,mid,word,niao,4,3,2,CVVV,cvv2,TRUE,FALSE,ao,3,2.683,"niho, niko, nao",-0.988,-1.013,NA,NA,NA,127,0.024
+336,348,high,word,tinana,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tina, nana",2,0,"tiana, tinara",-0.748714286,-0.705714286,NA,NA,NA,154,0.013
+0,349,unattested,word,pihe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.993,"ihe, pohe, pehe, piha, pine, pire, aihe, pihi, tihe",-0.8826,-0.8236,NA,NA,NA,106,0.085
+3,350,low,word,piha,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,0.977,"Apiha, pihia, pAha, peha, riha, pia, Niha, pihi, poha, puha, miha, pihe, piua, pika, pira, piwa",-0.825,-0.7588,NA,NA,NA,106,0.151
+0,351,unattested,word,peraro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pera, raro",2,0,"pewaro, paeraro",-0.776,-0.752857143,NA,NA,NA,154,0.013
+0,352,unattested,word,nohu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,4.558,"nehu, nohi, ohu, kohu, noho, tohu",-0.868,-0.8188,NA,NA,NA,106,0.057
+0,353,unattested,word,taNai,5,3,2,CVCVV,cvcv2,TRUE,FALSE,NA,6,2.052,"taNi, tawai, tarai, tafai, tatai, takai",-0.7865,-0.754,NA,NA,NA,136,0.044
+1,354,low,word,pehe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.2,"pohe, peha, pene, Nehe, peho, nehe, pehu, wehe, kehe, pepe, peke, pihe, rehe, tehe, pere",-0.805,-0.7854,NA,NA,NA,106,0.142
+126,355,mid,word,poaka,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"poa, aka",7,2.147,"poraka, pouaka, puaka, poata, paka, roaka, poka",-0.800833333,-0.762333333,NA,NA,NA,136,0.051
+803,356,high,word,moana,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"moa, ana",2,4.888,"mana, moata",-0.837833333,-0.806333333,NA,NA,NA,136,0.015
+0,357,unattested,word,korepe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kore, repe",4,0.52,"koreke, kerepe, korehe, karepe",-0.752571429,-0.684857143,NA,NA,NA,154,0.026
+0,358,unattested,word,pohuka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,huka,5,0.599,"pIhuka, pAhuka, pUhuka, poiuka, kohuka",-0.788714286,-0.693857143,NA,NA,NA,154,0.032
+0,359,unattested,word,konaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kona, naki",3,2.907,"koneki, kInaki, konaka",-0.685857143,-0.644285714,NA,NA,NA,154,0.019
+18,360,mid,word,Naki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,1.653,"Neki, Naeki, Naku, Nafi, Nakia, haki, maki, Nako, Naoki, Nake, Nari, NOki, raki, uaki, taki, naki, paki",-0.7912,-0.7546,NA,NA,NA,106,0.16
+8,361,mid,word,punua,5,3,3,CVCVV,cvcvv,FALSE,FALSE,NA,8,1.695,"tunua, punia, unua, puna, penua, putua, purua, punuka",-0.904833333,-0.859333333,NA,NA,NA,136,0.059
+0,362,unattested,word,konanu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kona, nanu",5,0.139,"kunanu, konau, koranu, konatu, konana",-0.778571429,-0.729857143,NA,NA,NA,154,0.032
+0,363,unattested,word,mawete,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,wete,1,1.386,mawehe,-0.794571429,-0.754428571,NA,NA,NA,154,0.006
+0,364,unattested,word,konihi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,koni,5,1.294,"konohi, koniahi, kAnihi, korihi, koihi",-0.750714286,-0.715857143,NA,NA,NA,154,0.032
+24,365,mid,word,paNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,2.203,"paNa, aNo, taNo, faNo, paNu, raNo, pao",-0.8344,-0.8066,NA,NA,NA,106,0.066
+0,366,unattested,word,paNoro,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,paNo,6,0.662,"paroro, haNoro, taNoro, paeoro, paNore, paoro",-0.796857143,-0.788857143,NA,NA,NA,154,0.039
+708,367,high,word,tohu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,4.415,"toha, tou, ohu, kohu, tonu, tuohu, toru, tohi, tahu, tohe, nohu, tohua",-0.8058,-0.7528,NA,NA,NA,106,0.113
+1,368,low,word,tanuku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tanu, nuku",1,1.792,panuku,-0.812714286,-0.76,NA,NA,NA,154,0.006
+9,369,mid,word,korou,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"koro, rou",7,3.107,"koru, koroa, koroI, koro, koroua, porou, kopou",-0.733833333,-0.688,NA,NA,NA,136,0.051
+0,370,unattested,word,karohi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"karo, rohi",7,1.327,"karori, karihi, karohe, kanohi, karowi, karohia, marohi",-0.687,-0.663571429,NA,NA,NA,154,0.045
+21,371,mid,word,piro,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,2.675,"piroe, poro, kiro, pio, tiro, pero, pioro, piko, riro, iro, piri, firo, pire, pito, pira, miro, pOro",-0.775,-0.7278,NA,NA,NA,106,0.16
+0,372,unattested,word,tupe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.097,"tuke, rupe, tAupe, tepe, tupea, tupa, ture, tope, tute, tupu",-0.7972,-0.7062,NA,NA,NA,106,0.094
+724,373,high,word,waru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,2.338,"Naru, maru, waro, karu, warua, weru, wara, raru, wahu, haru, ware, taru, wau, paru, aru, faru, warou, wUru, waku",-0.7918,-0.7556,NA,NA,NA,106,0.179
+33,374,mid,word,puare,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"pua, are",6,1.04,"pare, poare, huare, auare, pure, tuare",-0.821833333,-0.750666667,NA,NA,NA,136,0.044
+1,375,low,word,puaka,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"pua, aka",11,1.901,"auaka, puraka, poaka, pouaka, puaki, puata, puka, kuaka, paka, puaNa, tuaka",-0.770833333,-0.706666667,NA,NA,NA,136,0.081
+2,376,low,word,pohane,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"poha, hane",1,0,pohanea,-0.772714286,-0.713142857,NA,NA,NA,154,0.006
+2,377,low,word,pohe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,1.38,"poke, poue, pone, pAohe, pore, poha, pehe, kohe, poho, hohe, Nohe, pihe, tohe, rohe, pohU, mohe",-0.7756,-0.684,NA,NA,NA,106,0.151
+104,378,mid,word,pito,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.798,"pOito, pio, fito, piro, piti, rito, piko, tito, peto, poto, ito",-0.7818,-0.7354,NA,NA,NA,106,0.104
+1027,379,high,word,hoa,3,2,2,CVV,cvv,FALSE,FALSE,NA,22,3.648,"hoka, ha, hIa, hopa, ioa, houa, moa, roa, noa, hora, haoa, hoea, koa, hoi, hoNa, hia, toa, hou, hea, hoe, poa, hua",-0.81775,-0.81775,NA,NA,NA,88,0.25
+223,380,high,word,puhi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,2.648,"auhi, tuhi, pIhi, pOhi, pEhi, puihi, pihi, puri, pAhi, pahi, ruhi, puha, puni, kuhi, uhi",-0.733,-0.6774,NA,NA,NA,106,0.142
+0,381,unattested,word,takini,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taki, kini",5,0,"tikini, taukini, pakini, takina, tOkini",-0.724714286,-0.686428571,NA,NA,NA,154,0.032
+0,382,unattested,word,wani,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,3.243,"hani, pani, kani, wini, wana, wania, wai, wati",-0.8534,-0.8116,NA,NA,NA,106,0.075
+2,383,low,word,Nahu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.262,"hahu, Naru, Nau, ahu, Nahau, Naku, Nahue, pahu, Natu, kahu, tahu, wahu, Napu, rahu, Nahua, mahu",-0.8466,-0.8136,NA,NA,NA,106,0.151
+0,384,unattested,word,pohau,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"poha, hau",9,0.602,"poau, poihau, pAhau, potau, pUhau, puhau, poharu, pIhau, poha",-0.851333333,-0.780333333,NA,NA,NA,136,0.066
+1193,385,high,word,kotahi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kota, tahi",4,1.777,"korahi, okotahi, kotami, kAtahi",-0.726571429,-0.67,NA,NA,NA,154,0.026
+113,386,mid,word,puni,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.977,"pauni, pani, puhi, punia, puna, pIni, pune, puri, poni",-0.857,-0.7618,NA,NA,NA,106,0.085
+0,387,unattested,word,puneke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pune, neke",2,0.693,"pineke, paneke",-0.808571429,-0.757571429,NA,NA,NA,154,0.013
+18,388,mid,word,kume,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,5,0.819,"kame, kumu, kumi, kune, hume",-0.8892,-0.8248,NA,NA,NA,106,0.047
+354,389,high,word,waea,4,3,2,CVVV,cv2v,TRUE,FALSE,"wae, ea",20,2.514,"waoa, wanea, waeNa, wara, taea, faea, Iwaea, waka, paea, wea, wata, kaea, waia, wana, waha, haea, wae, maea, wakea, warea",-0.9256,-0.8938,NA,NA,NA,127,0.157
+188,390,high,word,rawe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.748,"rape, nawe, rawa, wawe, rate, awe, rake, rae, rawea, kawe, rare",-0.8372,-0.8034,NA,NA,NA,106,0.104
+36,391,mid,word,waia,4,3,2,CVVV,cv2v,TRUE,FALSE,"wai, ia",13,2.842,"waka, waoa, wata, waea, waiU, wara, wahia, waina, wana, waha, wania, wai, iaia",-0.8826,-0.832,NA,NA,NA,127,0.102
+357,392,high,word,takoto,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tako, koto",0,0,,-0.717428571,-0.683571429,NA,NA,NA,154,0
+1732,393,high,word,rawa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,2.965,"tawa, rara, raha, raNa, raua, kawa, arawa, rama, rawea, rawe, rapa, raka, rata, hawa, rana, rewa, nawa, awa, pawa",-0.7838,-0.7534,NA,NA,NA,106,0.179
+0,394,unattested,word,hoNere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nere,3,0,"haNere, heNere, poNere",-0.748714286,-0.737,NA,NA,NA,154,0.019
+0,395,unattested,word,hohe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.534,"pohe, hohO, kohe, hone, hote, Nohe, hope, tohe, rohe, hoe, mohe, hore",-0.8066,-0.7754,NA,NA,NA,106,0.113
+0,396,unattested,word,paNare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"paNa, Nare",4,0.173,"papare, poNare, paNore, NaNare",-0.771571429,-0.740857143,NA,NA,NA,154,0.026
+1,397,low,word,rapi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,20,2.2,"rape, ropi, rahi, rai, rapoi, raNi, rapu, tapi, repi, rapa, raki, ripi, hapi, rari, napi, kapi, rUpi, mapi, papi, rafi",-0.8364,-0.8,NA,NA,NA,106,0.189
+0,398,unattested,word,nanea,5,3,3,CVCVV,cvcvv,FALSE,FALSE,NA,10,0.538,"wanea, napea, nanua, ranea, nahea, nana, nonea, anea, manea, nafea",-0.8605,-0.844166667,NA,NA,NA,136,0.074
+0,399,unattested,word,makue,5,3,3,CVCVV,cvcvv,FALSE,FALSE,NA,1,5.398,mahue,-0.923333333,-0.916333333,NA,NA,NA,136,0.007
+18,400,mid,word,raweke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,rawe,2,0,"taweke, aweke",-0.747142857,-0.728428571,NA,NA,NA,154,0.013
+128,401,mid,word,peka,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,22,2.436,"weka, pera, pekea, pewa, eka, pea, peha, meka, heka, peia, pena, pAka, keka, reka, poka, teka, pekI, pepa, peke, puka, paka, pika",-0.7654,-0.7468,NA,NA,NA,106,0.208
+1,402,low,word,tinei,5,3,2,CVCVV,cvcv2,TRUE,FALSE,nei,5,4.154,"tineia, tEnei, tini, tihei, inei",-0.843833333,-0.795666667,NA,NA,NA,136,0.037
+0,403,unattested,word,Neki,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,1.081,"NOki, Naeki, Neni, teki, Neri, neki, weki, Naki",-0.8528,-0.8524,NA,NA,NA,106,0.075
+489,404,high,word,rere,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,21,1.787,"reri, iere, reme, rore, rera, mere, kere, here, rerea, rire, rure, rare, Nere, uere, reke, fere, tere, rehe, rOre, repe, pere",-0.7266,-0.712,NA,NA,NA,106,0.198
+18,405,mid,word,wawe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.193,"ware, wawA, nawe, awe, wake, wawae, wae, rawe, kawe",-0.8692,-0.8438,NA,NA,NA,106,0.085
+0,406,unattested,word,ruao,4,3,2,CVVV,cvv2,TRUE,FALSE,"rua, ao",2,3.945,"rua, ruwao",-1.0836,-1.092,NA,NA,NA,127,0.016
+56,407,mid,word,rewa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,1.852,"refa, pewa, rera, orewa, reia, reNa, repa, rea, Arewa, reka, hewa, rawa, rena, reta, kewa",-0.7928,-0.76,NA,NA,NA,106,0.142
+11,408,mid,word,ropi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,1.019,"popi, rohi, romi, roi, ripi, hopi, roki, rori, rapi, rUpi, kopi, ropia, repi, rowi",-0.8484,-0.8278,NA,NA,NA,106,0.132
+53,409,mid,word,hiwi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,3.112,"hipi, hihi, hiri, hiki, iwi, hAwi, hiwia, hiwa, kiwi",-0.8432,-0.7906,NA,NA,NA,106,0.085
+196,410,high,word,nuku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,3.268,"nuka, kuku, nuke, ruku, uku, nAku, muku, nOku, tuku, naku, puku",-0.8798,-0.8666,NA,NA,NA,106,0.104
+0,411,unattested,word,roaka,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"roa, aka",4,2.979,"raka, poaka, roaNa, riaka",-0.851666667,-0.842,NA,NA,NA,136,0.029
+0,412,unattested,word,ranu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.817,"manu, rana, raku, nanu, tanu, rapu, ranua, raru, kanu, rahu, rau, anu",-0.8414,-0.8132,NA,NA,NA,106,0.113
+4618,413,high,word,ruNa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,16,2.422,"huNa, riNa, rua, raNa, puNa, uNa, reNa, rANa, rufa, muNa, ruia, ruiNa, ruha, runa, tuNa, uruNa",-0.8262,-0.8084,NA,NA,NA,106,0.151
+0,414,unattested,word,romi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,1.445,"rohi, ropi, roi, roki, momi, rori, roma, komi, romia, rowi",-0.864,-0.8592,NA,NA,NA,106,0.094
+0,415,unattested,word,houi,4,3,2,CVVV,cv2v,TRUE,FALSE,"hou, ui",10,3.342,"hoi, hopi, hoki, honi, hoNi, hou, houa, houhi, hui, hori",-1.0146,-1.0074,NA,NA,NA,127,0.079
+0,416,unattested,word,mouku,5,3,2,CVVCV,cv2cv,TRUE,FALSE,uku,2,1.778,"mauku, muku",-0.879333333,-0.848,NA,NA,NA,136,0.015
+9,417,mid,word,ruaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,rua,8,1.885,"tuaki, ruki, raki, riaki, puaki, huaki, uaki, rumaki",-0.804666667,-0.793,NA,NA,NA,136,0.059
+0,418,unattested,word,tuhui,5,3,3,CVCVV,cvcvv,FALSE,FALSE,hui,2,2.685,"tuhuhi, tuhi",-0.842333333,-0.800166667,NA,NA,NA,136,0.015
+3670,419,high,word,noho,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.753,"moho, naho, poho, nohi, noko, niho, nohu, nono, oho",-0.8744,-0.8662,NA,NA,NA,106,0.085
+1,420,low,word,meNe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,2.602,"mete, mene, mere, meke, NeNe, eNe",-0.9174,-0.9126,NA,NA,NA,106,0.057
+40,421,mid,word,mura,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,18,3.372,"mAra, ura, mEra, mara, muri, mira, murua, muNa, pura, muka, mua, muru, muera, muna, muha, muia, hura, kura",-0.809,-0.7912,NA,NA,NA,106,0.17
+15,422,mid,word,hune,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,1.81,"hue, kune, hume, hine, huna, hane, hone, huke, hure, hunu, pune",-0.8614,-0.8412,NA,NA,NA,106,0.104
+205,423,high,word,tafito,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tafi, fito",4,2.47,"tafiti, tafio, tahito, tafiro",-0.771571429,-0.688857143,NA,NA,NA,154,0.026
+0,424,unattested,word,matira,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mati, tira",7,0.611,"katira, mataira, mahira, matirua, matika, matara, matire",-0.732428571,-0.650285714,NA,NA,NA,154,0.045
+0,425,unattested,word,kawari,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,kawa,3,0.462,"kakari, tawari, kawiri",-0.697714286,-0.654857143,NA,NA,NA,154,0.019
+1,426,low,word,tuhene,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,1,0,tufene,-0.731428571,-0.686428571,NA,NA,NA,154,0.006
+1,427,low,word,pakere,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pake, kere",9,1.408,"pakeke, kakere, pokere, pOkere, takere, paere, paiere, pakore, makere",-0.698714286,-0.660857143,NA,NA,NA,154,0.058
+0,428,unattested,word,tapotu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,2,0,"tapou, tapatu",-0.784142857,-0.733571429,NA,NA,NA,154,0.013
+4,429,low,word,tapuhi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tapu, puhi",3,2.076,"tapahi, taupuhi, tUpuhi",-0.738142857,-0.674142857,NA,NA,NA,154,0.019
+0,430,unattested,word,tapona,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,pona,3,0.462,"tIpona, tupona, taona",-0.713714286,-0.666285714,NA,NA,NA,154,0.019
+5,431,low,word,kanae,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"kana, nae",5,1.179,"kauae, karae, kana, konae, kOnae",-0.831333333,-0.809166667,NA,NA,NA,136,0.037
+0,432,unattested,word,haranu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hara, ranu",2,0,"haranui, harau",-0.769571429,-0.730857143,NA,NA,NA,154,0.013
+0,433,unattested,word,hikawe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hika, kawe",2,0,"hikawea, hiawe",-0.804857143,-0.745142857,NA,NA,NA,154,0.013
+28,434,mid,word,tumeke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,meke,3,0.366,"tumere, tufeke, tueke",-0.805,-0.754,NA,NA,NA,154,0.019
+0,435,unattested,word,haNoNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NoNi,1,0,taNoNi,-0.805571429,-0.759285714,NA,NA,NA,154,0.006
+15,436,mid,word,tipi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.888,"hipi, tApi, pipi, ripi, tipia, tiki, tipu, tipa, tiri, tihi, tapi, titi, tini",-0.8042,-0.7358,NA,NA,NA,106,0.123
+14,437,mid,word,taNuru,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,Nuru,5,1.018,"tauru, tUNuru, taiuru, haNuru, paNuru",-0.835285714,-0.799571429,NA,NA,NA,154,0.032
+1282,438,high,word,taea,4,3,2,CVVV,cv2v,TRUE,FALSE,"tae, ea",24,3.988,"taua, taka, tawa, taha, taewa, tae, waea, tarea, faea, tana, takea, taera, tapa, paea, tata, tara, taeNa, kaea, toea, taiea, tama, haea, maea, tea",-0.8678,-0.8,NA,NA,NA,127,0.189
+0,439,unattested,word,paoe,4,3,2,CVVV,cv2v,TRUE,FALSE,pao,10,2.063,"paoke, pare, pape, pane, pake, pao, paoa, pae, paoi, paowe",-1.0054,-0.9882,NA,NA,NA,127,0.079
+0,440,unattested,word,tapape,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tapa, pape",1,2.303,tapepe,-0.774714286,-0.737285714,NA,NA,NA,154,0.006
+0,441,unattested,word,tarare,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tara, rare",7,0,"marare, taware, tararI, taraire, harare, tarore, tIrare",-0.687285714,-0.65,NA,NA,NA,154,0.045
+38,442,mid,word,tapahi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tapa, pahi",3,3.411,"tapuhi, tapahia, takahi",-0.712,-0.650857143,NA,NA,NA,154,0.019
+1,443,low,word,maheno,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,3,0,"paheno, maheni, mahenoa",-0.799571429,-0.764142857,NA,NA,NA,154,0.019
+0,444,unattested,word,tafera,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,fera,7,0.975,"tafero, pafera, tauera, tIfera, tufera, mafera, taera",-0.708142857,-0.649714286,NA,NA,NA,154,0.045
+0,445,unattested,word,matire,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mati, tire",4,0.882,"maire, matihe, matike, matira",-0.756571429,-0.690142857,NA,NA,NA,154,0.026
+18,446,mid,word,waro,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,3.383,"waho, ewaro, wero, wao, waru, wara, Naro, raro, aro, waero, ware, maro, owaro, faro, warou, karo, taro",-0.7922,-0.7552,NA,NA,NA,106,0.16
+1823,447,high,word,marae,5,3,2,CVCVV,cvcv2,TRUE,FALSE,"mara, rae",7,2.045,"marau, marare, mara, karae, marake, mare, mamae",-0.760333333,-0.7415,NA,NA,NA,136,0.051
+0,448,unattested,word,karipi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"kari, ripi",6,1.063,"karaipi, kariri, kOripi, karihi, karipia, karioi",-0.715285714,-0.684428571,NA,NA,NA,154,0.039
+24,449,mid,word,tahaki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taha, haki",8,0.858,"mahaki, pahaki, hahaki, rahaki, tafaki, tawaki, kahaki, taiaki",-0.707428571,-0.645,NA,NA,NA,154,0.052
+7,450,mid,word,mariu,5,3,3,CVCVV,cvcvv,FALSE,FALSE,riu,3,2.725,"maru, marau, makiu",-0.814666667,-0.776333333,NA,NA,NA,136,0.022
+1,451,low,word,marewa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"mare, rewa",2,0.693,"marea, maewa",-0.746142857,-0.698571429,NA,NA,NA,154,0.013
+0,452,unattested,word,karohe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"karo, rohe",5,0.801,"karore, karAhe, kOrohe, parohe, karohi",-0.727285714,-0.699142857,NA,NA,NA,154,0.032
+0,453,unattested,word,marure,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"maru, rure",7,0.157,"marere, parure, marare, marurea, karure, maruru, marore",-0.724428571,-0.693285714,NA,NA,NA,154,0.045
+2,454,low,word,taute,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"tau, ute",8,1.09,"haute, paute, tautO, tauta, kaute, tautea, aute, tute",-0.784333333,-0.73,NA,NA,NA,136,0.059
+4,455,low,word,taunu,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"tau, unu",5,2.267,"tauru, tanu, tunu, maunu, paunu",-0.727166667,-0.694666667,NA,NA,NA,136,0.037
+0,456,unattested,word,tauri,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"tau, uri",10,3.735,"tauru, kauri, turi, tahuri, taura, tari, taui, mauri, tauria, tuauri",-0.721166667,-0.686,NA,NA,NA,136,0.074
+1,457,low,word,tute,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,14,1.864,"tuke, tote, tutu, tutea, ute, tuta, tupe, tutU, Atute, tete, ture, aute, taute, tAte",-0.7906,-0.7078,NA,NA,NA,106,0.132
+33,458,mid,word,kawiti,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,witi,2,1.099,"kapiti, kawiri",-0.811,-0.746285714,NA,NA,NA,154,0.013
+0,459,unattested,word,muhu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,10,2.355,"huhu, kuhu, mumu, muhua, muru, muku, uhu, mutu, muha, mahu",-0.82,-0.817,NA,NA,NA,106,0.094
+0,460,unattested,word,panunu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,3,0.597,"manunu, panuku, paunu",-0.804857143,-0.792714286,NA,NA,NA,154,0.019
+0,461,unattested,word,reu,3,2,2,CVV,cvv,FALSE,FALSE,NA,11,2.954,"rehu, rei, rou, reo, riu, weu, heu, remu, rea, keu, rau",-1.038,-1.02225,NA,NA,NA,88,0.125
+1,462,low,word,pewa,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,2.56,"peka, hewa, pera, pea, rewa, peha, pepa, peia, pIwa, pena, pawa, kewa, piwa",-0.8742,-0.8474,NA,NA,NA,106,0.123
+0,463,unattested,word,tinaku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tina, naku",1,0,tinakua,-0.777571429,-0.733,NA,NA,NA,154,0.006
+0,464,unattested,word,hinaNi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,hina,0,0,,-0.829571429,-0.780285714,NA,NA,NA,154,0
+0,465,unattested,word,tameme,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,tame,0,0,,-0.838,-0.783857143,NA,NA,NA,154,0
+5793,466,high,word,tonu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,4.032,"konu, tou, toru, tanu, tona, tono, honu, tohu, tunu",-0.8622,-0.8292,NA,NA,NA,106,0.085
+0,467,unattested,word,tiraki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tira, raki",5,2.264,"turaki, tiaki, tiriki, tAraki, tairaki",-0.734,-0.663857143,NA,NA,NA,154,0.032
+6,468,low,word,hakeke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"hake, keke",7,1.105,"pakeke, takeke, haukeke, hUkeke, Nakeke, hakeka, hOkeke",-0.780142857,-0.728142857,NA,NA,NA,154,0.045
+0,469,unattested,word,korio,5,3,3,CVCVV,cvcvv,FALSE,FALSE,kori,4,2.293,"koro, koio, koria, kori",-0.884166667,-0.813833333,NA,NA,NA,136,0.029
+395,470,high,word,hine,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,1.935,"hina, hane, pine, hone, hie, hinu, mine, hune, ine",-0.8092,-0.7402,NA,NA,NA,106,0.085
+0,471,unattested,word,riaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,NA,5,3.295,"tiaki, raki, ruaki, riaka, riki",-0.8415,-0.8235,NA,NA,NA,136,0.037
+0,472,unattested,word,toati,5,3,3,CVVCV,cvvcv,FALSE,FALSE,"toa, ati",5,1.522,"koati, toti, oati, tiati, toari",-0.856166667,-0.833833333,NA,NA,NA,136,0.037
+0,473,unattested,word,toreke,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tore, reke",3,0,"torete, koreke, tAreke",-0.719285714,-0.686285714,NA,NA,NA,154,0.019
+851,474,high,word,tono,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,4.698,"kono, hono, toko, tomo, tonu, tonoa, ono, tino, pono, toro, toto, tona, nono",-0.8102,-0.7872,NA,NA,NA,106,0.123
+0,475,unattested,word,takune,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"taku, kune",2,0,"takuhe, hakune",-0.816285714,-0.767,NA,NA,NA,154,0.013
+0,476,unattested,word,hote,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,2.192,"hAte, tote, hEte, hone, Note, hohe, hope, mote, hoe, hoto, hotu, hore",-0.8282,-0.788,NA,NA,NA,106,0.113
+2,477,low,word,NoNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,5,1.453,"Noto, roNo, Noio, NoNi, NoNoa",-0.8552,-0.8424,NA,NA,NA,106,0.047
+8,478,mid,word,toromi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"toro, romi",5,0.555,"toroNi, roromi, horomi, toroi, toremi",-0.771571429,-0.759,NA,NA,NA,154,0.032
+0,479,unattested,word,henumi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,numi,3,0,"henui, hanumi, fenumi",-0.854428571,-0.855142857,NA,NA,NA,154,0.019
+0,480,unattested,word,tirawa,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tira, rawa",3,0.732,"tUrawa, tArawa, tarawa",-0.784857143,-0.712428571,NA,NA,NA,154,0.019
+0,481,unattested,word,pauku,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"pau, uku",6,2.214,"paunu, panuku, pakuku, paku, mauku, puku",-0.867833333,-0.814166667,NA,NA,NA,136,0.044
+0,482,unattested,word,koero,5,3,2,CVVCV,cv2cv,TRUE,FALSE,"koe, ero",6,0.89,"koeo, koera, koro, koeko, koere, kero",-0.842,-0.802833333,NA,NA,NA,136,0.044
+371,483,high,word,tiaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,tia,9,1.905,"tuaki, tieki, tiraki, riaki, tiki, tiaka, taki, tiati, taiaki",-0.843333333,-0.774,NA,NA,NA,136,0.066
+1,484,low,word,tuaki,5,3,3,CVVCV,cvvcv,FALSE,FALSE,tua,13,2.03,"tiaki, tuki, tuari, tuakoi, tuaka, puaki, huaki, tuauki, turaki, uaki, tuaNi, taki, ruaki",-0.745833333,-0.721333333,NA,NA,NA,136,0.096
+3226,485,high,word,noa,3,2,2,CVV,cvv,FALSE,FALSE,NA,8,3.797,"koa, moa, hoa, noi, ioa, toa, roa, poa",-0.94025,-0.93475,NA,NA,NA,88,0.091
+91,486,mid,word,puea,4,3,3,CVVV,cvvv,FALSE,FALSE,ea,15,2.374,"pea, puNa, puna, uea, pAea, pukea, purea, puia, paea, puha, pufa, pura, puta, pua, puka",-1.109,-1.0794,NA,NA,NA,127,0.118
+0,487,unattested,word,fito,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,9,2.919,"fita, fitu, rito, fio, tito, firo, pito, fiti, ito",-0.8174,-0.7996,NA,NA,NA,106,0.085
+1,488,low,word,tahe,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,4.218,"tare, tame, taha, tae, tahA, tahi, nahe, take, tahu, tohe, tihe, tehe, tane",-0.7704,-0.7114,NA,NA,NA,106,0.123
+0,489,unattested,word,pohio,5,3,3,CVCVV,cvcvv,FALSE,FALSE,NA,1,3.219,poho,-0.895833333,-0.8075,NA,NA,NA,136,0.007
+6,490,low,word,tuha,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,17,2.466,"taha, tuhi, uha, tufa, toha, puha, Nuha, kuha, tuna, tuia, ruha, tuta, tuNa, tupa, tuhia, muha, tua",-0.7726,-0.7126,NA,NA,NA,106,0.16
+0,491,unattested,word,tuhuhi,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,1,0,tuhui,-0.774428571,-0.729142857,NA,NA,NA,154,0.006
+0,492,unattested,word,tupehu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"tupe, pehu",1,0,tupehau,-0.785142857,-0.723,NA,NA,NA,154,0.006
+0,493,unattested,word,pukira,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,NA,1,1.946,pAkira,-0.763,-0.709857143,NA,NA,NA,154,0.006
+0,494,unattested,word,takuhe,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,taku,2,0,"takune, takohe",-0.768285714,-0.725285714,NA,NA,NA,154,0.013
+67,495,mid,word,tunu,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,13,3.286,"unu, tunua, tuna, tonu, tumu, tupu, turu, tanu, hunu, tuku, Nunu, tutu, taunu",-0.809,-0.79,NA,NA,NA,106,0.123
+0,496,unattested,word,kunanu,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,nanu,2,0,"kumanu, konanu",-0.857,-0.82,NA,NA,NA,154,0.013
+3,497,low,word,feo,3,2,2,CVV,cvv,FALSE,FALSE,NA,13,2.058,"Afeo, teo, fao, keo, fea, feao, feoi, reo, eo, fio, fero, peo, feko",-1.08075,-1.07075,NA,NA,NA,88,0.148
+0,498,unattested,word,puraka,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pura, raka",8,1.118,"poraka, pEraka, puaka, puraku, auraka, pouraka, purata, paraka",-0.735428571,-0.677142857,NA,NA,NA,154,0.052
+0,499,unattested,word,puraku,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"pura, raku",2,0,"puraka, purau",-0.786142857,-0.724571429,NA,NA,NA,154,0.013
+4,500,low,word,turuki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"turu, ruki",6,1.718,"turaki, kuruki, turukio, puruki, tutuki, tuauki",-0.745571429,-0.698857143,NA,NA,NA,154,0.039
+6,501,low,word,uara,4,3,3,VVCV,vvcv,FALSE,FALSE,"ua, ara",16,2.978,"fara, rara, ura, mara, wara, Nara, kara, tara, uaroa, para, uaNa, uaua, uira, ara, uarua, hara",-1.027,-1.0036,NA,NA,NA,126,0.127
+0,502,unattested,word,upane,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"upa, pane",1,2.773,pane,-0.934166667,-0.9255,NA,NA,NA,135,0.007
+0,503,unattested,word,uhu,3,2,2,VCV,vcv,FALSE,FALSE,NA,15,3.397,"unu, uho, ihu, kuhu, muhu, uha, ehu, huhu, ahu, utu, umu, ohu, uru, uku, uhi",-1.0235,-1.022,NA,NA,NA,87,0.172
+11,504,mid,word,uira,4,3,3,VVCV,vvcv,FALSE,FALSE,"ui, ira",12,2.63,"hira, Nira, kuira, uia, ura, fira, tira, uara, mira, ira, wira, pira",-0.9814,-0.961,NA,NA,NA,126,0.095
+50,505,mid,word,aho,3,2,2,VCV,vcv,FALSE,FALSE,NA,18,3.752,"uho, aNo, naho, waho, iho, aha, ahi, oho, apo, raho, ao, ako, maho, ato, aro, ahu, kaho, amo",-0.99975,-0.934,NA,NA,NA,87,0.207
+13,506,mid,word,umere,5,3,3,VCVCV,vcvcv,FALSE,FALSE,mere,3,1.444,"mere, tumere, uere",-0.8975,-0.8515,NA,NA,NA,135,0.022
+87,507,mid,word,umu,3,2,2,VCV,vcv,FALSE,FALSE,NA,13,1.979,"unu, kumu, oumu, Omu, utu, tumu, mumu, uru, uku, imu, uhu, uma, humu",-0.95225,-0.959,NA,NA,NA,87,0.149
+0,508,unattested,word,opeti,5,3,3,VCVCV,vcvcv,FALSE,FALSE,"ope, peti",1,2.565,peti,-0.878,-0.870166667,NA,NA,NA,135,0.007
+10,509,mid,word,uma,3,2,2,VCV,vcv,FALSE,FALSE,NA,13,2.311,"ufa, ama, upa, uia, ura, umu, oma, uha, uNa, uea, uka, ua, uta",-0.998,-0.9985,NA,NA,NA,87,0.149
+0,510,unattested,word,iere,4,3,3,VVCV,vvcv,FALSE,FALSE,NA,12,2.377,"hiere, rere, piere, Nere, uere, tiere, fere, mere, tere, kere, here, pere",-1.1012,-1.119,NA,NA,NA,126,0.095
+8,511,mid,word,ipu,3,2,2,VCV,vcv,FALSE,FALSE,NA,6,2.838,"tipu, imu, inu, ihu, ipo, apu",-1.1385,-1.12925,NA,NA,NA,87,0.069
+0,512,unattested,word,umiki,5,3,3,VCVCV,vcvcv,FALSE,FALSE,miki,3,0.732,"umikia, Amiki, miki",-0.875166667,-0.8785,NA,NA,NA,135,0.022
+14,513,mid,word,amo,3,2,2,VCV,vcv,FALSE,FALSE,NA,12,2.924,"mo, aNo, ama, hamo, apo, ao, ako, aho, kamo, ato, aro, amio",-1.081,-0.985,NA,NA,NA,87,0.138
+0,514,unattested,word,nahui,5,3,3,CVCVV,cvcvv,FALSE,FALSE,hui,0,0,,-0.882666667,-0.871833333,NA,NA,NA,136,0
+0,515,unattested,word,waere,5,3,2,CVVCV,cv2cv,TRUE,FALSE,wae,6,3.112,"ware, paere, waerea, waero, Naere, haere",-0.8175,-0.802833333,NA,NA,NA,136,0.044
+68,516,mid,word,huna,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,15,3.061,"huNa, hina, huia, puna, hune, hunaa, hupa, tuna, runa, hana, hunu, huka, muna, hua, hura",-0.777,-0.75,NA,NA,NA,106,0.142
+0,517,unattested,word,tuNi,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,3.275,"tui, toNi, turi, tuki, tuhi, taNi, tuNa, tuaNi",-0.7962,-0.775,NA,NA,NA,106,0.075
+1,518,low,word,faNo,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,8,3.306,"aNo, fano, paNo, taNo, fao, raNo, faro, faNa",-0.859,-0.8168,NA,NA,NA,106,0.075
+0,519,unattested,word,waraki,6,3,3,CVCVCV,cvcvcv,FALSE,FALSE,"wara, raki",3,0.536,"haraki, paraki, wairaki",-0.716142857,-0.687714286,NA,NA,NA,154,0.019
+4,520,low,word,weto,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,7,1.075,"weko, wete, meto, wero, weta, peto, keto",-0.831,-0.8162,NA,NA,NA,106,0.066
+2,521,low,word,weku,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,12,1.472,"weka, wAku, weko, wepu, wOku, waku, weru, feku, wekua, weu, weki, eku",-0.8574,-0.8548,NA,NA,NA,106,0.113
+6116,522,high,word,hei,3,2,1,CVV,cv2,TRUE,FALSE,NA,18,4.656,"Ahei, he, heoi, heia, pei, mei, hemi, hui, kei, hoi, rei, hai, tei, hea, nei, heu, heri, heNi",-0.957,-0.942,NA,NA,NA,88,0.205
+0,523,unattested,word,weru,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,11,2.808,"weku, weri, wepu, wero, waru, wera, weu, heru, wUru, peru, Neru",-0.8174,-0.7932,NA,NA,NA,106,0.104
+1,524,low,word,keo,3,2,2,CVV,cvv,FALSE,FALSE,NA,20,2.257,"kemo, reo, kao, kea, keho, kei, keko, keNo, teo, kAeo, ko, kero, koeo, eo, kueo, feo, kAo, keto, peo, keu",-1.037,-1.02625,NA,NA,NA,88,0.227
+0,525,unattested,word,wanea,5,3,3,CVCVV,cvcvv,FALSE,FALSE,NA,9,1.513,"nanea, ranea, waea, wana, wania, anea, wakea, warea, manea",-0.868333333,-0.844833333,NA,NA,NA,136,0.066
+131,526,mid,word,waha,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,19,3.392,"waoa, waho, taha, wahaa, aha, raha, waea, wara, maha, haha, naha, wahu, kaha, waka, wata, waia, wahia, wana, weha",-0.8112,-0.7806,NA,NA,NA,106,0.179
+1,527,low,word,meho,4,2,2,CVCV,cvcv,FALSE,FALSE,NA,6,0.555,"moho, meto, maho, meko, keho, peho",-0.9186,-0.9182,NA,NA,NA,106,0.057
